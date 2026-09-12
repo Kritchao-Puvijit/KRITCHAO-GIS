@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สำรวจภูมิประเทศด้วย UAV อ่างเก็บน้ำและสะพานห้วยโป่ง | Kritchao Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="../style.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style>
+  .model-viewer-wrap{border-radius:14px;overflow:hidden;border:1px solid var(--border-strong);background:var(--card);margin-bottom:12px;position:relative;}
+  model-viewer{width:100%;height:560px;--poster-color:transparent;background:#0b0e11;}
+  @media(max-width:640px){model-viewer{height:380px;}}
+  .model-hint{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;color:var(--text-mute);margin-bottom:20px;}
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo"><span class="dot"></span>KRITCHAO.GIS</a>
+    <div class="navlinks">
+      <a href="../index.html#about">เกี่ยวกับ</a>
+      <a href="../index.html#experience">ประสบการณ์</a>
+      <a href="../index.html#skills">ทักษะ</a>
+      <a href="../index.html#projects" class="active">ผลงาน</a>
+      <a href="../index.html#certificates">ใบรับรอง</a>
+      <a href="../index.html#contact">ติดต่อ</a>
+    </div>
+  </div>
+</nav>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>Photogrammetry</span></div>
+    <div class="proj-cat-badge">Photogrammetry / UAV</div>
+    <h1>สำรวจภูมิประเทศด้วย UAV อ่างเก็บน้ำและสะพานห้วยโป่ง</h1>
+    <p class="proj-lede">บินสำรวจด้วยโดรน DJI Air 2S เก็บภาพถ่ายทางอากาศบริเวณอ่างเก็บน้ำห้วยโป่งที่เสียหายและสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108 ประมวลผลด้วย Agisoft Metashape และ WebODM เพื่อผลิต Point Cloud, DEM/DSM และ Orthomosaic ความละเอียดสูง สนับสนุนการประเมินความเสียหายและออกแบบซ่อมแซมโครงสร้าง</p>
+  </div>
+</section>
+
+<section style="padding-top:0;border-top:none;">
+  <div class="wrap">
+    <div class="meta-row">
+      <div class="meta-item"><div class="meta-label">หมวดหมู่</div><div class="meta-value">UAV Photogrammetry</div></div>
+      <div class="meta-item"><div class="meta-label">พื้นที่สำรวจ</div><div class="meta-value">อ่างเก็บน้ำห้วยโป่งและสะพาน ทล.108</div></div>
+      <div class="meta-item"><div class="meta-label">ผลผลิต</div><div class="meta-value">Point Cloud, DEM/DSM, Orthomosaic, 3D Model</div></div>
+      <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">DJI Air 2S, Agisoft Metashape, WebODM</div></div>
+    </div>
+
+    <div class="content-block">
+      <h2>โจทย์และที่มา</h2>
+      <p>หลังพายุทาจิกิทำให้อ่างเก็บน้ำห้วยโป่งเสียหายและสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108 ขาด (อ้างอิงจากผลงาน <a href="huai-pong.html" style="color:var(--accent);">RS Change Detection</a> ที่วิเคราะห์ด้วยภาพถ่ายดาวเทียม) จำเป็นต้องเก็บข้อมูลภูมิประเทศระดับพื้นที่ (ground-level) ที่ละเอียดกว่าเพื่อใช้ประเมินขอบเขตความเสียหายเชิงปริมาตรและสนับสนุนการออกแบบซ่อมแซม จึงบินสำรวจด้วย UAV แบ่งเป็น 2 ชุดข้อมูล คือ จุดอ่างเก็บน้ำ/สันทำนบที่เสียหายโดยตรง (ระยะใกล้) และภาพรวมหมู่บ้าน ถนน และสะพานห้วยโป่งตลอดแนว (ระยะกว้าง)</p>
+    </div>
+
+    <div class="content-block">
+      <h2>วิธีการดำเนินงาน</h2>
+      <ul>
+        <li>วางแผนเส้นทางบินและถ่ายภาพด้วยโดรน DJI Air 2S ครอบคลุมทั้งจุดอ่างเก็บน้ำที่เสียหายและแนวถนน/สะพานห้วยโป่ง</li>
+        <li>ประมวลผลภาพชุดจุดอ่างเก็บน้ำ (44 ภาพ) ด้วย Agisoft Metashape: Tie Points → Dense Cloud (79 ล้านจุด) → 3D Model → DEM → Orthomosaic ความละเอียด 1.21 ซม./พิกเซล</li>
+        <li>ประมวลผลภาพชุดภาพรวมหมู่บ้าน/ถนน/สะพาน (1,424 ภาพ แบ่ง 3 Chunk แล้วรวมเป็น Merged Chunk 712 ภาพ) สร้าง Dense Cloud กว่า 367 ล้านจุด, DSM และ Orthomosaic ความละเอียด 2.91 ซม./พิกเซล ครอบคลุมพื้นที่กว่า 55,738 x 42,032 พิกเซล</li>
+        <li>ทดสอบประมวลผลไขว้ด้วย WebODM (โอเพนซอร์ส) เพื่อเปรียบเทียบผลลัพธ์กับ Metashape</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h2>ชุดข้อมูลที่ 1 — จุดอ่างเก็บน้ำห้วยโป่ง (ระยะใกล้)</h2>
+      <p>ภาพถ่าย 44 ภาพ ประมวลผลเป็น Dense Cloud 79,014,605 จุด และ 3D Model 22,289,012 หน้า แสดงสภาพสันทำนบและร่องน้ำกัดเซาะที่จุดเสียหายโดยตรง</p>
+
+      <div class="model-viewer-wrap">
+        <model-viewer src="../assets/models/huai-pong-3dmodel.glb" orientation="0deg -90deg 0deg" camera-controls auto-rotate auto-rotate-delay="1500" rotation-per-second="18deg" shadow-intensity="0.6" exposure="1" camera-orbit="45deg 55deg auto" min-camera-orbit="auto 5deg auto" max-camera-orbit="auto 100deg auto" touch-action="pan-y" alt="โมเดล 3D จุดอ่างเก็บน้ำห้วยโป่งที่เสียหาย">
+        </model-viewer>
+      </div>
+      <div class="model-hint"><i class="ti ti-rotate"></i> ลาก/ปัดเพื่อหมุนดูโมเดล 3D จริง · ประมวลผลจาก Dense Cloud ด้วย Metashape แล้วบีบอัดสำหรับเว็บ (จาก 580 MB เหลือ 1.7 MB)</div>
+
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/uav-survey/01-model-closerange-1.jpg" data-caption="3D Model จุดอ่างเก็บน้ำห้วยโป่งที่เสียหาย ประมวลผลจากภาพถ่าย 44 ภาพ ใน Agisoft Metashape">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/01-model-closerange-1.jpg" alt="3D Model จุดอ่างเก็บน้ำห้วยโป่ง มุมที่ 1"></div>
+          <div class="shot-cap"><span class="shot-tag">3D Model · Metashape</span><span class="shot-desc">จุดอ่างเก็บน้ำที่เสียหาย (มุม 1)</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/02-model-closerange-2.jpg" data-caption="3D Model จุดอ่างเก็บน้ำห้วยโป่ง มุมมองแสดงร่องน้ำกัดเซาะและสันทำนบ">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/02-model-closerange-2.jpg" alt="3D Model จุดอ่างเก็บน้ำห้วยโป่ง มุมที่ 2"></div>
+          <div class="shot-cap"><span class="shot-tag">3D Model · Metashape</span><span class="shot-desc">ร่องน้ำกัดเซาะและสันทำนบ</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/04-camera-alignment.jpg" data-caption="ตำแหน่งกล้องและ Tie Points จากการบิน 44 ภาพ แสดงแนวการบินสำรวจแบบ Grid">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/04-camera-alignment.jpg" alt="ตำแหน่งกล้องและ Tie Points"></div>
+          <div class="shot-cap"><span class="shot-tag">Camera Alignment</span><span class="shot-desc">ตำแหน่งกล้อง 44 จุดบิน</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/03-orthomosaic-closerange.jpg" data-caption="Orthomosaic ความละเอียด 1.21 ซม./พิกเซล ซ้อนทับภาพถ่ายดาวเทียมฐาน แสดงตำแหน่งจุดอ่างเก็บน้ำ">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/03-orthomosaic-closerange.jpg" alt="Orthomosaic จุดอ่างเก็บน้ำห้วยโป่ง"></div>
+          <div class="shot-cap"><span class="shot-tag">Orthomosaic · 1.21 cm/px</span><span class="shot-desc">ซ้อนทับภาพถ่ายดาวเทียมฐาน</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/12-orthomosaic-weir-proposal.jpg" data-caption="แผนที่ Orthomosaic พร้อมพิกัด UTM ระบุตำแหน่งอ่างเก็บน้ำห้วยโป่ง (47 QLB 942-030) และจุดพิจารณาก่อสร้างฝายชั่วคราว (47 QLB 945-029)">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/12-orthomosaic-weir-proposal.jpg" alt="แผนที่ Orthomosaic ระบุจุดอ่างเก็บน้ำและจุดก่อสร้างฝายชั่วคราว"></div>
+          <div class="shot-cap"><span class="shot-tag">Orthomosaic + พิกัด UTM</span><span class="shot-desc">จุดพิจารณาก่อสร้างฝายชั่วคราว</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>ชุดข้อมูลที่ 2 — ภาพรวมหมู่บ้าน ถนน และสะพานห้วยโป่ง (ระยะกว้าง)</h2>
+      <p>ภาพถ่ายรวม 1,424 ภาพ แบ่งประมวลผล 3 Chunk แล้วรวมเป็น Merged Chunk 712 ภาพ (2,242,317 Tie Points) ครอบคลุมหมู่บ้าน ถนน สะพานห้วยโป่ง และพื้นที่เกษตรกรรมโดยรอบ</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/uav-survey/09-densecloud-bridge.jpg" data-caption="Dense Cloud แสดงหมู่บ้าน วัด ถนน และสะพานห้วยโป่งที่ข้ามลำน้ำซึ่งถูกกัดเซาะเสียหาย">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/09-densecloud-bridge.jpg" alt="Dense Cloud แสดงสะพานห้วยโป่งและหมู่บ้าน"></div>
+          <div class="shot-cap"><span class="shot-tag">Dense Cloud</span><span class="shot-desc">สะพานห้วยโป่งและหมู่บ้าน</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/10-densecloud-erosion.jpg" data-caption="Dense Cloud ระยะใกล้จุดถนนถูกกัดเซาะและดินสไลด์ ต้นไม้ล้มทับเส้นทาง">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/10-densecloud-erosion.jpg" alt="Dense Cloud จุดถนนกัดเซาะ"></div>
+          <div class="shot-cap"><span class="shot-tag">Dense Cloud</span><span class="shot-desc">จุดถนนกัดเซาะ/ดินสไลด์</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/05-model-wideblock.jpg" data-caption="แบบจำลอง 3D ภาพรวมอ่างเก็บน้ำห้วยโป่งจากชุดข้อมูล Merged Chunk 712 ภาพ">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/05-model-wideblock.jpg" alt="แบบจำลอง 3D ภาพรวมอ่างเก็บน้ำ"></div>
+          <div class="shot-cap"><span class="shot-tag">3D Model</span><span class="shot-desc">ภาพรวมอ่างเก็บน้ำ (Merged Chunk)</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/06-dsm-colorized.jpg" data-caption="DSM ระบายสีตามระดับความสูง (426-526 ม.) ความละเอียด 5.82 ซม./พิกเซล">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/06-dsm-colorized.jpg" alt="DSM ระบายสีตามระดับความสูง"></div>
+          <div class="shot-cap"><span class="shot-tag">DSM · 5.82 cm/px</span><span class="shot-desc">ระบายสีตามระดับความสูง</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/07-dsm-basemap-overlay.jpg" data-caption="DSM ซ้อนทับภาพถ่ายดาวเทียมฐานแสดงตำแหน่งพื้นที่สำรวจตามแนวลำห้วยโป่ง">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/07-dsm-basemap-overlay.jpg" alt="DSM ซ้อนทับภาพถ่ายดาวเทียมฐาน"></div>
+          <div class="shot-cap"><span class="shot-tag">DSM Overlay</span><span class="shot-desc">ซ้อนทับภาพถ่ายดาวเทียมฐาน</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/08-orthomosaic-village.jpg" data-caption="Orthomosaic ความละเอียด 2.91 ซม./พิกเซล แสดงหมู่บ้าน เส้นทาง และแปลงเกษตรกรรมโดยรอบ">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/08-orthomosaic-village.jpg" alt="Orthomosaic หมู่บ้านห้วยโป่ง"></div>
+          <div class="shot-cap"><span class="shot-tag">Orthomosaic · 2.91 cm/px</span><span class="shot-desc">หมู่บ้าน เส้นทาง และพื้นที่เกษตร</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>เครื่องมือเสริม — WebODM</h2>
+      <p>นอกจาก Agisoft Metashape ยังทดลองใช้ WebODM ซึ่งเป็นซอฟต์แวร์โอเพนซอร์สสำหรับประมวลผลภาพถ่ายทางอากาศ เพื่อเปรียบเทียบผลลัพธ์และเป็นทางเลือกสำรองเมื่อต้องประมวลผลชุดข้อมูลขนาดใหญ่</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/uav-survey/11-webodm-dashboard.jpg" data-caption="WebODM กำลังประมวลผลชุดภาพถ่าย 198 ภาพ เป็นอีกทางเลือกในการผลิต Orthomosaic และ DSM/DTM">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/11-webodm-dashboard.jpg" alt="WebODM Dashboard กำลังประมวลผล"></div>
+          <div class="shot-cap"><span class="shot-tag">WebODM</span><span class="shot-desc">ประมวลผลชุดภาพถ่าย 198 ภาพ</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>ภาพตอนปฏิบัติงาน</h2>
+      <p>ลงพื้นที่บินสำรวจจริงบริเวณอ่างเก็บน้ำห้วยโป่งและหมู่บ้านโดยรอบ ในช่วงที่ยังมีร่องรอยความเสียหายจากน้ำท่วมและการซ่อมแซมเส้นทางสัญจร</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/uav-survey/13-field-aerial-valley.jpg" data-caption="ภาพถ่ายทางอากาศมุมกว้างแสดงหมู่บ้าน วัด นาข้าว และแนวลำน้ำห้วยโป่งที่ยังมีร่องรอยความเสียหายจากน้ำท่วม">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/13-field-aerial-valley.jpg" alt="ภาพถ่ายทางอากาศมุมกว้างหมู่บ้านห้วยโป่ง"></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Overview</span><span class="shot-desc">หมู่บ้านและลำน้ำห้วยโป่ง</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/14-field-drone-pilot.jpg" data-caption="ปฏิบัติงานบินสำรวจด้วยโดรน DJI Air 2S บริเวณจุดที่ถนนถูกกัดเซาะเสียหาย">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/14-field-drone-pilot.jpg" alt="ปฏิบัติงานบินสำรวจด้วยโดรน"></div>
+          <div class="shot-cap"><span class="shot-tag">Field Operation</span><span class="shot-desc">บังคับโดรนสำรวจภาคสนาม</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/uav-survey/15-field-aerial-breach.jpg" data-caption="ภาพถ่ายทางอากาศระยะใกล้จุดตลิ่งกัดเซาะบริเวณอ่างเก็บน้ำห้วยโป่ง ถ่ายระหว่างบินสำรวจจริง">
+          <div class="shot-thumb"><img src="../assets/img/uav-survey/15-field-aerial-breach.jpg" alt="ภาพถ่ายทางอากาศจุดตลิ่งกัดเซาะ"></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Close-up</span><span class="shot-desc">จุดตลิ่งกัดเซาะ อ่างเก็บน้ำห้วยโป่ง</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>ผลลัพธ์และการนำไปใช้</h2>
+      <p>ข้อมูล Point Cloud, DEM/DSM และ Orthomosaic ความละเอียดสูงที่ได้ ใช้สนับสนุนการประเมินปริมาตรความเสียหายของอ่างเก็บน้ำและถนนอย่างละเอียดกว่าการวิเคราะห์ภาพถ่ายดาวเทียมเพียงอย่างเดียว เป็นข้อมูลประกอบการออกแบบซ่อมแซมโครงสร้างและวางแผนฟื้นฟูเส้นทางสัญจรผ่านสะพานห้วยโป่ง</p>
+    </div>
+
+    <div class="proj-nav">
+      <a href="water-dashboard.html"><i class="ti ti-arrow-left"></i> ผลงานก่อนหน้า</a>
+      <a href="permit-map.html">ผลงานถัดไป <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCap');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function openLightbox(src, caption){
+    lightboxImg.src = src;
+    lightboxCap.textContent = caption || '';
+    lightbox.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('show');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.shot-card').forEach(card=>{
+    card.addEventListener('click', ()=> openLightbox(card.dataset.full, card.dataset.caption));
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

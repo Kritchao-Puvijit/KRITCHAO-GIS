@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ขออนุญาตทำถนนชายแดนและจัดหาน้ำสนับสนุนฐานปฏิบัติการ | Kritchao Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo"><span class="dot"></span>KRITCHAO.GIS</a>
+    <div class="navlinks">
+      <a href="../index.html#about">เกี่ยวกับ</a>
+      <a href="../index.html#experience">ประสบการณ์</a>
+      <a href="../index.html#skills">ทักษะ</a>
+      <a href="../index.html#projects" class="active">ผลงาน</a>
+      <a href="../index.html#certificates">ใบรับรอง</a>
+      <a href="../index.html#contact">ติดต่อ</a>
+    </div>
+  </div>
+</nav>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>แผนที่ขออนุญาต</span></div>
+    <div class="proj-cat-badge">แผนที่ขออนุญาตใช้พื้นที่</div>
+    <h1>ขออนุญาตทำถนนชายแดนและจัดหาน้ำสนับสนุนฐานปฏิบัติการ</h1>
+    <p class="proj-lede">จัดทำแผนที่ขออนุญาตใช้พื้นที่สำหรับโครงการก่อสร้างถนนเข้าฐานปฏิบัติการชายแดน 4 เส้นทาง พร้อมโครงการจัดหาน้ำสนับสนุนหมู่บ้านที่เกี่ยวข้อง ครอบคลุมพื้นที่อำเภอปางมะผ้าและอำเภอปาย จังหวัดแม่ฮ่องสอน ดำเนินการร่วมกับหน่วยเฉพาะกิจสิงหนาทและโครงการชลประทานแม่ฮ่องสอน</p>
+  </div>
+</section>
+
+<section style="padding-top:0;border-top:none;">
+  <div class="wrap">
+    <div class="meta-row">
+      <div class="meta-item"><div class="meta-label">หมวดหมู่</div><div class="meta-value">Permit Mapping / Elevation Survey</div></div>
+      <div class="meta-item"><div class="meta-label">หน่วยงาน</div><div class="meta-value">โครงการชลประทานแม่ฮ่องสอน ร่วมกับหน่วยเฉพาะกิจสิงหนาท</div></div>
+      <div class="meta-item"><div class="meta-label">พื้นที่ศึกษา</div><div class="meta-value">อ.ปางมะผ้า และ อ.ปาย จ.แม่ฮ่องสอน (4 เส้นทาง)</div></div>
+      <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">QGIS, ArcGIS Pro</div></div>
+    </div>
+
+    <div class="content-block">
+      <h2>โจทย์และที่มา</h2>
+      <p>พื้นที่ชายแดนจังหวัดแม่ฮ่องสอนมีฐานปฏิบัติการทางความมั่นคงหลายจุดที่ยังเข้าถึงยาก หน่วยเฉพาะกิจสิงหนาทจึงร่วมกับโครงการชลประทานแม่ฮ่องสอนดำเนินโครงการก่อสร้าง/ปรับปรุงถนนเข้าฐานปฏิบัติการ 4 เส้นทาง พร้อมโครงการจัดหาน้ำสนับสนุนหมู่บ้านตามแนวเส้นทางแต่ละแห่ง เนื่องจากทุกเส้นทางพาดผ่านพื้นที่ที่มีข้อกำหนดทับซ้อนหลายประเภท ทั้งเขตอุทยานแห่งชาติ เขตโครงการพระราชดำริ/พัฒนาป่าไม้ เขตรักษาพันธุ์สัตว์ป่า และแนวสันปันแดน จึงต้องจัดทำแผนที่ขออนุญาตแยกตามหน่วยงานเจ้าของพื้นที่แต่ละประเภทให้ครบถ้วนก่อนดำเนินการก่อสร้างจริง</p>
+    </div>
+
+    <div class="content-block">
+      <h2>วิธีการดำเนินงาน</h2>
+      <ul>
+        <li>สำรวจแนวเส้นทางถนนและพิกัดจุดสำคัญ (จุดเริ่มต้น-สิ้นสุด, ฝายต้นน้ำ, บ่อเก็บน้ำ, แนวท่อส่งน้ำ) ด้วย GNSS</li>
+        <li>ตรวจสอบพื้นที่ทับซ้อนกับเขตอนุรักษ์/เขตป่าแต่ละประเภทตามแนวเส้นทาง แล้วแยกจัดทำแผนที่ขออนุญาตต่อหน่วยงานเจ้าของพื้นที่ (อุทยานแห่งชาติ, กรมป่าไม้, อบต., เขตรักษาพันธุ์สัตว์ป่า)</li>
+        <li>จัดทำแผนที่ค่าระดับความสูงเชิงเส้น (Contour) สนับสนุนการวางแนวท่อส่งน้ำแบบอาศัยแรงโน้มถ่วง (Gravity Flow)</li>
+        <li>รวบรวมแผนที่ภาพรวมโครงการ (Topo/Aerial) และแผนที่รายเขตเป็นชุดเอกสารประกอบการยื่นขออนุญาตใช้พื้นที่</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h2>ภาพปฏิบัติงานภาคสนาม</h2>
+      <p>ลงพื้นที่ร่วมกับหน่วยเฉพาะกิจสิงหนาทเพื่อตรวจสอบสภาพป่าตามแนวเส้นทางถนนและแหล่งน้ำจริงก่อนจัดทำแผนที่ขออนุญาต บางพื้นที่ต้องเข้าถึงโดยเฮลิคอปเตอร์เนื่องจากภูมิประเทศเป็นภูเขาสูงชันและอยู่ห่างไกล</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/singhanat/field-01-forest-survey.jpg" data-caption="ลงพื้นที่ตรวจสอบสภาพป่าตามแนวเส้นทางถนนที่จะก่อสร้างร่วมกับหน่วยเฉพาะกิจสิงหนาท">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-01-forest-survey.jpg" alt="ลงพื้นที่ตรวจสอบแนวเส้นทางถนน"></div>
+          <div class="shot-cap"><span class="shot-tag">Field Survey</span><span class="shot-desc">ตรวจสอบแนวเส้นทางถนนในป่า</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/field-03-map-check.jpg" data-caption="ตรวจสอบพิกัดและแนวเขตบนแผนที่ภาคสนามร่วมกับเจ้าหน้าที่หน่วยเฉพาะกิจสิงหนาท">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-03-map-check.jpg" alt="ตรวจสอบแผนที่ภาคสนาม"></div>
+          <div class="shot-cap"><span class="shot-tag">Field Survey</span><span class="shot-desc">ตรวจสอบพิกัดและแนวเขตบนแผนที่</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/field-04-team-forest.jpg" data-caption="คณะทำงานร่วมสำรวจพื้นที่ป่าตามแนวเส้นทางโครงการ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-04-team-forest.jpg" alt="คณะทำงานสำรวจพื้นที่ป่า"></div>
+          <div class="shot-cap"><span class="shot-tag">Field Survey</span><span class="shot-desc">คณะทำงานสำรวจพื้นที่</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/field-02-water-source.jpg" data-caption="ตรวจสอบแหล่งน้ำต้นทางและจุดวางท่อส่งน้ำสนับสนุนหมู่บ้าน">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-02-water-source.jpg" alt="ตรวจสอบแหล่งน้ำต้นทาง"></div>
+          <div class="shot-cap"><span class="shot-tag">Water Source Check</span><span class="shot-desc">แหล่งน้ำต้นทางและจุดวางท่อ</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/field-05-water-check.jpg" data-caption="ตรวจสอบแนวท่อส่งน้ำจากแหล่งน้ำต้นทางร่วมกับเจ้าหน้าที่">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-05-water-check.jpg" alt="ตรวจสอบแนวท่อส่งน้ำ"></div>
+          <div class="shot-cap"><span class="shot-tag">Water Source Check</span><span class="shot-desc">ตรวจสอบแนวท่อส่งน้ำ</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/field-06-water-pipe.jpg" data-caption="ตรวจสอบจุดวางท่อส่งน้ำที่แหล่งน้ำต้นทางร่วมกับหน่วยเฉพาะกิจสิงหนาท">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-06-water-pipe.jpg" alt="ตรวจสอบจุดวางท่อส่งน้ำ"></div>
+          <div class="shot-cap"><span class="shot-tag">Water Source Check</span><span class="shot-desc">จุดวางท่อส่งน้ำ</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/field-07-heli-landing.jpg" data-caption="เดินทางเข้าพื้นที่ฐานปฏิบัติการด้วยเฮลิคอปเตอร์ เนื่องจากภูมิประเทศห่างไกลและเข้าถึงยาก">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-07-heli-landing.jpg" alt="เฮลิคอปเตอร์ลงจอดที่ฐานปฏิบัติการ"></div>
+          <div class="shot-cap"><span class="shot-tag">Helicopter Access</span><span class="shot-desc">เดินทางเข้าพื้นที่ด้วยเฮลิคอปเตอร์</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/field-08-heli-cockpit.jpg" data-caption="ตรวจสอบแผนที่แนวเส้นทางระหว่างการเดินทางด้วยเฮลิคอปเตอร์เข้าพื้นที่ฐานปฏิบัติการ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-08-heli-cockpit.jpg" alt="ตรวจสอบแผนที่บนเฮลิคอปเตอร์"></div>
+          <div class="shot-cap"><span class="shot-tag">Helicopter Access</span><span class="shot-desc">ตรวจสอบแผนที่ระหว่างเดินทาง</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/field-09-base-group.jpg" data-caption="คณะทำงานร่วมกับเจ้าหน้าที่หน่วยเฉพาะกิจสิงหนาทที่ฐานปฏิบัติการชายแดน">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/field-09-base-group.jpg" alt="คณะทำงานที่ฐานปฏิบัติการชายแดน"></div>
+          <div class="shot-cap"><span class="shot-tag">Border Outpost</span><span class="shot-desc">คณะทำงานที่ฐานปฏิบัติการชายแดน</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>1. ระบบส่งน้ำ อ่างเก็บน้ำม่อนตะแลง — หน่วยเฉพาะกิจสิงหนาท — อ่างเก็บน้ำนากระจง</h2>
+      <p>แผนที่ค่าระดับความสูงสนับสนุนแนวท่อส่งน้ำจากอ่างเก็บน้ำม่อนตะแลงไปยังหน่วยเฉพาะกิจสิงหนาทและอ่างเก็บน้ำนากระจง เพื่อยืนยันความเป็นไปได้ของแนวท่อก่อนดำเนินการก่อสร้างจริง</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/singhanat/02-elevation-aerial-overview.jpg" data-caption="ภาพรวมแนวเส้นทางซ้อนทับภาพถ่ายทางอากาศ มาตราส่วน 1:20,000 แสดงตำแหน่งหน่วยเฉพาะกิจสิงหนาทและอาคารส่งน้ำ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/02-elevation-aerial-overview.jpg" alt="ภาพรวมแนวเส้นทางซ้อนภาพถ่ายทางอากาศ"></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Overlay · 1:20,000</span><span class="shot-desc">ภาพรวมพื้นที่โครงการ</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/03-elevation-pipeline-detail.jpg" data-caption="รายละเอียดแนวท่อส่งน้ำฝั่งขวาและฝั่งซ้ายของอ่างเก็บน้ำม่อนตะแลง มาตราส่วน 1:10,000">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/03-elevation-pipeline-detail.jpg" alt="รายละเอียดแนวท่อส่งน้ำฝั่งขวาและฝั่งซ้าย"></div>
+          <div class="shot-cap"><span class="shot-tag">Pipeline Detail · 1:10,000</span><span class="shot-desc">แนวท่อส่งน้ำฝั่งขวา/ซ้าย</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>2. ถนนบ้านแอโก๋ — ฐานปฏิบัติการดอยมูเซอร์</h2>
+      <p>เส้นทางก่อสร้างระยะทาง 13.471 กิโลเมตร พาดผ่านเขตอุทยานแห่งชาติห้วยน้ำดัง เขตโครงการพัฒนาป่าไม้บ้านแสนคำลืออันเนื่องมาจากพระราชดำริ และเขตรักษาพันธุ์สัตว์ป่าสันปันแดน พร้อมโครงการจัดหาน้ำสนับสนุนบ้านแสนคำลือ (ฝายต้นน้ำและแนวท่อส่งน้ำความยาวรวม 720 เมตร)</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/singhanat/road-04-doimuser-landuse.jpg" data-caption="แผนที่แสดงพื้นที่ขอใช้ประโยชน์ ถนนบ้านแอโก๋-ฐานฯดอยมูเซอร์ ซ้อนทับเขตอนุรักษ์ประเภทต่างๆ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-04-doimuser-landuse.jpg" alt="แผนที่พื้นที่ขอใช้ประโยชน์ ถนนดอยมูเซอร์"></div>
+          <div class="shot-cap"><span class="shot-tag">Land-use Overview</span><span class="shot-desc">ถนนบ้านแอโก๋-ฐานฯดอยมูเซอร์</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-05-doimuser-aerial.jpg" data-caption="ภาพถ่ายทางอากาศแนวเส้นทางถนนบ้านแอโก๋-ฐานฯดอยมูเซอร์ พร้อมจุดฝายต้นน้ำและบ่อเก็บน้ำ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-05-doimuser-aerial.jpg" alt="ภาพถ่ายทางอากาศ ถนนดอยมูเซอร์"></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Overview</span><span class="shot-desc">ถนนบ้านแอโก๋-ฐานฯดอยมูเซอร์</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-04b-doimuser-topo.jpg" data-caption="แผนที่ภูมิประเทศ (Topo) แนวเส้นทางถนนบ้านแอโก๋-ฐานฯดอยมูเซอร์">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-04b-doimuser-topo.jpg" alt="แผนที่ภูมิประเทศ ถนนดอยมูเซอร์"></div>
+          <div class="shot-cap"><span class="shot-tag">Topo Map</span><span class="shot-desc">ถนนบ้านแอโก๋-ฐานฯดอยมูเซอร์</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-04c-doimuser-permit.jpg" data-caption="ตัวอย่างแผนที่ขออนุญาตแนบท้าย แสดงขอบเขตแนวถนนในเขตโครงการพัฒนาป่าไม้บ้านแสนคำลืออันเนื่องมาจากพระราชดำริ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-04c-doimuser-permit.jpg" alt="ตัวอย่างแผนที่ขออนุญาต ถนนดอยมูเซอร์"></div>
+          <div class="shot-cap"><span class="shot-tag">Permit Map Example</span><span class="shot-desc">เขตโครงการพัฒนาป่าไม้แสนคำลือ</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>3. ถนนบ้านปางโยน — ฐานปฏิบัติการไม้กาย</h2>
+      <p>เส้นทางพาดผ่านเขตอุทยานแห่งชาติถ้ำปลา-น้ำตกผาเสื่อ และเขตโครงการพระราชดำริปางคอง พร้อมโครงการจัดหาน้ำสนับสนุนบ้านปางโยน โครงการนี้ได้รับใบอนุญาตปรับปรุงเส้นทางตรวจการณ์อย่างเป็นทางการแล้ว</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/singhanat/road-06-maikai-landuse.jpg" data-caption="แผนที่แสดงพื้นที่ขอใช้ประโยชน์ ถนนบ้านปางโยน-ฐานฯไม้กาย ซ้อนทับเขตอนุรักษ์ประเภทต่างๆ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-06-maikai-landuse.jpg" alt="แผนที่พื้นที่ขอใช้ประโยชน์ ถนนไม้กาย"></div>
+          <div class="shot-cap"><span class="shot-tag">Land-use Overview</span><span class="shot-desc">ถนนบ้านปางโยน-ฐานฯไม้กาย</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-07-maikai-aerial.jpg" data-caption="ภาพถ่ายทางอากาศแนวเส้นทางถนนบ้านปางโยน-ฐานฯไม้กาย">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-07-maikai-aerial.jpg" alt="ภาพถ่ายทางอากาศ ถนนไม้กาย"></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Overview</span><span class="shot-desc">ถนนบ้านปางโยน-ฐานฯไม้กาย</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-06b-maikai-topo.jpg" data-caption="แผนที่ภูมิประเทศ (Topo) แนวเส้นทางถนนบ้านปางโยน-ฐานฯไม้กาย">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-06b-maikai-topo.jpg" alt="แผนที่ภูมิประเทศ ถนนไม้กาย"></div>
+          <div class="shot-cap"><span class="shot-tag">Topo Map</span><span class="shot-desc">ถนนบ้านปางโยน-ฐานฯไม้กาย</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-06c-maikai-permit.jpg" data-caption="ตัวอย่างแผนที่ขออนุญาตแนบท้าย แสดงขอบเขตแนวถนนในเขตโครงการพระราชดำริปางคอง">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-06c-maikai-permit.jpg" alt="ตัวอย่างแผนที่ขออนุญาต ถนนไม้กาย"></div>
+          <div class="shot-cap"><span class="shot-tag">Permit Map Example</span><span class="shot-desc">เขตโครงการพระราชดำริปางคอง</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>4. ถนนฐานปฏิบัติการป่าแปก — บ้านแอโก๋</h2>
+      <p>เส้นทางพาดผ่านเขตอุทยานแห่งชาติห้วยน้ำดังและแนวสันปันแดน พร้อมโครงการจัดหาน้ำสนับสนุนบ้านห้วยแห้งและระบบส่งน้ำแนวสันปันแดน</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/singhanat/road-08-pabpaek-landuse.jpg" data-caption="แผนที่แสดงพื้นที่ขอใช้ประโยชน์ ถนนฐานฯป่าแปก-บ้านแอโก๋ ซ้อนทับเขตอนุรักษ์ประเภทต่างๆ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-08-pabpaek-landuse.jpg" alt="แผนที่พื้นที่ขอใช้ประโยชน์ ถนนป่าแปก"></div>
+          <div class="shot-cap"><span class="shot-tag">Land-use Overview</span><span class="shot-desc">ถนนฐานฯป่าแปก-บ้านแอโก๋</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-09-pabpaek-aerial.jpg" data-caption="ภาพถ่ายทางอากาศแนวเส้นทางถนนฐานฯป่าแปก-บ้านแอโก๋">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-09-pabpaek-aerial.jpg" alt="ภาพถ่ายทางอากาศ ถนนป่าแปก"></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Overview</span><span class="shot-desc">ถนนฐานฯป่าแปก-บ้านแอโก๋</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-08b-pabpaek-topo.jpg" data-caption="แผนที่ภูมิประเทศ (Topo) แนวเส้นทางถนนฐานฯป่าแปก-บ้านแอโก๋">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-08b-pabpaek-topo.jpg" alt="แผนที่ภูมิประเทศ ถนนป่าแปก"></div>
+          <div class="shot-cap"><span class="shot-tag">Topo Map</span><span class="shot-desc">ถนนฐานฯป่าแปก-บ้านแอโก๋</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-08c-pabpaek-permit.jpg" data-caption="ตัวอย่างแผนที่ขออนุญาตแนบท้าย แสดงขอบเขตแนวถนนในเขตโครงการพัฒนาป่าไม้">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-08c-pabpaek-permit.jpg" alt="ตัวอย่างแผนที่ขออนุญาต ถนนป่าแปก"></div>
+          <div class="shot-cap"><span class="shot-tag">Permit Map Example</span><span class="shot-desc">เขตโครงการพัฒนาป่าไม้</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>5. ถนนบ้านปายสองแง่ — ฐานปฏิบัติการดอยหัวแหวน</h2>
+      <p>เส้นทางพาดผ่านเขตอุทยานแห่งชาติห้วยน้ำดัง พร้อมโครงการจัดหาน้ำสนับสนุนบ้านปายสองแง่</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/singhanat/road-10-huawaen-landuse.jpg" data-caption="แผนที่แสดงพื้นที่ขอใช้ประโยชน์ ถนนบ้านปายสองแง่-ฐานฯดอยหัวแหวน ซ้อนทับเขตอนุรักษ์ประเภทต่างๆ">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-10-huawaen-landuse.jpg" alt="แผนที่พื้นที่ขอใช้ประโยชน์ ถนนปายสองแง่"></div>
+          <div class="shot-cap"><span class="shot-tag">Land-use Overview</span><span class="shot-desc">ถนนบ้านปายสองแง่-ฐานฯดอยหัวแหวน</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-11-huawaen-aerial.jpg" data-caption="ภาพถ่ายทางอากาศแนวเส้นทางถนนบ้านปายสองแง่-ฐานฯดอยหัวแหวน">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-11-huawaen-aerial.jpg" alt="ภาพถ่ายทางอากาศ ถนนปายสองแง่"></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Overview</span><span class="shot-desc">ถนนบ้านปายสองแง่-ฐานฯดอยหัวแหวน</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-10b-huawaen-topo.jpg" data-caption="แผนที่ภูมิประเทศ (Topo) แนวเส้นทางถนนบ้านปายสองแง่-ฐานฯดอยหัวแหวน">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-10b-huawaen-topo.jpg" alt="แผนที่ภูมิประเทศ ถนนปายสองแง่"></div>
+          <div class="shot-cap"><span class="shot-tag">Topo Map</span><span class="shot-desc">ถนนบ้านปายสองแง่-ฐานฯดอยหัวแหวน</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/singhanat/road-10c-huawaen-permit.jpg" data-caption="ตัวอย่างแผนที่ขออนุญาตแนบท้าย แสดงขอบเขตแนวถนนในเขตอุทยานแห่งชาติห้วยน้ำดัง">
+          <div class="shot-thumb"><img src="../assets/img/singhanat/road-10c-huawaen-permit.jpg" alt="ตัวอย่างแผนที่ขออนุญาต ถนนปายสองแง่"></div>
+          <div class="shot-cap"><span class="shot-tag">Permit Map Example</span><span class="shot-desc">เขตอุทยานแห่งชาติห้วยน้ำดัง</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>ผลลัพธ์และการนำไปใช้</h2>
+      <p>แผนที่ขออนุญาตและแผนที่ค่าระดับความสูงที่จัดทำขึ้นใช้ประกอบการยื่นขออนุญาตใช้พื้นที่กับหน่วยงานเจ้าของพื้นที่แต่ละประเภท (อุทยานแห่งชาติ กรมป่าไม้ อบต. เขตรักษาพันธุ์สัตว์ป่า) ทั้ง 4 เส้นทาง โดยเส้นทางบ้านปางโยน-ฐานฯไม้กายได้รับใบอนุญาตปรับปรุงเส้นทางตรวจการณ์อย่างเป็นทางการแล้ว ช่วยให้หน่วยงานความมั่นคงและชุมชนตามแนวชายแดนเข้าถึงเส้นทางคมนาคมและแหล่งน้ำได้สะดวกขึ้น</p>
+    </div>
+
+    <div class="proj-nav">
+      <a href="permit-map.html"><i class="ti ti-arrow-left"></i> ผลงานก่อนหน้า</a>
+      <a href="spatial-database.html">ผลงานถัดไป <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCap');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function openLightbox(src, caption){
+    lightboxImg.src = src;
+    lightboxCap.textContent = caption || '';
+    lightbox.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('show');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.shot-card').forEach(card=>{
+    card.addEventListener('click', ()=> openLightbox(card.dataset.full, card.dataset.caption));
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

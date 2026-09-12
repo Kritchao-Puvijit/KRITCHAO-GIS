@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ระบบติดตามสถานการณ์น้ำแบบเรียลไทม์ | Kritchao Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo"><span class="dot"></span>KRITCHAO.GIS</a>
+    <div class="navlinks">
+      <a href="../index.html#about">เกี่ยวกับ</a>
+      <a href="../index.html#experience">ประสบการณ์</a>
+      <a href="../index.html#skills">ทักษะ</a>
+      <a href="../index.html#projects" class="active">ผลงาน</a>
+      <a href="../index.html#contact">ติดต่อ</a>
+    </div>
+  </div>
+</nav>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>Webmap</span></div>
+    <div class="proj-cat-badge">Webmap / Dashboard</div>
+    <h1>MHS Water — ระบบเฝ้าระวังและติดตามสถานการณ์น้ำแบบเรียลไทม์ จังหวัดแม่ฮ่องสอน</h1>
+    <p class="proj-lede">เว็บแอปพลิเคชันติดตามปริมาณฝนและระดับน้ำแบบเรียลไทม์สำหรับจังหวัดแม่ฮ่องสอน ดึงข้อมูลสถานีตรวจวัดจาก ThaiWater API และภาพเรดาร์ฝนจาก RainViewer มาแสดงผลบนแผนที่เชิงโต้ตอบ พร้อมกราฟแนวโน้มย้อนหลังรายสถานี</p>
+    <div class="cta-row" style="margin-top:28px;">
+      <a href="https://kritchao-puvijit.github.io/MHS-WATER/" target="_blank" rel="noopener" class="btn btn-primary"><i class="ti ti-external-link"></i> เปิดเว็บไซต์จริง</a>
+      <a href="https://github.com/Kritchao-Puvijit/MHS-WATER" target="_blank" rel="noopener" class="btn btn-ghost"><i class="ti ti-brand-github"></i> ดูซอร์สโค้ด</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;border-top:none;">
+  <div class="wrap">
+    <div class="meta-row">
+      <div class="meta-item"><div class="meta-label">หมวดหมู่</div><div class="meta-value">Web GIS / Dashboard</div></div>
+      <div class="meta-item"><div class="meta-label">พื้นที่ศึกษา</div><div class="meta-value">จังหวัดแม่ฮ่องสอน</div></div>
+      <div class="meta-item"><div class="meta-label">แหล่งข้อมูล</div><div class="meta-value">ThaiWater API, RainViewer</div></div>
+      <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">Leaflet, Chart.js, GeoJSON</div></div>
+    </div>
+
+    <div class="content-block">
+      <h2>โจทย์และที่มา</h2>
+      <p>เจ้าหน้าที่ในพื้นที่จำเป็นต้องติดตามสถานการณ์น้ำอย่างต่อเนื่อง โดยเฉพาะในช่วงฤดูฝนที่มีความเสี่ยงต่อการเกิดอุทกภัย จึงพัฒนาเว็บแอปที่รวบรวมข้อมูลจากสถานีตรวจวัดของกรมทรัพยากรน้ำ (ผ่าน ThaiWater API) และภาพเรดาร์ฝนแบบเรียลไทม์ มาแสดงผลบนแผนที่เดียวกัน แบ่งเป็นสองโมดูลหลักคือ ติดตามปริมาณฝน และ ติดตามระดับน้ำ</p>
+    </div>
+
+    <div class="content-block">
+      <h2>วิธีการดำเนินงาน</h2>
+      <ul>
+        <li>ดึงข้อมูลสถานีตรวจวัดปริมาณฝน/ระดับน้ำแบบเรียลไทม์จาก ThaiWater API</li>
+        <li>ซ้อนภาพเรดาร์ฝนจาก RainViewer และภาพถ่ายดาวเทียม ESRI World Imagery เป็นชั้นข้อมูลอ้างอิง</li>
+        <li>จัดทำขอบเขตการปกครอง (อำเภอ/ตำบล/หมู่บ้าน) เป็น GeoJSON แสดงผลด้วย Leaflet</li>
+        <li>พัฒนากราฟแนวโน้มปริมาณฝนและระดับน้ำย้อนหลังรายสถานีด้วย Chart.js</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h2>ตัวอย่างการใช้งานจริง (Live Demo)</h2>
+      <div class="live-frame-label">
+        <span><span class="live-dot"></span>โมดูลติดตามปริมาณฝน</span>
+        <a href="https://kritchao-puvijit.github.io/MHS-WATER/" target="_blank" rel="noopener">เปิดแบบเต็มหน้าจอ <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+      <div class="live-frame-wrap">
+        <iframe class="live-frame" src="https://kritchao-puvijit.github.io/MHS-WATER/" loading="lazy" title="MHS Water - ระบบติดตามปริมาณฝน"></iframe>
+      </div>
+
+      <div class="live-frame-label">
+        <span><span class="live-dot"></span>โมดูลติดตามระดับน้ำ</span>
+        <a href="https://kritchao-puvijit.github.io/MHS-WATER/waterlevel.html" target="_blank" rel="noopener">เปิดแบบเต็มหน้าจอ <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+      <div class="live-frame-wrap">
+        <iframe class="live-frame" src="https://kritchao-puvijit.github.io/MHS-WATER/waterlevel.html" loading="lazy" title="MHS Water - ระบบติดตามระดับน้ำ"></iframe>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>ผลลัพธ์และการนำไปใช้</h2>
+      <p>ระบบช่วยลดเวลาในการติดตามสถานการณ์น้ำ และทำให้เจ้าหน้าที่สามารถตัดสินใจเชิงรุกได้เร็วขึ้นเมื่อพบสัญญาณความผิดปกติของระดับน้ำหรือปริมาณฝน เว็บแอปเผยแพร่แบบสาธารณะและเข้าถึงได้ทุกที่ผ่านเบราว์เซอร์</p>
+    </div>
+
+    <div class="proj-nav">
+      <a href="terrain-mapping.html"><i class="ti ti-arrow-left"></i> ผลงานก่อนหน้า</a>
+      <a href="uav-survey.html">ผลงานถัดไป <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
+
+</body>
+</html>
