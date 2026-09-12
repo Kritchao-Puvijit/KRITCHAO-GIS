@@ -46,7 +46,37 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .navlinks{display:flex;gap:36px;font-size:14px;color:var(--text-dim);}
 .navlinks a{transition:color .2s;}
 .navlinks a:hover, .navlinks a.active{color:var(--accent);}
-@media(max-width:720px){.navlinks{display:none;}}
+
+.nav-toggle{
+  display:none;width:40px;height:40px;align-items:center;justify-content:center;
+  background:transparent;border:1px solid var(--border-strong);border-radius:8px;
+  color:var(--text);font-size:19px;cursor:pointer;transition:all .2s;flex-shrink:0;
+}
+.nav-toggle:hover, .nav-toggle.active{border-color:var(--accent);color:var(--accent);}
+.nav-toggle .ti-x{display:none;}
+.nav-toggle.active .ti-menu-2{display:none;}
+.nav-toggle.active .ti-x{display:inline-block;}
+
+.nav-dropdown{
+  display:none;flex-direction:column;
+  position:fixed;top:72px;left:0;right:0;z-index:49;
+  background:rgba(11,14,17,0.98);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:8px 32px 16px;
+  max-height:calc(100vh - 72px);overflow-y:auto;
+}
+.nav-dropdown.show{display:flex;}
+.nav-dropdown a{
+  padding:15px 0;font-size:15px;color:var(--text-dim);
+  border-bottom:1px solid var(--border);transition:color .2s;
+}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover, .nav-dropdown a.active{color:var(--accent);}
+
+@media(max-width:720px){
+  .navlinks{display:none;}
+  .nav-toggle{display:flex;}
+}
 
 header.hero{
   min-height:70vh;

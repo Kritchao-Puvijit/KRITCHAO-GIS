@@ -29,6 +29,15 @@
         <a href="#certificates">ใบรับรอง</a>
         <a href="#contact">ติดต่อ</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><i class="ti ti-menu-2"></i><i class="ti ti-x"></i></button>
+    </div>
+    <div class="nav-dropdown" id="navDropdown">
+      <a href="#about">เกี่ยวกับ</a>
+      <a href="#experience">ประสบการณ์</a>
+      <a href="#skills">ทักษะ</a>
+      <a href="#projects">ผลงาน</a>
+      <a href="#certificates">ใบรับรอง</a>
+      <a href="#contact">ติดต่อ</a>
     </div>
   </nav>
 
@@ -577,11 +586,29 @@
   </div>
 
   <script>
+    const navToggle = document.getElementById('navToggle');
+    const navDropdown = document.getElementById('navDropdown');
+    if (navToggle && navDropdown) {
+      navToggle.addEventListener('click', () => {
+        navDropdown.classList.toggle('show');
+        navToggle.classList.toggle('active');
+      });
+      navDropdown.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          navDropdown.classList.remove('show');
+          navToggle.classList.remove('active');
+        });
+      });
+    }
+
     const faders = document.querySelectorAll('.fade-in');
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); } });
-    }, { threshold: 0.12 });
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
     faders.forEach(f => io.observe(f));
+    // Safety net: some tall sections (long photo galleries) can fail to trigger the
+    // reveal animation on certain browsers/viewports — never let content stay hidden.
+    setTimeout(() => faders.forEach(f => f.classList.add('show')), 1200);
 
     const buttons = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.proj-card');
