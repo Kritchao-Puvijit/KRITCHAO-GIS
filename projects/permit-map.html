@@ -71,8 +71,26 @@
     </div>
 
     <div class="content-block">
-      <h2>ภาพประกอบผลงาน</h2>
-      <div class="img-placeholder"><i class="ti ti-photo"></i>แทรกตัวอย่างแผนที่ขออนุญาตตรงนี้</div>
+      <h2>1. โครงการพัฒนาลุ่มน้ำปาย — พื้นที่ป่าสงวนแห่งชาติ ป่าแม่ปายฝั่งซ้าย-ฝั่งขวา</h2>
+      <p>แผนที่ต่อท้ายหนังสืออนุญาต เล่มที่ 15 ฉบับที่ 18 ลงวันที่ 28 มกราคม 2523 แสดงบริเวณที่จังหวัดแม่ฮ่องสอนได้รับอนุญาตให้ใช้พื้นที่ป่าสงวนแห่งชาติ ป่าแม่ปายฝั่งซ้าย ตำบลผาบ่อง เนื้อที่ 2,500 ไร่ และป่าแม่ปายฝั่งขวา ตำบลปางหมู เนื้อที่ 4,700 ไร่ รวมเนื้อที่ประมาณ 7,200 ไร่ เพื่อประโยชน์ในการดำเนินงานตามโครงการพัฒนาลุ่มน้ำปาย ครอบคลุมอ่างเก็บน้ำและระบบส่งน้ำภายในศูนย์ฯ ลุ่มน้ำปายทั้งหมด</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/permit-map/01-paiwatershed-permit-attachment.jpg" data-caption="แผนที่ต่อท้ายหนังสืออนุญาต เล่มที่ 15 ฉบับที่ 18 ลงวันที่ 28 มกราคม 2523 มาตราส่วน 1:50,000 แสดงพื้นที่ขอใช้ประโยชน์ในเขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย-ขวา โครงการพัฒนาลุ่มน้ำปาย">
+          <div class="shot-thumb"><img src="../assets/img/permit-map/01-paiwatershed-permit-attachment.jpg" alt="แผนที่ต่อท้ายหนังสืออนุญาต โครงการพัฒนาลุ่มน้ำปาย"></div>
+          <div class="shot-cap"><span class="shot-tag">Permit Attachment Map · 1:50,000</span><span class="shot-desc">โครงการพัฒนาลุ่มน้ำปาย (7,200 ไร่)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>2. ฝายถาวร 45 แห่ง — ป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย (เขต กปร.-หนองเขียว)</h2>
+      <p>แผนที่ภาพถ่ายดาวเทียมแสดงตำแหน่งฝายถาวร 45 แห่ง ในเขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย พื้นที่โครงการพัฒนาป่าไม้พัฒนาพื้นที่สูงแบบโครงการหลวงหนองเขียว ท้องที่ตำบลผาบ่องและตำบลห้วยโป่ง อำเภอเมืองแม่ฮ่องสอน จัดทำเป็นชุดข้อมูล Shapefile ประกอบการพิจารณาโครงการก่อนยื่นขออนุญาตใช้พื้นที่</p>
+      <div class="shot-grid">
+        <div class="shot-card" data-full="../assets/img/permit-map/02-weir45-nongkhiao-satellite.jpg" data-caption="แผนที่ภาพถ่ายดาวเทียมแสดงตำแหน่งฝายถาวร 45 แห่ง มาตราส่วน 1:250,000 เขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย ต.ผาบ่อง และ ต.ห้วยโป่ง อ.เมืองแม่ฮ่องสอน">
+          <div class="shot-thumb"><img src="../assets/img/permit-map/02-weir45-nongkhiao-satellite.jpg" alt="แผนที่ฝายถาวร 45 แห่ง ป่าแม่ปายฝั่งซ้าย"></div>
+          <div class="shot-cap"><span class="shot-tag">Satellite Overview · 1:250,000</span><span class="shot-desc">ฝายถาวร 45 แห่ง · เขต กปร.-หนองเขียว</span></div>
+        </div>
+      </div>
+      <p style="margin-top:16px;color:var(--text-dim);font-size:14px;">* ผลงานส่วนนี้จะทยอยอัปเดตเพิ่มเติมตามโครงการที่ดำเนินการจริง</p>
     </div>
 
     <div class="content-block">
@@ -89,6 +107,12 @@
 
 <footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
 
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
 <script>
   const navToggle = document.getElementById('navToggle');
   const navDropdown = document.getElementById('navDropdown');
@@ -104,6 +128,29 @@
       });
     });
   }
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCap');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function openLightbox(src, caption){
+    lightboxImg.src = src;
+    lightboxCap.textContent = caption || '';
+    lightbox.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('show');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.shot-card').forEach(card=>{
+    card.addEventListener('click', ()=> openLightbox(card.dataset.full, card.dataset.caption));
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
 </script>
 
 </body>
