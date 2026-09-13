@@ -129,14 +129,6 @@ h1.title{
   margin-bottom:22px;
 }
 h1.title span{color:var(--accent);}
-.lede,
-.about-grid p,
-.t-desc,
-.section-sub,
-.content-block p,
-.proj-hero .proj-lede{
-  text-align:justify;-webkit-text-justify:inter-character;text-justify:inter-character;
-}
 .lede{
   font-size:18px;color:var(--text-dim);max-width:620px;font-weight:300;margin-bottom:36px;
 }
