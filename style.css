@@ -219,12 +219,6 @@ footer{padding:32px 0;text-align:center;color:var(--text-mute);font-size:13px;fo
 }
 .proj-hero h1{font-size:clamp(30px,5vw,48px);font-weight:600;letter-spacing:-1px;margin-bottom:20px;max-width:800px;}
 .proj-hero .proj-lede{color:var(--text-dim);font-size:17px;max-width:680px;}
-.hero-visual{
-  height:320px;border-radius:16px;margin-top:48px;
-  background:linear-gradient(135deg, var(--accent-dim), transparent),repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 14px);
-  border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
-}
-.hero-visual i{font-size:56px;color:var(--accent);opacity:0.85;}
 .meta-row{display:flex;flex-wrap:wrap;gap:40px;padding:32px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:48px 0;}
 .meta-item .meta-label{font-family:var(--mono);font-size:11.5px;color:var(--text-mute);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
 .meta-item .meta-value{font-size:15px;color:var(--text);}
