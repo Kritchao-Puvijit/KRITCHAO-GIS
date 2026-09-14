@@ -20,6 +20,10 @@
   .model-viewer-wrap:fullscreen model-viewer{width:100vw;height:100vh;}
   .model-viewer-wrap:-webkit-full-screen{background:#000;display:flex;align-items:center;justify-content:center;}
   .model-viewer-wrap:-webkit-full-screen model-viewer{width:100vw;height:100vh;}
+  .model-loading{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#0b0e11;opacity:1;transition:opacity .3s ease;font-family:var(--mono);font-size:13px;color:var(--text-mute);}
+  .model-loading.hide{opacity:0;pointer-events:none;}
+  .model-spinner{width:34px;height:34px;border:3px solid rgba(255,255,255,.15);border-top-color:var(--accent,#3ddc97);border-radius:50%;animation:model-spin .8s linear infinite;}
+  @keyframes model-spin{to{transform:rotate(360deg);}}
 </style>
 </head>
 <body>
@@ -90,6 +94,7 @@
         <model-viewer src="../assets/models/huai-pong-3dmodel.glb" orientation="0deg -90deg 0deg" camera-controls auto-rotate auto-rotate-delay="1500" rotation-per-second="18deg" shadow-intensity="0.6" exposure="1" camera-orbit="45deg 55deg auto" min-camera-orbit="auto 5deg auto" max-camera-orbit="auto 100deg auto" touch-action="pan-y" alt="โมเดล 3D จุดอ่างเก็บน้ำห้วยโป่งที่เสียหาย">
         </model-viewer>
         <button class="model-fs-btn" type="button" aria-label="ดูเต็มหน้าจอ" title="ดูเต็มหน้าจอ"><i class="ti ti-arrows-maximize"></i></button>
+        <div class="model-loading"><div class="model-spinner"></div><div>กำลังโหลดโมเดล 3D... <span class="model-loading-pct">0%</span></div></div>
       </div>
       <div class="model-hint"><i class="ti ti-rotate"></i> ลาก/ปัดเพื่อหมุนดูโมเดล 3D จริง · ประมวลผลจาก Dense Cloud ด้วย Metashape แล้วบีบอัดสำหรับเว็บ (จาก 580 MB เหลือ 1.7 MB)</div>
 
@@ -125,6 +130,7 @@
         <model-viewer src="../assets/models/huai-pong-3dmodel-set2.glb" orientation="0deg -90deg 0deg" camera-controls auto-rotate auto-rotate-delay="1500" rotation-per-second="18deg" shadow-intensity="0.6" exposure="1" camera-orbit="45deg 55deg auto" min-camera-orbit="auto 5deg auto" max-camera-orbit="auto 100deg auto" touch-action="pan-y" alt="โมเดล 3D ภาพรวมหมู่บ้าน ถนน และสะพานห้วยโป่งจากชุดข้อมูล Merged Chunk">
         </model-viewer>
         <button class="model-fs-btn" type="button" aria-label="ดูเต็มหน้าจอ" title="ดูเต็มหน้าจอ"><i class="ti ti-arrows-maximize"></i></button>
+        <div class="model-loading"><div class="model-spinner"></div><div>กำลังโหลดโมเดล 3D... <span class="model-loading-pct">0%</span></div></div>
       </div>
       <div class="model-hint"><i class="ti ti-rotate"></i> ลาก/ปัดเพื่อหมุนดูโมเดล 3D จริง · ประมวลผลจาก Dense Cloud ด้วย Metashape แล้วบีบอัดสำหรับเว็บ (จาก 3.14 GB เหลือ 28.7 MB)</div>
 
@@ -265,6 +271,22 @@
         btn.setAttribute('aria-label', btn.title);
       });
     });
+
+    const mv = wrap.querySelector('model-viewer');
+    const loading = wrap.querySelector('.model-loading');
+    const pct = loading ? loading.querySelector('.model-loading-pct') : null;
+    if(mv && loading){
+      mv.addEventListener('progress', (e)=>{
+        const p = Math.round((e.detail.totalProgress || 0) * 100);
+        if(pct) pct.textContent = p + '%';
+      });
+      mv.addEventListener('load', ()=>{
+        loading.classList.add('hide');
+      });
+      mv.addEventListener('error', ()=>{
+        loading.innerHTML = '<div>โหลดโมเดล 3D ไม่สำเร็จ</div>';
+      });
+    }
   });
 </script>
 
