@@ -16,10 +16,8 @@
   .model-hint{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;color:var(--text-mute);margin-bottom:20px;}
   .model-fs-btn{position:absolute;top:10px;right:10px;z-index:5;width:38px;height:38px;border-radius:8px;border:1px solid var(--border-strong);background:rgba(11,14,17,.75);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;backdrop-filter:blur(4px);transition:background .15s,border-color .15s;}
   .model-fs-btn:hover{background:rgba(11,14,17,.95);border-color:var(--accent,#3ddc97);}
-  .model-viewer-wrap:fullscreen{background:#000;display:flex;align-items:center;justify-content:center;}
-  .model-viewer-wrap:fullscreen model-viewer{width:100vw;height:100vh;}
-  .model-viewer-wrap:-webkit-full-screen{background:#000;display:flex;align-items:center;justify-content:center;}
-  .model-viewer-wrap:-webkit-full-screen model-viewer{width:100vw;height:100vh;}
+  .model-viewer-wrap.model-fs-active{position:fixed;inset:0;z-index:1000;border-radius:0;border:none;margin:0;background:#000;display:flex;align-items:center;justify-content:center;}
+  .model-viewer-wrap.model-fs-active model-viewer{width:100vw;height:100vh;}
   .model-loading{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#0b0e11;opacity:1;transition:opacity .3s ease;font-family:var(--mono);font-size:13px;color:var(--text-mute);}
   .model-loading.hide{opacity:0;pointer-events:none;}
   .model-spinner{width:34px;height:34px;border:3px solid rgba(255,255,255,.15);border-top-color:var(--accent,#3ddc97);border-radius:50%;animation:model-spin .8s linear infinite;}
@@ -255,21 +253,21 @@
     const btn = wrap.querySelector('.model-fs-btn');
     const icon = btn.querySelector('i');
     if(!btn) return;
+    // iOS Safari doesn't reliably support the Fullscreen API on arbitrary
+    // elements, so toggle a CSS "fake fullscreen" overlay instead — works
+    // the same across every browser without needing any permission.
+    function setFs(active){
+      wrap.classList.toggle('model-fs-active', active);
+      document.body.style.overflow = active ? 'hidden' : '';
+      icon.className = active ? 'ti ti-arrows-minimize' : 'ti ti-arrows-maximize';
+      btn.title = active ? 'ออกจากเต็มหน้าจอ' : 'ดูเต็มหน้าจอ';
+      btn.setAttribute('aria-label', btn.title);
+    }
     btn.addEventListener('click', ()=>{
-      const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
-      if(!fsEl){
-        (wrap.requestFullscreen || wrap.webkitRequestFullscreen).call(wrap);
-      } else {
-        (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-      }
+      setFs(!wrap.classList.contains('model-fs-active'));
     });
-    ['fullscreenchange','webkitfullscreenchange'].forEach(evt=>{
-      document.addEventListener(evt, ()=>{
-        const isFs = (document.fullscreenElement || document.webkitFullscreenElement) === wrap;
-        icon.className = isFs ? 'ti ti-arrows-minimize' : 'ti ti-arrows-maximize';
-        btn.title = isFs ? 'ออกจากเต็มหน้าจอ' : 'ดูเต็มหน้าจอ';
-        btn.setAttribute('aria-label', btn.title);
-      });
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape' && wrap.classList.contains('model-fs-active')) setFs(false);
     });
 
     const mv = wrap.querySelector('model-viewer');
