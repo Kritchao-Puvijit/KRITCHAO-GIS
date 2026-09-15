@@ -594,6 +594,30 @@
       });
     }
 
+    // Nav bar solidifies once the page has scrolled past the hero
+    const navEl = document.querySelector('nav');
+    const setNavScrolled = () => navEl.classList.toggle('scrolled', window.scrollY > 40);
+    setNavScrolled();
+    window.addEventListener('scroll', setNavScrolled, { passive: true });
+
+    // Scrollspy: highlight the nav link for whichever section is in view
+    const navLinkGroups = [
+      document.querySelectorAll('.navlinks a'),
+      document.querySelectorAll('.nav-dropdown a'),
+    ];
+    const spySections = ['about', 'experience', 'skills', 'projects', 'certificates', 'contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+    const setActiveLink = (id) => {
+      navLinkGroups.forEach(links => links.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      }));
+    };
+    const spyIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) setActiveLink(e.target.id); });
+    }, { threshold: 0, rootMargin: '-45% 0px -50% 0px' });
+    spySections.forEach(s => spyIo.observe(s));
+
     const faders = document.querySelectorAll('.fade-in');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
