@@ -2,6 +2,7 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
+  <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>สำรวจภูมิประเทศด้วย UAV อ่างเก็บน้ำและสะพานห้วยโป่ง | Kritchao Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +40,7 @@
       <a href="../index.html#certificates">ใบรับรอง</a>
       <a href="../index.html#contact">ติดต่อ</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
+    <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
   </div>
   <div class="nav-dropdown" id="navDropdown">
       <a href="../index.html#about">เกี่ยวกับ</a>

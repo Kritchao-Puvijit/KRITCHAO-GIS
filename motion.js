@@ -1,6 +1,21 @@
 // Shared scroll motion: nav solidify-on-scroll, section fade-in reveal,
 // and staggered card-grid cascade. Used by index.html and every project page.
 (function () {
+  // Dark/light theme toggle, persisted in localStorage (dark is the default look).
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const goingLight = document.documentElement.getAttribute('data-theme') !== 'light';
+      if (goingLight) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
+
   const navEl = document.querySelector('nav');
   if (navEl) {
     const setNavScrolled = () => navEl.classList.toggle('scrolled', window.scrollY > 40);
