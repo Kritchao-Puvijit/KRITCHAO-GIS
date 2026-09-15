@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+  <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เปรียบเทียบภาพถ่ายดาวเทียมรายปีด้วย Google Earth Engine | Kritchao Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
+<link rel="stylesheet" href="../style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+<style>
+  .code-block-wrap{border-radius:14px;overflow:hidden;border:1px solid var(--border-strong);background:#0d1117;margin-bottom:12px;}
+  .code-block-label{display:flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,255,255,0.03);border-bottom:1px solid var(--border);font-family:var(--mono);font-size:12.5px;color:var(--text-dim);}
+  .code-block{margin:0;padding:20px;max-height:520px;overflow:auto;font-family:var(--mono);font-size:12.5px;line-height:1.65;color:#c9d1d9;}
+  .code-block::-webkit-scrollbar{width:10px;height:10px;}
+  .code-block::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:6px;}
+  .code-block::-webkit-scrollbar-track{background:transparent;}
+  .hljs-keyword,.hljs-built_in,.hljs-literal{color:#5de3b3;}
+  .hljs-string{color:#ffcb6b;}
+  .hljs-comment{color:#7d8590;font-style:italic;}
+  .hljs-number{color:#f78c6c;}
+  .hljs-title.function_{color:#82aaff;}
+  .hljs-property{color:#c9d1d9;}
+  .live-frame-tall{height:760px;}
+  @media(max-width:640px){.live-frame-tall{height:480px;}}
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo"><span class="dot"></span>KRITCHAO.GIS</a>
+    <div class="navlinks">
+      <a href="../index.html#about">เกี่ยวกับ</a>
+      <a href="../index.html#experience">ประสบการณ์</a>
+      <a href="../index.html#skills">ทักษะ</a>
+      <a href="../index.html#projects" class="active">ผลงาน</a>
+      <a href="../index.html#certificates">ใบรับรอง</a>
+      <a href="../index.html#contact">ติดต่อ</a>
+    </div>
+    <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
+  </div>
+  <div class="nav-dropdown" id="navDropdown">
+      <a href="../index.html#about">เกี่ยวกับ</a>
+      <a href="../index.html#experience">ประสบการณ์</a>
+      <a href="../index.html#skills">ทักษะ</a>
+      <a href="../index.html#projects">ผลงาน</a>
+      <a href="../index.html#certificates">ใบรับรอง</a>
+      <a href="../index.html#contact">ติดต่อ</a>
+  </div>
+</nav>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>RS Change Detection</span></div>
+    <div class="proj-cat-badge">Remote Sensing / Google Earth Engine</div>
+    <h1>เปรียบเทียบภาพถ่ายดาวเทียมรายปีแบบ<span class="nb">อินเทอร์แอกทีฟ</span> <span class="nb">อำเภอเมืองเชียงใหม่</span></h1>
+    <p class="proj-lede">GEE Application แบบ split-view เปรียบเทียบภาพถ่ายดาวเทียม Sentinel-2 และ Landsat 8/9 ระหว่างปีที่เลือกได้อิสระทั้งสองฝั่ง แสดงได้ทั้งภาพสีจริง (True Color) ภาพ False Color, ดัชนีพืชพรรณ (NDVI), ดัชนีพื้นที่เมือง (NDBI) รวมถึงภาพขาวดำความละเอียดสูงและภาพ Pansharpen ของ Landsat เพื่อติดตามการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองในแต่ละปี</p>
+    <div class="cta-row" style="margin-top:28px;">
+      <a href="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" target="_blank" rel="noopener" class="btn btn-primary"><i class="ti ti-external-link"></i> เปิดแอปจริง</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;border-top:none;">
+  <div class="wrap">
+    <div class="meta-row">
+      <div class="meta-item"><div class="meta-label">หมวดหมู่</div><div class="meta-value">Remote Sensing / GEE App</div></div>
+      <div class="meta-item"><div class="meta-label">พื้นที่ศึกษา</div><div class="meta-value">อำเภอเมืองเชียงใหม่ จังหวัดเชียงใหม่</div></div>
+      <div class="meta-item"><div class="meta-label">แหล่งข้อมูล</div><div class="meta-value">Sentinel-2, Landsat 8/9</div></div>
+      <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">Google Earth Engine, JavaScript</div></div>
+    </div>
+
+    <div class="content-block fade-in">
+      <h2>โจทย์และที่มา</h2>
+      <p>การติดตามการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองอย่างต่อเนื่องเป็นข้อมูลสำคัญสำหรับงานด้านนโยบายที่ดินและการบริหารจัดการทรัพยากรธรรมชาติ จึงพัฒนาเครื่องมือเปรียบเทียบภาพถ่ายดาวเทียมรายปีแบบอินเทอร์แอกทีฟ ให้ผู้ใช้เลือกปีและประเภทภาพได้อิสระทั้งสองฝั่งของหน้าจอ แล้วลากแถบกลางเพื่อเทียบความแตกต่าง โดยไม่ต้องเปิดโปรแกรม GIS หรือดาวน์โหลดภาพเอง</p>
+    </div>
+
+    <div class="content-block fade-in">
+      <h2>วิธีการดำเนินงาน</h2>
+      <ul>
+        <li>ดึงภาพ Sentinel-2 (Surface Reflectance) และ Landsat 8/9 (TOA) ผ่าน Google Earth Engine เฉพาะช่วงหน้าแล้ง (ม.ค.-มี.ค.) ของแต่ละปี เพื่อให้ได้ภาพเมฆน้อยและประมวลผลเร็ว</li>
+        <li>กรองเมฆด้วย CLOUDY_PIXEL_PERCENTAGE / CLOUD_COVER แล้วทำ median composite รายปี</li>
+        <li>คำนวณดัชนี NDVI และ NDBI จากค่าการสะท้อนแสงแต่ละแบนด์</li>
+        <li>ทำ Pan-sharpening ภาพ Landsat ด้วยเทคนิค HSV swap (แทนช่อง Value ด้วยแบนด์ขาวดำความละเอียด 15m) เพื่อเพิ่มความคมชัดของภาพสี</li>
+        <li>ออกแบบ UI แบบ Split-panel (wipe compare) ด้วย GEE UI API พร้อม dropdown เลือกแหล่งภาพ/ปี/ประเภทภาพอิสระทั้งสองฝั่ง แล้ว publish เป็น GEE Application</li>
+      </ul>
+    </div>
+
+    <div class="content-block fade-in">
+      <h2>ตัวอย่างการใช้งานจริง (Live Demo)</h2>
+      <div class="live-frame-label">
+        <span><span class="live-dot"></span>เปรียบเทียบภาพถ่ายดาวเทียมรายปี</span>
+        <a href="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" target="_blank" rel="noopener">เปิดแบบเต็มหน้าจอ <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+      <div class="live-frame-wrap">
+        <iframe class="live-frame live-frame-tall" src="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" loading="lazy" title="เปรียบเทียบภาพถ่ายดาวเทียมรายปี - อำเภอเมืองเชียงใหม่"></iframe>
+      </div>
+
+      <div class="shot-grid" style="margin-top:20px;">
+        <div class="shot-card" data-full="../assets/img/gee-chiangmai/01-split-compare.jpg" data-caption="เปรียบเทียบ Sentinel-2 True Color ปี 2016 (ซ้าย) กับปี 2025 (ขวา) บริเวณอำเภอเมืองเชียงใหม่">
+          <div class="shot-thumb"><img src="../assets/img/gee-chiangmai/01-split-compare.jpg" alt="Sentinel-2 True Color เทียบปี 2016 กับ 2025"></div>
+          <div class="shot-cap"><span class="shot-tag">Sentinel-2 · Split View</span><span class="shot-desc">True Color ปี 2016 vs 2025</span></div>
+        </div>
+        <div class="shot-card" data-full="../assets/img/gee-chiangmai/02-landsat-pansharpen.jpg" data-caption="เทียบ Sentinel-2 True Color ปี 2016 (ซ้าย) กับ Landsat 8/9 Pansharpen ปี 2025 (ขวา) แสดงความคมชัดที่เพิ่มขึ้นจาก Pan-sharpening">
+          <div class="shot-thumb"><img src="../assets/img/gee-chiangmai/02-landsat-pansharpen.jpg" alt="Landsat 8/9 Pansharpen เทียบกับ Sentinel-2"></div>
+          <div class="shot-cap"><span class="shot-tag">Landsat 8/9 · Pansharpen</span><span class="shot-desc">สลับแหล่งภาพและประเภทภาพได้อิสระ</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block fade-in">
+      <h2>ตัวอย่างโค้ด GEE JavaScript (Full Source)</h2>
+      <p>สคริปต์เต็มที่ใช้สร้างแอปนี้ เขียนด้วย GEE JavaScript API รันบน Google Earth Engine ครอบคลุมตั้งแต่การดึงข้อมูลดาวเทียม คำนวณดัชนี ทำ Pan-sharpening จนถึงสร้าง UI แบบ split-view</p>
+      <div class="code-block-wrap">
+        <div class="code-block-label"><i class="ti ti-brand-javascript"></i> main.js — Google Earth Engine Code Editor</div>
+        <pre class="code-block"><code class="language-javascript">/**
+ * GEE App: เปรียบเทียบภาพถ่ายดาวเทียมรายปี — อำเภอเมืองเชียงใหม่
+ * Split-view (swipe) comparison between two user-selected years.
+ * Each side lets you pick independently:
+ *   - แหล่งภาพ (Source)  : Sentinel-2  หรือ  Landsat 8/9
+ *   - ปี (Year)
+ *   - ประเภทภาพ (Layer)  :
+ *       Sentinel-2 → True Color (TCI) / False Color (FCI) / NDVI / NDBI
+ *       Landsat    → True Color / False Color / NDVI / NDBI /
+ *                    Panchromatic (ขาวดำ, 15m) / Pansharpen (TCI ความละเอียดสูง)
+ *
+ * AOI = อำเภอเมืองเชียงใหม่ เป็นกรอบสี่เหลี่ยมธรรมดา (section 1) — เร็วกว่าครอบทั้งจังหวัด
+ *
+ * Speed: each yearly composite only pulls scenes from a 3-month dry-season
+ * window (Jan-Mar, section 2) instead of the full calendar year — cuts the
+ * number of images median() churns through by ~4x with minimal quality
+ * loss, since Northern Thailand is clearest Dec-Feb anyway.
+ *
+ * Layout: title → controls row (both sides) → split map → status row (both
+ * sides), all stacked vertically. Dropdowns are NOT overlaid on the map (see
+ * the note at section 5 for why that broke the right-hand side previously).
+ *
+ * HOW TO USE:
+ *  1. Paste this entire script into code.earthengine.google.com (new script).
+ *  2. Click &quot;Run&quot;. A split map should appear with dropdowns above each side.
+ *  3. To publish as a public app: Apps (top toolbar) &gt; Publish new App &gt;
+ *     point it at this script &gt; Publish. You&#x27;ll get a shareable URL like
+ *     https://&lt;username&gt;.projects.earthengine.app/view/&lt;app-name&gt;
+ *
+ * CUSTOMIZE:
+ *  - AOI: section 1 — plain bbox, edit the 4 coordinates directly.
+ *  - YEARS: section 5.
+ *  - Composite date window: DRY_SEASON_START_MONTH / DRY_SEASON_MONTHS in
+ *    section 2. Widen this (or set DRY_SEASON_MONTHS to 12) if a particular
+ *    year&#x27;s Jan-Mar composite still looks too cloudy.
+ *  - Cloud filter thresholds: section 2 (CLOUDY_PIXEL_PERCENTAGE / CLOUD_COVER).
+ *  - Pansharpen min/max stretch: section 4 (TOA reflectance scale — tweak
+ *    after a visual check, this wasn&#x27;t hand-tuned against a live run).
+ */
+
+// ============================================================
+// 1. Area of interest — อำเภอเมืองเชียงใหม่ (กรอบสี่เหลี่ยมธรรมดา)
+// ============================================================
+// GAUL district-level boundary lookup was tried and dropped — name matching
+// at that level turned out unreliable in practice (matched a tiny/wrong
+// feature instead of the real district). Plain bbox is simple and correct;
+// widen/move these 4 numbers [west, south, east, north] as needed.
+var aoi = ee.Geometry.Rectangle([98.90, 18.70, 99.05, 18.87]);
+
+var aoiOutline = ee.Image().byte()
+  .paint({featureCollection: ee.FeatureCollection([ee.Feature(aoi)]), color: 1, width: 2});
+
+// ============================================================
+// 2. Composites per data source (cloud-filtered median, per year)
+//
+//    Speed: use a 3-month dry-season window (Jan-Mar) instead of the full
+//    calendar year. Northern Thailand is clearest Dec-Feb, so this window
+//    still gives a clean composite while cutting the number of candidate
+//    scenes median() has to churn through by roughly 4x — the interactive
+//    dropdowns stay fully live (every year still computed on demand), this
+//    just makes each computation itself faster. Widen back to a full year
+//    (see DRY_SEASON_* below) if a given year&#x27;s window turns out too cloudy.
+// ============================================================
+var DRY_SEASON_START_MONTH = 1; // January
+var DRY_SEASON_MONTHS = 3;      // Jan-Mar
+
+function getS2Composite(year) {
+  var start = ee.Date.fromYMD(year, DRY_SEASON_START_MONTH, 1);
+  var end = start.advance(DRY_SEASON_MONTHS, &#x27;month&#x27;);
+  return ee.ImageCollection(&#x27;COPERNICUS/S2_SR_HARMONIZED&#x27;)
+    .filterBounds(aoi)
+    .filterDate(start, end)
+    .filter(ee.Filter.lt(&#x27;CLOUDY_PIXEL_PERCENTAGE&#x27;, 20))
+    .median()
+    .clip(aoi);
+}
+
+function addS2Indices(img) {
+  return img.addBands([
+    img.normalizedDifference([&#x27;B8&#x27;, &#x27;B4&#x27;]).rename(&#x27;NDVI&#x27;),
+    img.normalizedDifference([&#x27;B11&#x27;, &#x27;B8&#x27;]).rename(&#x27;NDBI&#x27;)
+  ]);
+}
+
+// Landsat: TOA collection (not Surface Reflectance) so the 15m panchromatic
+// band (B8) is available for the Panchromatic/Pansharpen layer options.
+function getLandsatComposite(year) {
+  var start = ee.Date.fromYMD(year, DRY_SEASON_START_MONTH, 1);
+  var end = start.advance(DRY_SEASON_MONTHS, &#x27;month&#x27;);
+  var l8 = ee.ImageCollection(&#x27;LANDSAT/LC08/C02/T1_TOA&#x27;)
+    .filterBounds(aoi).filterDate(start, end)
+    .filter(ee.Filter.lt(&#x27;CLOUD_COVER&#x27;, 20));
+  var l9 = ee.ImageCollection(&#x27;LANDSAT/LC09/C02/T1_TOA&#x27;)
+    .filterBounds(aoi).filterDate(start, end)
+    .filter(ee.Filter.lt(&#x27;CLOUD_COVER&#x27;, 20));
+  return l8.merge(l9).median().clip(aoi);
+}
+
+function addLandsatIndices(img) {
+  return img.addBands([
+    img.normalizedDifference([&#x27;B5&#x27;, &#x27;B4&#x27;]).rename(&#x27;NDVI&#x27;),
+    img.normalizedDifference([&#x27;B6&#x27;, &#x27;B5&#x27;]).rename(&#x27;NDBI&#x27;)
+  ]);
+}
+
+// ============================================================
+// 3. Pan-sharpening (HSV swap: replace the &quot;value&quot; channel of the RGB
+//    composite with the sharper 15m panchromatic band, standard EE recipe)
+// ============================================================
+function pansharpenLandsat(img) {
+  var rgb = img.select([&#x27;B4&#x27;, &#x27;B3&#x27;, &#x27;B2&#x27;]);
+  var pan = img.select(&#x27;B8&#x27;);
+  var huesat = rgb.rgbToHsv().select(&#x27;hue&#x27;, &#x27;saturation&#x27;);
+  return ee.Image.cat(huesat, pan).hsvToRgb().rename([&#x27;B4&#x27;, &#x27;B3&#x27;, &#x27;B2&#x27;]);
+}
+
+// ============================================================
+// 4. Visualization parameters + per-source image builder
+// ============================================================
+var visNDVI = {
+  bands: [&#x27;NDVI&#x27;], min: -0.2, max: 0.8,
+  palette: [&#x27;a50026&#x27;, &#x27;d73027&#x27;, &#x27;f46d43&#x27;, &#x27;fdae61&#x27;, &#x27;fee08b&#x27;,
+            &#x27;ffffbf&#x27;, &#x27;d9ef8b&#x27;, &#x27;a6d96a&#x27;, &#x27;66bd63&#x27;, &#x27;1a9850&#x27;, &#x27;006837&#x27;]
+};
+var visNDBI = {
+  bands: [&#x27;NDBI&#x27;], min: -0.5, max: 0.5,
+  palette: [&#x27;2166ac&#x27;, &#x27;67a9cf&#x27;, &#x27;d1e5f0&#x27;, &#x27;f7f7f7&#x27;, &#x27;fddbc7&#x27;, &#x27;ef8a62&#x27;, &#x27;b2182b&#x27;]
+};
+
+var SOURCES = {
+  &#x27;Sentinel-2&#x27;: {
+    layers: [&#x27;True Color (TCI)&#x27;, &#x27;False Color (FCI)&#x27;, &#x27;NDVI (พืชพรรณ)&#x27;, &#x27;NDBI (พื้นที่เมือง)&#x27;],
+    getImage: function (year) { return addS2Indices(getS2Composite(year)); },
+    vis: {
+      &#x27;True Color (TCI)&#x27;: {bands: [&#x27;B4&#x27;, &#x27;B3&#x27;, &#x27;B2&#x27;], min: 0, max: 3000, gamma: 1.1},
+      &#x27;False Color (FCI)&#x27;: {bands: [&#x27;B8&#x27;, &#x27;B4&#x27;, &#x27;B3&#x27;], min: 0, max: 4000, gamma: 1.1},
+      &#x27;NDVI (พืชพรรณ)&#x27;: visNDVI,
+      &#x27;NDBI (พื้นที่เมือง)&#x27;: visNDBI
+    }
+  },
+  &#x27;Landsat 8/9&#x27;: {
+    layers: [&#x27;True Color&#x27;, &#x27;False Color&#x27;, &#x27;NDVI&#x27;, &#x27;NDBI&#x27;,
+             &#x27;Panchromatic (ขาวดำ)&#x27;, &#x27;Pansharpen (TCI ความละเอียดสูง)&#x27;],
+    getImage: function (year, layerType) {
+      var raw = getLandsatComposite(year);
+      if (layerType === &#x27;Pansharpen (TCI ความละเอียดสูง)&#x27;) {
+        return pansharpenLandsat(raw);
+      }
+      return addLandsatIndices(raw); // NDVI/NDBI bands added; B8 pan stays available too
+    },
+    vis: {
+      // TOA reflectance is roughly 0-1 (typically &lt;0.4 for land); tweak
+      // min/max after a visual check if scenes look too dark/bright.
+      &#x27;True Color&#x27;: {bands: [&#x27;B4&#x27;, &#x27;B3&#x27;, &#x27;B2&#x27;], min: 0, max: 0.3, gamma: 1.1},
+      &#x27;False Color&#x27;: {bands: [&#x27;B5&#x27;, &#x27;B4&#x27;, &#x27;B3&#x27;], min: 0, max: 0.4, gamma: 1.1},
+      &#x27;NDVI&#x27;: visNDVI,
+      &#x27;NDBI&#x27;: visNDBI,
+      &#x27;Panchromatic (ขาวดำ)&#x27;: {bands: [&#x27;B8&#x27;], min: 0, max: 0.3},
+      &#x27;Pansharpen (TCI ความละเอียดสูง)&#x27;: {bands: [&#x27;B4&#x27;, &#x27;B3&#x27;, &#x27;B2&#x27;], min: 0, max: 0.3, gamma: 1.1}
+    }
+  }
+};
+var SOURCE_NAMES = Object.keys(SOURCES);
+
+// ============================================================
+// 5. Build one side: a bare ui.Map (for the SplitPanel/Linker) plus its
+//    OWN controls row + status label as separate, non-overlaid widgets.
+//
+//    Earlier version used map.add(controls) to overlay the dropdowns
+//    directly on each map. That broke the right-hand side: ui.SplitPanel&#x27;s
+//    wipe/swipe effect works by rendering both maps full-width and masking
+//    each to only reveal its half — the right map&#x27;s &quot;top-left&quot; overlay
+//    lands in screen space that belongs to the LEFT half, so it was being
+//    clipped away by that mask (not actually a layout bug, a consequence of
+//    how the wipe mask works). Keeping the maps bare and putting every
+//    dropdown/label in ordinary flow panels above/below the split map
+//    sidesteps this entirely — nothing is ever overlaid on a masked map.
+// ============================================================
+var YEARS = [&#x27;2018&#x27;, &#x27;2019&#x27;, &#x27;2020&#x27;, &#x27;2021&#x27;, &#x27;2022&#x27;, &#x27;2023&#x27;, &#x27;2024&#x27;, &#x27;2025&#x27;];
+
+function buildSide(defaultSource, defaultYear, defaultLayer, sideLabel) {
+  var map = ui.Map();
+  map.setControlVisibility({layerList: false, zoomControl: false, fullscreenControl: false});
+  map.centerObject(aoi, 12);
+
+  var state = {source: defaultSource, year: defaultYear, layerType: defaultLayer};
+  var statusLabel = ui.Label(&#x27;&#x27;, {fontSize: &#x27;12px&#x27;, color: &#x27;#666666&#x27;, margin: &#x27;4px 8px&#x27;});
+
+  function render() {
+    map.layers().reset([]);
+    var year = parseInt(state.year, 10);
+    var src = SOURCES[state.source];
+    var img = src.getImage(year, state.layerType);
+    map.addLayer(img, src.vis[state.layerType], state.layerType + &#x27; &#x27; + state.year);
+    map.addLayer(aoiOutline, {palette: [&#x27;ffffff&#x27;]}, &#x27;ขอบเขตอำเภอเมืองเชียงใหม่&#x27;, true, 0.7);
+    statusLabel.setValue(sideLabel + &#x27;:  &#x27; + state.source + &#x27;  ·  ปี &#x27; + state.year + &#x27;  ·  &#x27; + state.layerType);
+  }
+
+  var layerSelect = ui.Select({
+    items: SOURCES[defaultSource].layers, value: defaultLayer,
+    onChange: function (v) { state.layerType = v; render(); },
+    style: {stretch: &#x27;horizontal&#x27;}
+  });
+
+  var sourceSelect = ui.Select({
+    items: SOURCE_NAMES, value: defaultSource,
+    onChange: function (v) {
+      state.source = v;
+      var newLayers = SOURCES[v].layers;
+      layerSelect.items().reset(newLayers);
+      state.layerType = newLayers[0];
+      layerSelect.setValue(newLayers[0], false); // false = don&#x27;t re-fire onChange
+      render();
+    },
+    style: {stretch: &#x27;horizontal&#x27;}
+  });
+
+  var yearSelect = ui.Select({
+    items: YEARS, value: defaultYear,
+    onChange: function (v) { state.year = v; render(); },
+    style: {stretch: &#x27;horizontal&#x27;}
+  });
+
+  var controlsRow = ui.Panel({
+    widgets: [ui.Label(sideLabel, {fontWeight: &#x27;bold&#x27;, margin: &#x27;4px 8px 4px 8px&#x27;}),
+              sourceSelect, yearSelect, layerSelect],
+    layout: ui.Panel.Layout.flow(&#x27;horizontal&#x27;),
+    style: {stretch: &#x27;horizontal&#x27;, padding: &#x27;4px&#x27;}
+  });
+
+  render();
+  return {map: map, controlsRow: controlsRow, statusLabel: statusLabel};
+}
+
+// ============================================================
+// 6. Assemble: controls row (both sides) → split map → status row
+// ============================================================
+var left = buildSide(&#x27;Sentinel-2&#x27;, &#x27;2019&#x27;, &#x27;True Color (TCI)&#x27;, &#x27;ซ้าย&#x27;);
+var right = buildSide(&#x27;Sentinel-2&#x27;, &#x27;2025&#x27;, &#x27;True Color (TCI)&#x27;, &#x27;ขวา&#x27;);
+
+ui.Map.Linker([left.map, right.map]);
+
+var splitPanel = ui.SplitPanel({
+  firstPanel: left.map,
+  secondPanel: right.map,
+  orientation: &#x27;horizontal&#x27;,
+  wipe: true,
+  style: {stretch: &#x27;both&#x27;}
+});
+
+var controlsBar = ui.Panel({
+  widgets: [left.controlsRow, right.controlsRow],
+  layout: ui.Panel.Layout.flow(&#x27;horizontal&#x27;),
+  style: {stretch: &#x27;horizontal&#x27;}
+});
+var statusBar = ui.Panel({
+  widgets: [left.statusLabel, right.statusLabel],
+  layout: ui.Panel.Layout.flow(&#x27;horizontal&#x27;),
+  style: {stretch: &#x27;horizontal&#x27;}
+});
+
+var title = ui.Panel({
+  widgets: [
+    ui.Label(&#x27;เปรียบเทียบภาพถ่ายดาวเทียมรายปี — อำเภอเมืองเชียงใหม่&#x27;,
+      {fontWeight: &#x27;bold&#x27;, fontSize: &#x27;18px&#x27;, margin: &#x27;8px 8px 0px 8px&#x27;}),
+    ui.Label(&#x27;ลากแถบตรงกลางเพื่อเทียบภาพซ้าย/ขวา · แต่ละฝั่งเลือกแหล่งภาพ ปี และประเภทภาพได้อิสระ&#x27;,
+      {fontSize: &#x27;12px&#x27;, color: &#x27;#666666&#x27;, margin: &#x27;2px 8px 8px 8px&#x27;})
+  ]
+});
+
+var appLayout = ui.Panel({
+  widgets: [title, controlsBar, splitPanel, statusBar],
+  layout: ui.Panel.Layout.flow(&#x27;vertical&#x27;),
+  style: {stretch: &#x27;both&#x27;, height: &#x27;100%&#x27;}
+});
+
+ui.root.clear();
+ui.root.add(appLayout);
+</code></pre>
+      </div>
+    </div>
+
+    <div class="content-block fade-in">
+      <h2>ผลลัพธ์และการนำไปใช้</h2>
+      <p>เครื่องมือนี้ช่วยให้เห็นการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองเชียงใหม่ในแต่ละปีได้ทันทีผ่านเบราว์เซอร์ โดยไม่ต้องเปิดโปรแกรม GIS เผยแพร่เป็น GEE Application สาธารณะ เข้าถึงได้ทุกที่ เหมาะสำหรับงานติดตามทรัพยากรธรรมชาติและนโยบายที่ดินที่ต้องอ้างอิงข้อมูลภาพถ่ายดาวเทียมย้อนหลังหลายปี</p>
+    </div>
+
+    <div class="proj-nav">
+      <a href="singhanat-water.html"><i class="ti ti-arrow-left"></i> ผลงานก่อนหน้า</a>
+      <a href="../index.html#projects">กลับไปหน้าผลงาน <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<script src="../motion.js"></script>
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navDropdown = document.getElementById('navDropdown');
+  if (navToggle && navDropdown) {
+    navToggle.addEventListener('click', () => {
+      navDropdown.classList.toggle('show');
+      navToggle.classList.toggle('active');
+    });
+    navDropdown.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navDropdown.classList.remove('show');
+        navToggle.classList.remove('active');
+      });
+    });
+  }
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCap');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function openLightbox(src, caption) {
+    lightboxImg.src = src;
+    lightboxCap.textContent = caption || '';
+    lightbox.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('show');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.shot-card').forEach(card => {
+    card.addEventListener('click', () => openLightbox(card.dataset.full, card.dataset.caption));
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+  if (window.hljs) { hljs.highlightAll(); }
+</script>
+</body>
+</html>
