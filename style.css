@@ -212,6 +212,12 @@ footer{padding:32px 0;text-align:center;color:var(--text-mute);font-size:13px;fo
 .fade-in{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
 .fade-in.show{opacity:1;transform:translateY(0);}
 
+.proj-card,.skill-card,.cert-card{opacity:0;transform:translateY(18px);transition:opacity .5s ease, transform .35s ease, border-color .2s;}
+.proj-card.show,.skill-card.show,.cert-card.show{opacity:1;transform:translateY(0);}
+@media(prefers-reduced-motion: reduce){
+  .fade-in,.proj-card,.skill-card,.cert-card{opacity:1!important;transform:none!important;transition:none!important;}
+}
+
 /* project detail page */
 .breadcrumb{font-family:var(--mono);font-size:13px;color:var(--text-mute);display:flex;align-items:center;gap:8px;margin-bottom:28px;}
 .breadcrumb a{color:var(--text-dim);}

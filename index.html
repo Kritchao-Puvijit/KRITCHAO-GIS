@@ -599,9 +599,29 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
     }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
     faders.forEach(f => io.observe(f));
+
+    // Staggered cascade reveal for card grids (skills / projects / certificates)
+    const cardGrids = [
+      document.querySelectorAll('#skills .skill-card'),
+      document.querySelectorAll('#projects .proj-card'),
+      document.querySelectorAll('#certificates .cert-card'),
+    ];
+    const cardIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); cardIo.unobserve(e.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+    cardGrids.forEach(grid => {
+      grid.forEach((card, i) => {
+        card.style.transitionDelay = (i * 70) + 'ms';
+        cardIo.observe(card);
+      });
+    });
+
     // Safety net: some tall sections (long photo galleries) can fail to trigger the
     // reveal animation on certain browsers/viewports — never let content stay hidden.
-    setTimeout(() => faders.forEach(f => f.classList.add('show')), 1200);
+    setTimeout(() => {
+      faders.forEach(f => f.classList.add('show'));
+      cardGrids.forEach(grid => grid.forEach(c => c.classList.add('show')));
+    }, 1200);
 
     const buttons = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.proj-card');
