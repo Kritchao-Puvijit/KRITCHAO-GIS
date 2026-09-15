@@ -241,10 +241,10 @@ footer{padding:32px 0;text-align:center;color:var(--text-mute);font-size:13px;fo
 .fade-in{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
 .fade-in.show{opacity:1;transform:translateY(0);}
 
-.proj-card,.skill-card,.cert-card{opacity:0;transform:translateY(18px);transition:opacity .5s ease, transform .35s ease, border-color .2s;}
-.proj-card.show,.skill-card.show,.cert-card.show{opacity:1;transform:translateY(0);}
+.proj-card,.skill-card,.cert-card,.shot-card{opacity:0;transform:translateY(18px);transition:opacity .5s ease, transform .35s ease, border-color .2s;}
+.proj-card.show,.skill-card.show,.cert-card.show,.shot-card.show{opacity:1;transform:translateY(0);}
 @media(prefers-reduced-motion: reduce){
-  .fade-in,.proj-card,.skill-card,.cert-card{opacity:1!important;transform:none!important;transition:none!important;}
+  .fade-in,.proj-card,.skill-card,.cert-card,.shot-card{opacity:1!important;transform:none!important;transition:none!important;}
 }
 
 /* project detail page */
@@ -261,6 +261,19 @@ footer{padding:32px 0;text-align:center;color:var(--text-mute);font-size:13px;fo
 .proj-hero .proj-lede{color:var(--text-dim);font-size:17px;max-width:680px;}
 @media(max-width:600px){
   .proj-hero h1{font-size:26px;letter-spacing:-0.3px;line-height:1.35;}
+}
+
+.proj-hero .breadcrumb,.proj-hero .proj-cat-badge,.proj-hero h1,.proj-hero .proj-lede{
+  opacity:0;animation:heroIn .7s cubic-bezier(.16,1,.3,1) forwards;
+}
+.proj-hero .breadcrumb{animation-delay:.05s;}
+.proj-hero .proj-cat-badge{animation-delay:.13s;}
+.proj-hero h1{animation-delay:.2s;}
+.proj-hero .proj-lede{animation-delay:.32s;}
+@media(prefers-reduced-motion: reduce){
+  .proj-hero .breadcrumb,.proj-hero .proj-cat-badge,.proj-hero h1,.proj-hero .proj-lede{
+    opacity:1;animation:none;transform:none;
+  }
 }
 .meta-row{display:flex;flex-wrap:wrap;gap:40px;padding:32px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:48px 0;}
 .meta-item .meta-label{font-family:var(--mono);font-size:11.5px;color:var(--text-mute);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
@@ -282,7 +295,7 @@ footer{padding:32px 0;text-align:center;color:var(--text-mute);font-size:13px;fo
 
 /* project detail image gallery (reuses .lightbox from certificates) */
 .shot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:8px;}
-.shot-card{cursor:zoom-in;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--card);transition:border-color .2s, transform .2s;}
+.shot-card{cursor:zoom-in;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--card);}
 .shot-card:hover{border-color:var(--accent);transform:translateY(-3px);}
 .shot-thumb{height:200px;overflow:hidden;background:#0b0e11;}
 .shot-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease;}

@@ -69,12 +69,12 @@
       <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">DJI Air 2S, Agisoft Metashape, WebODM</div></div>
     </div>
 
-    <div class="content-block">
+    <div class="content-block fade-in">
       <h2>โจทย์และที่มา</h2>
       <p>หลังพายุคาจิกิทำให้อ่างเก็บน้ำห้วยโป่งเสียหายและสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108 ขาด (อ้างอิงจากผลงาน <a href="huai-pong.html" style="color:var(--accent);">RS Change Detection</a> ที่วิเคราะห์ด้วยภาพถ่ายดาวเทียม) จำเป็นต้องเก็บข้อมูลภูมิประเทศระดับพื้นที่ (ground-level) ที่ละเอียดกว่าเพื่อใช้ประเมินขอบเขตความเสียหายเชิงปริมาตรและสนับสนุนการออกแบบซ่อมแซม จึงบินสำรวจด้วย UAV แบ่งเป็น 2 ชุดข้อมูล คือ จุดอ่างเก็บน้ำ/สันทำนบที่เสียหายโดยตรง (ระยะใกล้) และภาพรวมหมู่บ้าน ถนน และสะพานห้วยโป่งตลอดแนว (ระยะกว้าง)</p>
     </div>
 
-    <div class="content-block">
+    <div class="content-block fade-in">
       <h2>วิธีการดำเนินงาน</h2>
       <ul>
         <li>วางแผนเส้นทางบินและถ่ายภาพด้วยโดรน DJI Air 2S ครอบคลุมทั้งจุดอ่างเก็บน้ำที่เสียหายและแนวถนน/สะพานห้วยโป่ง</li>
@@ -84,7 +84,7 @@
       </ul>
     </div>
 
-    <div class="content-block">
+    <div class="content-block fade-in">
       <h2>ชุดข้อมูลที่ 1 — จุดอ่างเก็บน้ำห้วยโป่ง (ระยะใกล้)</h2>
       <p>ภาพถ่าย 44 ภาพ ประมวลผลเป็น Dense Cloud 79,014,605 จุด และ 3D Model 22,289,012 หน้า แสดงสภาพสันทำนบและร่องน้ำกัดเซาะที่จุดเสียหายโดยตรง</p>
 
@@ -120,7 +120,7 @@
       </div>
     </div>
 
-    <div class="content-block">
+    <div class="content-block fade-in">
       <h2>ชุดข้อมูลที่ 2 — ภาพรวมหมู่บ้าน ถนน และสะพานห้วยโป่ง (ระยะกว้าง)</h2>
       <p>ภาพถ่ายรวม 1,424 ภาพ แบ่งประมวลผล 3 Chunk แล้วรวมเป็น Merged Chunk 712 ภาพ (2,242,317 Tie Points) ครอบคลุมหมู่บ้าน ถนน สะพานห้วยโป่ง และพื้นที่เกษตรกรรมโดยรอบ</p>
 
@@ -160,7 +160,7 @@
       </div>
     </div>
 
-    <div class="content-block">
+    <div class="content-block fade-in">
       <h2>เครื่องมือเสริม — WebODM</h2>
       <p>นอกจาก Agisoft Metashape ยังทดลองใช้ WebODM ซึ่งเป็นซอฟต์แวร์โอเพนซอร์สสำหรับประมวลผลภาพถ่ายทางอากาศ เพื่อเปรียบเทียบผลลัพธ์และเป็นทางเลือกสำรองเมื่อต้องประมวลผลชุดข้อมูลขนาดใหญ่</p>
       <div class="shot-grid">
@@ -171,7 +171,7 @@
       </div>
     </div>
 
-    <div class="content-block">
+    <div class="content-block fade-in">
       <h2>ภาพตอนปฏิบัติงาน</h2>
       <p>ลงพื้นที่บินสำรวจจริงบริเวณอ่างเก็บน้ำห้วยโป่งและหมู่บ้านโดยรอบ ในช่วงที่ยังมีร่องรอยความเสียหายจากน้ำท่วมและการซ่อมแซมเส้นทางสัญจร</p>
       <div class="shot-grid">
@@ -190,7 +190,7 @@
       </div>
     </div>
 
-    <div class="content-block">
+    <div class="content-block fade-in">
       <h2>ผลลัพธ์และการนำไปใช้</h2>
       <p>ข้อมูล Point Cloud, DEM/DSM และ Orthomosaic ความละเอียดสูงที่ได้ ใช้สนับสนุนการประเมินปริมาตรความเสียหายของอ่างเก็บน้ำและถนนอย่างละเอียดกว่าการวิเคราะห์ภาพถ่ายดาวเทียมเพียงอย่างเดียว เป็นข้อมูลประกอบการออกแบบซ่อมแซมโครงสร้างและวางแผนฟื้นฟูเส้นทางสัญจรผ่านสะพานห้วยโป่ง</p>
     </div>
@@ -210,6 +210,7 @@
   <div class="lightbox-cap" id="lightboxCap"></div>
 </div>
 
+<script src="../motion.js"></script>
 <script>
   const navToggle = document.getElementById('navToggle');
   const navDropdown = document.getElementById('navDropdown');
