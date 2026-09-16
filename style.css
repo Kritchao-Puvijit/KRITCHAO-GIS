@@ -223,6 +223,11 @@ section{padding:110px 0;border-top:1px solid var(--border);}
 .about-grid p strong{color:var(--text);font-weight:500;}
 .stat-block{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
 .stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 20px;}
+
+.vision{padding:64px 0;}
+.vision-box{border-left:3px solid var(--accent);padding:6px 0 6px 28px;}
+.vision-label{font-family:var(--mono);color:var(--accent);font-size:13px;letter-spacing:2px;margin-bottom:10px;}
+.vision-text{font-size:clamp(20px,3vw,28px);font-weight:500;line-height:1.5;letter-spacing:-0.3px;}
 .stat-num{font-family:var(--mono);font-size:28px;color:var(--accent);font-weight:500;}
 .stat-label{font-size:13px;color:var(--text-dim);margin-top:6px;}
 
