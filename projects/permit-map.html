@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
   <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
+  <script>try{document.documentElement.setAttribute('data-lang',localStorage.getItem('lang')==='en'?'en':'th');}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>จัดทำแผนที่ขออนุญาตใช้พื้นที่ก่อสร้างโครงการชลประทาน | Kritchao Portfolio</title>
+<title data-en="Land-Use Permit Maps for Irrigation Construction | Kritchao Portfolio">จัดทำแผนที่ขออนุญาตใช้พื้นที่ก่อสร้างโครงการชลประทาน | Kritchao Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
@@ -18,147 +19,147 @@
   <div class="wrap">
     <a href="../index.html" class="logo"><span class="dot"></span>KRITCHAO.GIS</a>
     <div class="navlinks">
-      <a href="../index.html#about">เกี่ยวกับ</a>
-      <a href="../index.html#experience">ประสบการณ์</a>
-      <a href="../index.html#skills">ทักษะ</a>
-      <a href="../index.html#projects" class="active">ผลงาน</a>
-      <a href="../index.html#certificates">ใบรับรอง</a>
-      <a href="../index.html#contact">ติดต่อ</a>
+      <a href="../index.html#about" data-en="About">เกี่ยวกับ</a>
+      <a href="../index.html#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="../index.html#skills" data-en="Skills">ทักษะ</a>
+      <a href="../index.html#projects" class="active" data-en="Projects">ผลงาน</a>
+      <a href="../index.html#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="../index.html#contact" data-en="Contact">ติดต่อ</a>
     </div>
-    <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
+    <div class="nav-actions"><button class="lang-toggle" id="langToggle" aria-label="Switch language / สลับภาษา" title="Switch language / สลับภาษา"><span class="lang-th">TH</span><span class="lang-en">EN</span></button><button class="theme-toggle" id="themeToggle" data-en-aria-label="Toggle light/dark theme" data-en-title="Toggle light/dark theme" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" data-en-aria-label="Open menu" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
   </div>
   <div class="nav-dropdown" id="navDropdown">
-      <a href="../index.html#about">เกี่ยวกับ</a>
-      <a href="../index.html#experience">ประสบการณ์</a>
-      <a href="../index.html#skills">ทักษะ</a>
-      <a href="../index.html#projects">ผลงาน</a>
-      <a href="../index.html#certificates">ใบรับรอง</a>
-      <a href="../index.html#contact">ติดต่อ</a>
+      <a href="../index.html#about" data-en="About">เกี่ยวกับ</a>
+      <a href="../index.html#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="../index.html#skills" data-en="Skills">ทักษะ</a>
+      <a href="../index.html#projects" data-en="Projects">ผลงาน</a>
+      <a href="../index.html#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="../index.html#contact" data-en="Contact">ติดต่อ</a>
   </div>
 </nav>
 
 <section class="proj-hero">
   <div class="wrap">
-    <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>แผนที่ขออนุญาต</span></div>
-    <div class="proj-cat-badge">แผนที่ขออนุญาตใช้พื้นที่</div>
-    <h1>จัดทำแผนที่ขออนุญาตใช้พื้นที่ก่อสร้าง<span class="nb">โครงการชลประทาน</span></h1>
-    <p class="proj-lede">ผลิตแผนที่และเอกสารประกอบสำหรับขออนุญาตใช้พื้นที่ก่อสร้างโครงสร้างชลประทาน <span class="nb">ตามมาตรฐานและระเบียบของกรมชลประทาน</span></p>
+    <div class="breadcrumb"><a href="../index.html#projects" data-en="Projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span data-en="Permit Maps">แผนที่ขออนุญาต</span></div>
+    <div class="proj-cat-badge" data-en="Land-Use Permit Maps">แผนที่ขออนุญาตใช้พื้นที่</div>
+    <h1 data-en="Land-Use Permit Maps for <span class=&quot;nb&quot;>Irrigation Construction</span>">จัดทำแผนที่ขออนุญาตใช้พื้นที่ก่อสร้าง<span class="nb">โครงการชลประทาน</span></h1>
+    <p class="proj-lede" data-en="Producing maps and supporting documents for land-use permits for irrigation structures, <span class=&quot;nb&quot;>following Royal Irrigation Department standards and regulations</span>">ผลิตแผนที่และเอกสารประกอบสำหรับขออนุญาตใช้พื้นที่ก่อสร้างโครงสร้างชลประทาน <span class="nb">ตามมาตรฐานและระเบียบของกรมชลประทาน</span></p>
   </div>
 </section>
 
 <section style="padding-top:0;border-top:none;">
   <div class="wrap">
     <div class="meta-row">
-      <div class="meta-item"><div class="meta-label">หมวดหมู่</div><div class="meta-value">Permit Mapping</div></div>
-      <div class="meta-item"><div class="meta-label">หน่วยงาน</div><div class="meta-value">กรมชลประทาน</div></div>
-      <div class="meta-item"><div class="meta-label">มาตรฐานอ้างอิง</div><div class="meta-value">ระเบียบขออนุญาตใช้พื้นที่ของกรมชลประทาน</div></div>
-      <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">QGIS, ArcGIS Pro</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Category">หมวดหมู่</div><div class="meta-value">Permit Mapping</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Agency">หน่วยงาน</div><div class="meta-value" data-en="Royal Irrigation Department">กรมชลประทาน</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Reference Standard">มาตรฐานอ้างอิง</div><div class="meta-value" data-en="Royal Irrigation Department land-use permit regulations">ระเบียบขออนุญาตใช้พื้นที่ของกรมชลประทาน</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Tools">เครื่องมือ</div><div class="meta-value">QGIS, ArcGIS Pro</div></div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>โจทย์และที่มา</h2>
-      <p>การก่อสร้างโครงสร้างชลประทาน เช่น ฝายและเขื่อน ต้องผ่านกระบวนการขออนุญาตใช้พื้นที่ตามระเบียบราชการ ซึ่งต้องแนบแผนที่แสดงตำแหน่งและขอบเขตพื้นที่ที่ถูกต้องตามมาตรฐานที่หน่วยงานกำหนด</p>
+      <h2 data-en="Problem &amp; Background">โจทย์และที่มา</h2>
+      <p data-en="Building irrigation structures such as weirs and dams requires a land-use permit under government regulations, which must include a map showing the location and boundary accurately, following the agency's required standards.">การก่อสร้างโครงสร้างชลประทาน เช่น ฝายและเขื่อน ต้องผ่านกระบวนการขออนุญาตใช้พื้นที่ตามระเบียบราชการ ซึ่งต้องแนบแผนที่แสดงตำแหน่งและขอบเขตพื้นที่ที่ถูกต้องตามมาตรฐานที่หน่วยงานกำหนด</p>
     </div>
 
     <div class="content-block fade-in">
-      <h2>วิธีการดำเนินงาน</h2>
+      <h2 data-en="Approach">วิธีการดำเนินงาน</h2>
       <ul>
-        <li>รวบรวมข้อมูลตำแหน่งและขอบเขตพื้นที่โครงการจากการสำรวจภาคสนามและข้อมูล UAV</li>
-        <li>ประสานงานกับทีมออกแบบก่อสร้าง รับไฟล์แบบโครงการ (AutoCAD .dwg, .kml, .kmz) มาอ้างอิงตำแหน่งและแนวเขตที่ต้องขออนุญาต</li>
-        <li>จัดทำแผนที่แสดงขอบเขตพื้นที่ขออนุญาตตามมาตรฐานการเขียนแผนที่ราชการ</li>
-        <li>ตรวจสอบความถูกต้องของพิกัดและขอบเขตร่วมกับหน่วยงานที่เกี่ยวข้อง</li>
-        <li>จัดทำเอกสารประกอบการยื่นขออนุญาตให้ครบถ้วนตามระเบียบ</li>
+        <li data-en="Collect project location and boundary data from field survey and UAV data">รวบรวมข้อมูลตำแหน่งและขอบเขตพื้นที่โครงการจากการสำรวจภาคสนามและข้อมูล UAV</li>
+        <li data-en="Coordinate with the construction design team, receiving project design files (AutoCAD .dwg, .kml, .kmz) to reference the location and boundary requiring a permit">ประสานงานกับทีมออกแบบก่อสร้าง รับไฟล์แบบโครงการ (AutoCAD .dwg, .kml, .kmz) มาอ้างอิงตำแหน่งและแนวเขตที่ต้องขออนุญาต</li>
+        <li data-en="Produce a map showing the permit-area boundary following official mapping standards">จัดทำแผนที่แสดงขอบเขตพื้นที่ขออนุญาตตามมาตรฐานการเขียนแผนที่ราชการ</li>
+        <li data-en="Verify coordinate and boundary accuracy together with related agencies">ตรวจสอบความถูกต้องของพิกัดและขอบเขตร่วมกับหน่วยงานที่เกี่ยวข้อง</li>
+        <li data-en="Prepare complete supporting documents for the permit application, per regulation">จัดทำเอกสารประกอบการยื่นขออนุญาตให้ครบถ้วนตามระเบียบ</li>
       </ul>
     </div>
 
     <div class="content-block fade-in">
-      <h2>1. โครงการพัฒนาลุ่มน้ำปาย — พื้นที่ป่าสงวนแห่งชาติ ป่าแม่ปายฝั่งซ้าย-ฝั่งขวา</h2>
-      <p>แผนที่ต่อท้ายหนังสืออนุญาต เล่มที่ 15 ฉบับที่ 18 ลงวันที่ 28 มกราคม 2523 แสดงบริเวณที่จังหวัดแม่ฮ่องสอนได้รับอนุญาตให้ใช้พื้นที่ป่าสงวนแห่งชาติ ป่าแม่ปายฝั่งซ้าย ตำบลผาบ่อง เนื้อที่ 2,500 ไร่ และป่าแม่ปายฝั่งขวา ตำบลปางหมู เนื้อที่ 4,700 ไร่ รวมเนื้อที่ประมาณ 7,200 ไร่ เพื่อประโยชน์ในการดำเนินงานตามโครงการพัฒนาลุ่มน้ำปาย ครอบคลุมอ่างเก็บน้ำและระบบส่งน้ำภายในศูนย์ฯ ลุ่มน้ำปายทั้งหมด</p>
+      <h2 data-en="1. Pai Watershed Development Project — Mae Pai Left &amp; Right Bank National Reserved Forests">1. โครงการพัฒนาลุ่มน้ำปาย — พื้นที่ป่าสงวนแห่งชาติ ป่าแม่ปายฝั่งซ้าย-ฝั่งขวา</h2>
+      <p data-en="Map attached to Permit Volume 15, No. 18, dated 28 January 1980, showing the area Mae Hong Son Province was permitted to use in the Mae Pai Left Bank National Reserved Forest, Pha Bong Subdistrict (2,500 rai / ~400 hectares) and the Mae Pai Right Bank forest, Pang Mu Subdistrict (4,700 rai / ~752 hectares) — about 7,200 rai (~1,152 hectares) total — for the Pai Watershed Development Project, covering the reservoir and water-supply system across the whole Pai watershed center.">แผนที่ต่อท้ายหนังสืออนุญาต เล่มที่ 15 ฉบับที่ 18 ลงวันที่ 28 มกราคม 2523 แสดงบริเวณที่จังหวัดแม่ฮ่องสอนได้รับอนุญาตให้ใช้พื้นที่ป่าสงวนแห่งชาติ ป่าแม่ปายฝั่งซ้าย ตำบลผาบ่อง เนื้อที่ 2,500 ไร่ และป่าแม่ปายฝั่งขวา ตำบลปางหมู เนื้อที่ 4,700 ไร่ รวมเนื้อที่ประมาณ 7,200 ไร่ เพื่อประโยชน์ในการดำเนินงานตามโครงการพัฒนาลุ่มน้ำปาย ครอบคลุมอ่างเก็บน้ำและระบบส่งน้ำภายในศูนย์ฯ ลุ่มน้ำปายทั้งหมด</p>
       <div class="shot-grid">
-        <div class="shot-card" data-full="../assets/img/permit-map/01-paiwatershed-permit-attachment.jpg" data-caption="แผนที่ต่อท้ายหนังสืออนุญาต เล่มที่ 15 ฉบับที่ 18 ลงวันที่ 28 มกราคม 2523 มาตราส่วน 1:50,000 แสดงพื้นที่ขอใช้ประโยชน์ในเขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย-ขวา โครงการพัฒนาลุ่มน้ำปาย">
+        <div class="shot-card" data-full="../assets/img/permit-map/01-paiwatershed-permit-attachment.jpg" data-en-data-caption="Map attached to Permit Volume 15, No. 18, dated 28 January 1980, at 1:50,000 scale, showing the permitted area in the Mae Pai Left &amp; Right Bank National Reserved Forests for the Pai Watershed Development Project" data-caption="แผนที่ต่อท้ายหนังสืออนุญาต เล่มที่ 15 ฉบับที่ 18 ลงวันที่ 28 มกราคม 2523 มาตราส่วน 1:50,000 แสดงพื้นที่ขอใช้ประโยชน์ในเขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย-ขวา โครงการพัฒนาลุ่มน้ำปาย">
           <div class="shot-thumb"><img src="../assets/img/permit-map/01-paiwatershed-permit-attachment.jpg" alt="แผนที่ต่อท้ายหนังสืออนุญาต โครงการพัฒนาลุ่มน้ำปาย"></div>
-          <div class="shot-cap"><span class="shot-tag">Permit Attachment Map · 1:50,000</span><span class="shot-desc">โครงการพัฒนาลุ่มน้ำปาย (7,200 ไร่)</span></div>
+          <div class="shot-cap"><span class="shot-tag">Permit Attachment Map · 1:50,000</span><span class="shot-desc" data-en="Pai Watershed Development Project (7,200 rai)">โครงการพัฒนาลุ่มน้ำปาย (7,200 ไร่)</span></div>
         </div>
       </div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>2. ฝายถาวร 45 แห่ง — ป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย (เขต กปร.-หนองเขียว)</h2>
-      <p>แผนที่ภาพถ่ายดาวเทียมแสดงตำแหน่งฝายถาวร 45 แห่ง ในเขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย พื้นที่โครงการพัฒนาป่าไม้พัฒนาพื้นที่สูงแบบโครงการหลวงหนองเขียว ท้องที่ตำบลผาบ่องและตำบลห้วยโป่ง อำเภอเมืองแม่ฮ่องสอน จัดทำเป็นชุดข้อมูล Shapefile ประกอบการพิจารณาโครงการก่อนยื่นขออนุญาตใช้พื้นที่</p>
+      <h2 data-en="2. 45 Permanent Weirs — Mae Pai Left Bank National Reserved Forest (RDPB-Nong Khiao Area)">2. ฝายถาวร 45 แห่ง — ป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย (เขต กปร.-หนองเขียว)</h2>
+      <p data-en="A satellite-imagery map showing the locations of 45 permanent weirs in the Mae Pai Left Bank National Reserved Forest, part of the Royal Project-style highland forest development area at Nong Khiao, in Pha Bong and Huai Pong Subdistricts, Mueang Mae Hong Son District. Prepared as a Shapefile dataset to support project review before submitting the land-use permit.">แผนที่ภาพถ่ายดาวเทียมแสดงตำแหน่งฝายถาวร 45 แห่ง ในเขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย พื้นที่โครงการพัฒนาป่าไม้พัฒนาพื้นที่สูงแบบโครงการหลวงหนองเขียว ท้องที่ตำบลผาบ่องและตำบลห้วยโป่ง อำเภอเมืองแม่ฮ่องสอน จัดทำเป็นชุดข้อมูล Shapefile ประกอบการพิจารณาโครงการก่อนยื่นขออนุญาตใช้พื้นที่</p>
       <div class="shot-grid">
-        <div class="shot-card" data-full="../assets/img/permit-map/02-weir45-nongkhiao-satellite.jpg" data-caption="แผนที่ภาพถ่ายดาวเทียมแสดงตำแหน่งฝายถาวร 45 แห่ง มาตราส่วน 1:250,000 เขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย ต.ผาบ่อง และ ต.ห้วยโป่ง อ.เมืองแม่ฮ่องสอน">
+        <div class="shot-card" data-full="../assets/img/permit-map/02-weir45-nongkhiao-satellite.jpg" data-en-data-caption="Satellite-imagery map showing 45 permanent weir locations at 1:250,000 scale, in the Mae Pai Left Bank National Reserved Forest, Pha Bong and Huai Pong Subdistricts, Mueang Mae Hong Son" data-caption="แผนที่ภาพถ่ายดาวเทียมแสดงตำแหน่งฝายถาวร 45 แห่ง มาตราส่วน 1:250,000 เขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย ต.ผาบ่อง และ ต.ห้วยโป่ง อ.เมืองแม่ฮ่องสอน">
           <div class="shot-thumb"><img src="../assets/img/permit-map/02-weir45-nongkhiao-satellite.jpg" alt="แผนที่ฝายถาวร 45 แห่ง ป่าแม่ปายฝั่งซ้าย"></div>
-          <div class="shot-cap"><span class="shot-tag">Satellite Overview · 1:250,000</span><span class="shot-desc">ฝายถาวร 45 แห่ง · เขต กปร.-หนองเขียว</span></div>
+          <div class="shot-cap"><span class="shot-tag">Satellite Overview · 1:250,000</span><span class="shot-desc" data-en="45 permanent weirs &middot; RDPB-Nong Khiao area">ฝายถาวร 45 แห่ง · เขต กปร.-หนองเขียว</span></div>
         </div>
       </div>
-      <p style="margin-top:16px;color:var(--text-dim);font-size:14px;">* ผลงานส่วนนี้จะทยอยอัปเดตเพิ่มเติมตามโครงการที่ดำเนินการจริง</p>
+      <p style="margin-top:16px;color:var(--text-dim);font-size:14px;" data-en="* This section will be updated over time as projects are actually carried out.">* ผลงานส่วนนี้จะทยอยอัปเดตเพิ่มเติมตามโครงการที่ดำเนินการจริง</p>
     </div>
 
     <div class="content-block fade-in">
-      <h2>3. โครงการจัดหาน้ำสนับสนุนหมู่บ้านปางบอนและบ้านปางตอง — ฝายห้วยน้ำของพร้อมระบบส่งน้ำ</h2>
-      <p>แผนที่เสนอประมาณการที่ตั้งโครงการ (หัวงาน) ฝายห้วยน้ำของพร้อมระบบส่งน้ำ พิกัดที่ 47Q MB 135-819 (413590 E, 2181945 N) ท้องที่บ้านซอแบะ หมู่ 8 ตำบลนาปู่ป้อม อำเภอปางมะผ้า จังหวัดแม่ฮ่องสอน จัดทำทั้งแบบซ้อนทับภาพถ่ายทางอากาศและแผนที่ภูมิประเทศ เพื่อประกอบการยื่นขออนุญาตใช้พื้นที่ก่อสร้างฝาย</p>
+      <h2 data-en="3. Water Supply Project for Ban Pang Bon &amp; Ban Pang Tong — Huai Nam Khong Weir with Water-Supply System">3. โครงการจัดหาน้ำสนับสนุนหมู่บ้านปางบอนและบ้านปางตอง — ฝายห้วยน้ำของพร้อมระบบส่งน้ำ</h2>
+      <p data-en="Proposed site map for the Huai Nam Khong Weir with water-supply system project headworks, at coordinates 47Q MB 135-819 (413590 E, 2181945 N), Ban Sor Bae, Moo 8, Na Pu Pom Subdistrict, Pang Mapha District, Mae Hong Son Province. Prepared as both an aerial-photo overlay and a topographic map to support the weir construction land-use permit.">แผนที่เสนอประมาณการที่ตั้งโครงการ (หัวงาน) ฝายห้วยน้ำของพร้อมระบบส่งน้ำ พิกัดที่ 47Q MB 135-819 (413590 E, 2181945 N) ท้องที่บ้านซอแบะ หมู่ 8 ตำบลนาปู่ป้อม อำเภอปางมะผ้า จังหวัดแม่ฮ่องสอน จัดทำทั้งแบบซ้อนทับภาพถ่ายทางอากาศและแผนที่ภูมิประเทศ เพื่อประกอบการยื่นขออนุญาตใช้พื้นที่ก่อสร้างฝาย</p>
       <div class="shot-grid">
-        <div class="shot-card" data-full="../assets/img/permit-map/03-pangbon-pangtong-aerial.jpg" data-caption="แผนที่เสนอประมาณการ (หัวงาน) ซ้อนทับภาพถ่ายทางอากาศ มาตราส่วน 1:50,000 ฝายห้วยน้ำของพร้อมระบบส่งน้ำ บ้านซอแบะ ต.นาปู่ป้อม อ.ปางมะผ้า">
+        <div class="shot-card" data-full="../assets/img/permit-map/03-pangbon-pangtong-aerial.jpg" data-en-data-caption="Proposed site map (headworks) overlaid on aerial imagery at 1:50,000 scale — Huai Nam Khong Weir with water-supply system, Ban Sor Bae, Na Pu Pom Subdistrict, Pang Mapha" data-caption="แผนที่เสนอประมาณการ (หัวงาน) ซ้อนทับภาพถ่ายทางอากาศ มาตราส่วน 1:50,000 ฝายห้วยน้ำของพร้อมระบบส่งน้ำ บ้านซอแบะ ต.นาปู่ป้อม อ.ปางมะผ้า">
           <div class="shot-thumb"><img src="../assets/img/permit-map/03-pangbon-pangtong-aerial.jpg" alt="แผนที่หัวงานฝายห้วยน้ำของ ซ้อนภาพถ่ายทางอากาศ"></div>
-          <div class="shot-cap"><span class="shot-tag">Aerial Overlay · 1:50,000</span><span class="shot-desc">ที่ตั้งโครงการ (หัวงาน)</span></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Overlay · 1:50,000</span><span class="shot-desc" data-en="Project site (headworks)">ที่ตั้งโครงการ (หัวงาน)</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/permit-map/04-pangbon-pangtong-topo.jpg" data-caption="แผนที่เสนอประมาณการ (หัวงาน) แสดงภูมิประเทศ (Topo) มาตราส่วน 1:50,000 ฝายห้วยน้ำของพร้อมระบบส่งน้ำ บ้านซอแบะ ต.นาปู่ป้อม อ.ปางมะผ้า">
+        <div class="shot-card" data-full="../assets/img/permit-map/04-pangbon-pangtong-topo.jpg" data-en-data-caption="Proposed site map (headworks) showing topography at 1:50,000 scale — Huai Nam Khong Weir with water-supply system, Ban Sor Bae, Na Pu Pom Subdistrict, Pang Mapha" data-caption="แผนที่เสนอประมาณการ (หัวงาน) แสดงภูมิประเทศ (Topo) มาตราส่วน 1:50,000 ฝายห้วยน้ำของพร้อมระบบส่งน้ำ บ้านซอแบะ ต.นาปู่ป้อม อ.ปางมะผ้า">
           <div class="shot-thumb"><img src="../assets/img/permit-map/04-pangbon-pangtong-topo.jpg" alt="แผนที่หัวงานฝายห้วยน้ำของ ภูมิประเทศ"></div>
-          <div class="shot-cap"><span class="shot-tag">Topo Map · 1:50,000</span><span class="shot-desc">ที่ตั้งโครงการ (หัวงาน)</span></div>
+          <div class="shot-cap"><span class="shot-tag">Topo Map · 1:50,000</span><span class="shot-desc" data-en="Project site (headworks)">ที่ตั้งโครงการ (หัวงาน)</span></div>
         </div>
       </div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>4. ระบบสูบน้ำด้วยพลังงานแสงอาทิตย์ เพิ่มปริมาณน้ำอ่างเก็บน้ำห้วยฝายคอ</h2>
-      <p>โครงการก่อสร้างสถานีสูบน้ำด้วยพลังงานแสงอาทิตย์ สูบน้ำจากแม่น้ำปายเพิ่มปริมาณน้ำต้นทุนให้อ่างเก็บน้ำห้วยฝายคอ ท้องที่บ้านปางหมู หมู่ 1 ตำบลปางหมู อำเภอเมืองแม่ฮ่องสอน แนวท่อส่งน้ำความยาว 733 เมตร พาดผ่านพื้นที่ 2 ประเภท คือ เขตป่าไม้ถาวรแม่ปายฝั่งซ้าย (พ.ร.บ. ป่าไม้ พ.ศ. 2484) และเขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย (พ.ร.บ. ป่าสงวนแห่งชาติ พ.ศ. 2507) จึงต้องจัดทำแผนที่ขออนุญาตแยกตามกฎหมายทั้งสองฉบับ พร้อมตรวจสอบว่าพื้นที่ก่อสร้างไม่ทับซ้อนกับเขตอุทยานแห่งชาติ เขตรักษาพันธุ์สัตว์ป่า และเขตป่าชุมชน ก่อนเสนอผู้อำนวยการโครงการชลประทานแม่ฮ่องสอนลงนามยื่นขออนุญาต</p>
+      <h2 data-en="4. Solar-Powered Pumping System — Adding Water to Huai Fai Kho Reservoir">4. ระบบสูบน้ำด้วยพลังงานแสงอาทิตย์ เพิ่มปริมาณน้ำอ่างเก็บน้ำห้วยฝายคอ</h2>
+      <p data-en="A solar-powered pumping station project pumping water from the Pai River to add source water to Huai Fai Kho Reservoir, at Ban Pang Mu, Moo 1, Pang Mu Subdistrict, Mueang Mae Hong Son District. The 733-meter pipeline crosses two land types: the Mae Pai Left Bank Permanent Forest Reserve (under the Forest Act B.E. 2484) and the Mae Pai Left Bank National Reserved Forest (under the National Reserved Forest Act B.E. 2507), requiring separate permit maps under each law, plus verification that construction does not overlap national parks, wildlife sanctuaries, or community forests, before submission for the Mae Hong Son Irrigation Project Director's signature.">โครงการก่อสร้างสถานีสูบน้ำด้วยพลังงานแสงอาทิตย์ สูบน้ำจากแม่น้ำปายเพิ่มปริมาณน้ำต้นทุนให้อ่างเก็บน้ำห้วยฝายคอ ท้องที่บ้านปางหมู หมู่ 1 ตำบลปางหมู อำเภอเมืองแม่ฮ่องสอน แนวท่อส่งน้ำความยาว 733 เมตร พาดผ่านพื้นที่ 2 ประเภท คือ เขตป่าไม้ถาวรแม่ปายฝั่งซ้าย (พ.ร.บ. ป่าไม้ พ.ศ. 2484) และเขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย (พ.ร.บ. ป่าสงวนแห่งชาติ พ.ศ. 2507) จึงต้องจัดทำแผนที่ขออนุญาตแยกตามกฎหมายทั้งสองฉบับ พร้อมตรวจสอบว่าพื้นที่ก่อสร้างไม่ทับซ้อนกับเขตอุทยานแห่งชาติ เขตรักษาพันธุ์สัตว์ป่า และเขตป่าชุมชน ก่อนเสนอผู้อำนวยการโครงการชลประทานแม่ฮ่องสอนลงนามยื่นขออนุญาต</p>
       <div class="shot-grid">
-        <div class="shot-card" data-full="../assets/img/permit-map/05-solarpump-hqarea-aerial.jpg" data-caption="แผนที่เสนอโครงการ (หัวงาน) แสดงตำแหน่งสถานีสูบน้ำริมแม่น้ำปาย มาตราส่วน 1:4,000 บ้านปางหมู ต.ปางหมู อ.เมืองแม่ฮ่องสอน">
+        <div class="shot-card" data-full="../assets/img/permit-map/05-solarpump-hqarea-aerial.jpg" data-en-data-caption="Proposed project map (headworks) showing the pump station location by the Pai River at 1:4,000 scale, Ban Pang Mu, Pang Mu Subdistrict, Mueang Mae Hong Son" data-caption="แผนที่เสนอโครงการ (หัวงาน) แสดงตำแหน่งสถานีสูบน้ำริมแม่น้ำปาย มาตราส่วน 1:4,000 บ้านปางหมู ต.ปางหมู อ.เมืองแม่ฮ่องสอน">
           <div class="shot-thumb"><img src="../assets/img/permit-map/05-solarpump-hqarea-aerial.jpg" alt="แผนที่หัวงาน สถานีสูบน้ำพลังงานแสงอาทิตย์"></div>
-          <div class="shot-cap"><span class="shot-tag">Aerial · 1:4,000</span><span class="shot-desc">ที่ตั้งสถานีสูบน้ำ (หัวงาน)</span></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial · 1:4,000</span><span class="shot-desc" data-en="Pump station site (headworks)">ที่ตั้งสถานีสูบน้ำ (หัวงาน)</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/permit-map/06-solarpump-landuse-overview.jpg" data-caption="แผนที่ภาพรวมพื้นที่ขอใช้ประโยชน์ มาตราส่วน 1:5,000 แสดงแนวท่อสูบน้ำความยาว 733 เมตร พาดผ่านเขตป่าไม้ถาวรและป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย">
+        <div class="shot-card" data-full="../assets/img/permit-map/06-solarpump-landuse-overview.jpg" data-en-data-caption="Land-use overview map at 1:5,000 scale showing the 733-meter pipeline route crossing the Mae Pai Left Bank permanent forest reserve and national reserved forest" data-caption="แผนที่ภาพรวมพื้นที่ขอใช้ประโยชน์ มาตราส่วน 1:5,000 แสดงแนวท่อสูบน้ำความยาว 733 เมตร พาดผ่านเขตป่าไม้ถาวรและป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย">
           <div class="shot-thumb"><img src="../assets/img/permit-map/06-solarpump-landuse-overview.jpg" alt="แผนที่ภาพรวมพื้นที่ขอใช้ประโยชน์"></div>
-          <div class="shot-cap"><span class="shot-tag">Land-use Overview · 1:5,000</span><span class="shot-desc">แนวท่อสูบน้ำ 733 เมตร</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Land-use Overview · 1:5,000">Land-use Overview · 1:5,000</span><span class="shot-desc" data-en="733-meter pipeline route">แนวท่อสูบน้ำ 733 เมตร</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/permit-map/07-solarpump-forestact84-boundary.jpg" data-caption="แผนที่แนบท้ายแสดงขอบเขตพื้นที่ขอใช้ประโยชน์ในเขตป่าไม้ถาวรแม่ปายฝั่งซ้าย (พ.ร.บ. ป่าไม้ พ.ศ. 2484) มาตราส่วน 1:4,000 พร้อมพิกัดควบคุมแปลง">
+        <div class="shot-card" data-full="../assets/img/permit-map/07-solarpump-forestact84-boundary.jpg" data-en-data-caption="Attached map showing the requested-use boundary in the Mae Pai Left Bank permanent forest reserve (Forest Act B.E. 2484) at 1:4,000 scale, with plot control coordinates" data-caption="แผนที่แนบท้ายแสดงขอบเขตพื้นที่ขอใช้ประโยชน์ในเขตป่าไม้ถาวรแม่ปายฝั่งซ้าย (พ.ร.บ. ป่าไม้ พ.ศ. 2484) มาตราส่วน 1:4,000 พร้อมพิกัดควบคุมแปลง">
           <div class="shot-thumb"><img src="../assets/img/permit-map/07-solarpump-forestact84-boundary.jpg" alt="แผนที่ขอบเขต เขตป่าไม้ถาวร พ.ร.บ.2484"></div>
-          <div class="shot-cap"><span class="shot-tag">Permit Map · พ.ร.บ.ป่าไม้ 2484</span><span class="shot-desc">แผงโซลาร์เซลล์ + แนวท่อ</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Permit Map &middot; Forest Act 1941">Permit Map · พ.ร.บ.ป่าไม้ 2484</span><span class="shot-desc" data-en="Solar panels + pipeline route">แผงโซลาร์เซลล์ + แนวท่อ</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/permit-map/08-solarpump-nooverlap-permit.jpg" data-caption="แผนที่แนบท้าย 4 แผ่น แสดงการไม่ทับซ้อนพื้นที่กับเขตอุทยาน วนอุทยาน เขตรักษาพันธุ์สัตว์ป่า และเขตปฏิรูปที่ดิน ลงนามโดยผู้อำนวยการโครงการชลประทานแม่ฮ่องสอนในฐานะผู้เสนอโครงการ">
+        <div class="shot-card" data-full="../assets/img/permit-map/08-solarpump-nooverlap-permit.jpg" data-en-data-caption="4-sheet attached map showing no overlap with national parks, forest parks, wildlife sanctuaries, and land-reform zones, signed by the Mae Hong Son Irrigation Project Director as project proposer" data-caption="แผนที่แนบท้าย 4 แผ่น แสดงการไม่ทับซ้อนพื้นที่กับเขตอุทยาน วนอุทยาน เขตรักษาพันธุ์สัตว์ป่า และเขตปฏิรูปที่ดิน ลงนามโดยผู้อำนวยการโครงการชลประทานแม่ฮ่องสอนในฐานะผู้เสนอโครงการ">
           <div class="shot-thumb"><img src="../assets/img/permit-map/08-solarpump-nooverlap-permit.jpg" alt="แผนที่แสดงการไม่ทับซ้อนพื้นที่ ลงนามผู้อำนวยการโครงการ"></div>
-          <div class="shot-cap"><span class="shot-tag">Permit Map · พ.ร.บ.ป่าสงวนฯ 2507</span><span class="shot-desc">ตรวจสอบไม่ทับซ้อนพื้นที่อนุรักษ์</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Permit Map &middot; National Reserved Forest Act 1964">Permit Map · พ.ร.บ.ป่าสงวนฯ 2507</span><span class="shot-desc" data-en="Verifying no overlap with conservation areas">ตรวจสอบไม่ทับซ้อนพื้นที่อนุรักษ์</span></div>
         </div>
       </div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>5. อ่างเก็บน้ำม่อนตะแลง — ตรวจสอบพื้นที่ทับซ้อนหลายหน่วยงาน</h2>
-      <p>ตรวจสอบและจัดทำแผนที่ขอบเขตพื้นที่โครงการอ่างเก็บน้ำม่อนตะแลง บ้านม่อนตะแลง หมู่ 11 ตำบลผาบ่อง อำเภอเมืองแม่ฮ่องสอน เนื้อที่รวม 355 ไร่ 2 งาน 66 ตารางวา (569,063.568 ตร.ม.) พื้นที่โครงการทับซ้อนกับเขตหน่วยงานถึง 4 ประเภท จึงต้องจำแนกสัดส่วนพื้นที่ทับซ้อนแต่ละเขตให้ชัดเจนก่อนยื่นขออนุญาตใช้พื้นที่ ได้แก่ เขตอุทยานแห่งชาติน้ำตกแม่สุรินทร์ 280-1-99 ไร่ เขตโครงการธนาคารอาหารชุมชนอันเนื่องมาจากพระราชดำริ 54-3-12 ไร่ เขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย 18-2-42 ไร่ และเขต คทช. กลุ่มที่ 1,2 (ลุ่มน้ำชั้น 3,4,5) 1-3-16 ไร่</p>
+      <h2 data-en="5. Mon Talaeng Reservoir — Multi-Agency Overlap Review">5. อ่างเก็บน้ำม่อนตะแลง — ตรวจสอบพื้นที่ทับซ้อนหลายหน่วยงาน</h2>
+      <p data-en="Reviewed and mapped the boundary of the Mon Talaeng Reservoir project, Ban Mon Talaeng, Moo 11, Pha Bong Subdistrict, Mueang Mae Hong Son District, totaling 355 rai 2 ngan 66 sq. wah (569,063.568 sq. m.). The project area overlapped 4 different jurisdictions, requiring clear classification of each overlap before submitting the permit: Mae Surin Waterfall National Park (280-1-99 rai), the royally initiated Community Food Bank Project area (54-3-12 rai), the Mae Pai Left Bank National Reserved Forest (18-2-42 rai), and the CPLC land-allocation zone groups 1-2 / watershed classes 3-5 (1-3-16 rai).">ตรวจสอบและจัดทำแผนที่ขอบเขตพื้นที่โครงการอ่างเก็บน้ำม่อนตะแลง บ้านม่อนตะแลง หมู่ 11 ตำบลผาบ่อง อำเภอเมืองแม่ฮ่องสอน เนื้อที่รวม 355 ไร่ 2 งาน 66 ตารางวา (569,063.568 ตร.ม.) พื้นที่โครงการทับซ้อนกับเขตหน่วยงานถึง 4 ประเภท จึงต้องจำแนกสัดส่วนพื้นที่ทับซ้อนแต่ละเขตให้ชัดเจนก่อนยื่นขออนุญาตใช้พื้นที่ ได้แก่ เขตอุทยานแห่งชาติน้ำตกแม่สุรินทร์ 280-1-99 ไร่ เขตโครงการธนาคารอาหารชุมชนอันเนื่องมาจากพระราชดำริ 54-3-12 ไร่ เขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย 18-2-42 ไร่ และเขต คทช. กลุ่มที่ 1,2 (ลุ่มน้ำชั้น 3,4,5) 1-3-16 ไร่</p>
       <div class="shot-grid">
-        <div class="shot-card" data-full="../assets/img/permit-map/09-montalaeng-boundary.jpg" data-caption="แผนที่แสดงขอบเขตโครงการอ่างเก็บน้ำม่อนตะแลง มาตราส่วน 1:10,000 พร้อมพิกัดหมุดขอบเขตแปลงครบ 55 จุด เนื้อที่ 355-2-66 ไร่">
+        <div class="shot-card" data-full="../assets/img/permit-map/09-montalaeng-boundary.jpg" data-en-data-caption="Map showing the Mon Talaeng Reservoir project boundary at 1:10,000 scale, with coordinates for all 55 boundary markers, area 355-2-66 rai" data-caption="แผนที่แสดงขอบเขตโครงการอ่างเก็บน้ำม่อนตะแลง มาตราส่วน 1:10,000 พร้อมพิกัดหมุดขอบเขตแปลงครบ 55 จุด เนื้อที่ 355-2-66 ไร่">
           <div class="shot-thumb"><img src="../assets/img/permit-map/09-montalaeng-boundary.jpg" alt="แผนที่ขอบเขตอ่างเก็บน้ำม่อนตะแลง"></div>
-          <div class="shot-cap"><span class="shot-tag">Boundary Map · 1:10,000</span><span class="shot-desc">ขอบเขตโครงการ 355-2-66 ไร่</span></div>
+          <div class="shot-cap"><span class="shot-tag">Boundary Map · 1:10,000</span><span class="shot-desc" data-en="Project boundary, 355-2-66 rai">ขอบเขตโครงการ 355-2-66 ไร่</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/permit-map/10-montalaeng-landuse-labeled.jpg" data-caption="แผนที่ภาพรวมแสดงการใช้พื้นที่ทับซ้อนกับเขตอุทยานแห่งชาติน้ำตกแม่สุรินทร์ เขตโครงการธนาคารอาหารชุมชนฯ เขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย และเขต คทช. พร้อมป้ายกำกับเนื้อที่แต่ละเขต">
+        <div class="shot-card" data-full="../assets/img/permit-map/10-montalaeng-landuse-labeled.jpg" data-en-data-caption="Overview map showing land use overlapping Mae Surin Waterfall National Park, the Community Food Bank Project area, the Mae Pai Left Bank National Reserved Forest, and the CPLC zone, labeled with each area's size" data-caption="แผนที่ภาพรวมแสดงการใช้พื้นที่ทับซ้อนกับเขตอุทยานแห่งชาติน้ำตกแม่สุรินทร์ เขตโครงการธนาคารอาหารชุมชนฯ เขตป่าสงวนแห่งชาติป่าแม่ปายฝั่งซ้าย และเขต คทช. พร้อมป้ายกำกับเนื้อที่แต่ละเขต">
           <div class="shot-thumb"><img src="../assets/img/permit-map/10-montalaeng-landuse-labeled.jpg" alt="แผนที่ภาพรวมการใช้พื้นที่ พร้อมป้ายกำกับ"></div>
-          <div class="shot-cap"><span class="shot-tag">Land-use Overlay</span><span class="shot-desc">จำแนกพื้นที่ทับซ้อน 4 เขต</span></div>
+          <div class="shot-cap"><span class="shot-tag">Land-use Overlay</span><span class="shot-desc" data-en="Classifying the 4 overlapping zones">จำแนกพื้นที่ทับซ้อน 4 เขต</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/permit-map/11-montalaeng-landuse-clean.jpg" data-caption="แผนที่ภาพรวมการใช้พื้นที่ฉบับไม่มีป้ายกำกับ แสดงสัดส่วนพื้นที่แต่ละเขตซ้อนทับภาพถ่ายดาวเทียมชัดเจน">
+        <div class="shot-card" data-full="../assets/img/permit-map/11-montalaeng-landuse-clean.jpg" data-en-data-caption="Unlabeled overview map of land use, showing each zone's area overlaid clearly on satellite imagery" data-caption="แผนที่ภาพรวมการใช้พื้นที่ฉบับไม่มีป้ายกำกับ แสดงสัดส่วนพื้นที่แต่ละเขตซ้อนทับภาพถ่ายดาวเทียมชัดเจน">
           <div class="shot-thumb"><img src="../assets/img/permit-map/11-montalaeng-landuse-clean.jpg" alt="แผนที่ภาพรวมการใช้พื้นที่ ฉบับภาพถ่ายดาวเทียม"></div>
-          <div class="shot-cap"><span class="shot-tag">Satellite Overlay</span><span class="shot-desc">สัดส่วนพื้นที่ทับซ้อนแต่ละเขต</span></div>
+          <div class="shot-cap"><span class="shot-tag">Satellite Overlay</span><span class="shot-desc" data-en="Each zone's overlapping area">สัดส่วนพื้นที่ทับซ้อนแต่ละเขต</span></div>
         </div>
       </div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ผลลัพธ์และการนำไปใช้</h2>
-      <p>แผนที่ที่จัดทำถูกใช้ประกอบการยื่นขออนุญาตใช้พื้นที่อย่างเป็นทางการ ช่วยให้กระบวนการอนุมัติเป็นไปอย่างถูกต้องตามระเบียบและรวดเร็วขึ้น</p>
+      <h2 data-en="Results &amp; Impact">ผลลัพธ์และการนำไปใช้</h2>
+      <p data-en="The maps produced were used to support official land-use permit submissions, helping the approval process follow regulations correctly and move faster.">แผนที่ที่จัดทำถูกใช้ประกอบการยื่นขออนุญาตใช้พื้นที่อย่างเป็นทางการ ช่วยให้กระบวนการอนุมัติเป็นไปอย่างถูกต้องตามระเบียบและรวดเร็วขึ้น</p>
     </div>
 
     <div class="proj-nav">
-      <a href="terrain-mapping.html"><i class="ti ti-arrow-left"></i> ผลงานก่อนหน้า</a>
-      <a href="singhanat-water.html">ผลงานถัดไป <i class="ti ti-arrow-right"></i></a>
+      <a href="terrain-mapping.html"><i class="ti ti-arrow-left"></i> <span data-en="Previous Project">ผลงานก่อนหน้า</span></a>
+      <a href="singhanat-water.html"><span data-en="Next Project">ผลงานถัดไป</span> <i class="ti ti-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -166,11 +167,12 @@
 <footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
 
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+  <button class="lightbox-close" id="lightboxClose" data-en-aria-label="Close" aria-label="ปิด"><i class="ti ti-x"></i></button>
   <img id="lightboxImg" src="" alt="">
   <div class="lightbox-cap" id="lightboxCap"></div>
 </div>
 
+<script src="../i18n.js"></script>
 <script src="../motion.js"></script>
 <script>
   const navToggle = document.getElementById('navToggle');

@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
   <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
+  <script>try{document.documentElement.setAttribute('data-lang',localStorage.getItem('lang')==='en'?'en':'th');}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>วิเคราะห์ความเสียหายอ่างเก็บน้ำห้วยโป่ง | Kritchao Portfolio</title>
+<title data-en="Huai Pong Reservoir Damage Analysis | Kritchao Portfolio">วิเคราะห์ความเสียหายอ่างเก็บน้ำห้วยโป่ง | Kritchao Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
@@ -18,148 +19,148 @@
   <div class="wrap">
     <a href="../index.html" class="logo"><span class="dot"></span>KRITCHAO.GIS</a>
     <div class="navlinks">
-      <a href="../index.html#about">เกี่ยวกับ</a>
-      <a href="../index.html#experience">ประสบการณ์</a>
-      <a href="../index.html#skills">ทักษะ</a>
-      <a href="../index.html#projects" class="active">ผลงาน</a>
-      <a href="../index.html#certificates">ใบรับรอง</a>
-      <a href="../index.html#contact">ติดต่อ</a>
+      <a href="../index.html#about" data-en="About">เกี่ยวกับ</a>
+      <a href="../index.html#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="../index.html#skills" data-en="Skills">ทักษะ</a>
+      <a href="../index.html#projects" class="active" data-en="Projects">ผลงาน</a>
+      <a href="../index.html#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="../index.html#contact" data-en="Contact">ติดต่อ</a>
     </div>
-    <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
+    <div class="nav-actions"><button class="lang-toggle" id="langToggle" aria-label="Switch language / สลับภาษา" title="Switch language / สลับภาษา"><span class="lang-th">TH</span><span class="lang-en">EN</span></button><button class="theme-toggle" id="themeToggle" data-en-aria-label="Toggle light/dark theme" data-en-title="Toggle light/dark theme" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" data-en-aria-label="Open menu" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
   </div>
   <div class="nav-dropdown" id="navDropdown">
-      <a href="../index.html#about">เกี่ยวกับ</a>
-      <a href="../index.html#experience">ประสบการณ์</a>
-      <a href="../index.html#skills">ทักษะ</a>
-      <a href="../index.html#projects">ผลงาน</a>
-      <a href="../index.html#certificates">ใบรับรอง</a>
-      <a href="../index.html#contact">ติดต่อ</a>
+      <a href="../index.html#about" data-en="About">เกี่ยวกับ</a>
+      <a href="../index.html#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="../index.html#skills" data-en="Skills">ทักษะ</a>
+      <a href="../index.html#projects" data-en="Projects">ผลงาน</a>
+      <a href="../index.html#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="../index.html#contact" data-en="Contact">ติดต่อ</a>
   </div>
 </nav>
 
 <section class="proj-hero">
   <div class="wrap">
-    <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>RS Change Detection</span></div>
+    <div class="breadcrumb"><a href="../index.html#projects" data-en="Projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>RS Change Detection</span></div>
     <div class="proj-cat-badge">RS Change Detection</div>
-    <h1>วิเคราะห์ความเสียหาย<span class="nb">อ่างเก็บน้ำห้วยโป่ง</span> <span class="nb">จากอิทธิพลพายุคาจิกิ</span></h1>
-    <p class="proj-lede">ใช้ภาพถ่ายดาวเทียม Sentinel-2 เปรียบเทียบสภาพพื้นที่ก่อน-หลังเหตุการณ์ หลังพายุคาจิกิพัดผ่านจังหวัดแม่ฮ่องสอนจนอ่างเก็บน้ำห้วยโป่งเสียหายและสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108 ขาด เพื่อประเมินขอบเขตความเสียหายเบื้องต้นอย่างรวดเร็วก่อนออกสำรวจพื้นที่จริง</p>
+    <h1 data-en="Huai Pong Reservoir <span class=&quot;nb&quot;>Damage Analysis</span> <span class=&quot;nb&quot;>from Typhoon Kajiki</span>">วิเคราะห์ความเสียหาย<span class="nb">อ่างเก็บน้ำห้วยโป่ง</span> <span class="nb">จากอิทธิพลพายุคาจิกิ</span></h1>
+    <p class="proj-lede" data-en="Using Sentinel-2 satellite imagery to compare the area before and after Typhoon Kajiki passed through Mae Hong Son Province, damaging Huai Pong Reservoir and washing out the Highway 108 bridge over Huai Pong Creek, for a quick preliminary damage assessment before a field survey.">ใช้ภาพถ่ายดาวเทียม Sentinel-2 เปรียบเทียบสภาพพื้นที่ก่อน-หลังเหตุการณ์ หลังพายุคาจิกิพัดผ่านจังหวัดแม่ฮ่องสอนจนอ่างเก็บน้ำห้วยโป่งเสียหายและสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108 ขาด เพื่อประเมินขอบเขตความเสียหายเบื้องต้นอย่างรวดเร็วก่อนออกสำรวจพื้นที่จริง</p>
   </div>
 </section>
 
 <section style="padding-top:0;border-top:none;">
   <div class="wrap">
     <div class="meta-row">
-      <div class="meta-item"><div class="meta-label">หมวดหมู่</div><div class="meta-value">Remote Sensing / Change Detection</div></div>
-      <div class="meta-item"><div class="meta-label">พื้นที่ศึกษา</div><div class="meta-value">บ้านห้วยโป่ง ต.ห้วยโป่ง อ.เมืองแม่ฮ่องสอน</div></div>
-      <div class="meta-item"><div class="meta-label">แหล่งข้อมูล</div><div class="meta-value">ภาพถ่ายดาวเทียม Sentinel-2</div></div>
-      <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">QGIS, True/False Color Composite</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Category">หมวดหมู่</div><div class="meta-value">Remote Sensing / Change Detection</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Study Area">พื้นที่ศึกษา</div><div class="meta-value" data-en="Ban Huai Pong, Huai Pong Subdistrict, Mueang Mae Hong Son">บ้านห้วยโป่ง ต.ห้วยโป่ง อ.เมืองแม่ฮ่องสอน</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Data Sources">แหล่งข้อมูล</div><div class="meta-value" data-en="Sentinel-2 satellite imagery">ภาพถ่ายดาวเทียม Sentinel-2</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Tools">เครื่องมือ</div><div class="meta-value">QGIS, True/False Color Composite</div></div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>โจทย์และที่มา</h2>
-      <p>พายุคาจิกิพัดผ่านและทำให้เกิดฝนตกหนักสะสมในพื้นที่จังหวัดแม่ฮ่องสอน ส่งผลให้อ่างเก็บน้ำห้วยโป่ง ตำบลห้วยโป่ง อำเภอเมืองแม่ฮ่องสอน ได้รับความเสียหาย และสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108 ถูกกระแสน้ำกัดเซาะจนขาด ตัดเส้นทางสัญจรหลักที่เชื่อมพื้นที่</p>
-      <p>เนื่องจากพื้นที่ประสบภัยเข้าถึงยากในช่วงวิกฤต จึงใช้ภาพถ่ายดาวเทียม Sentinel-2 เปรียบเทียบสภาพพื้นที่ก่อนและหลังเหตุการณ์ เพื่อประเมินขอบเขตความเสียหายเบื้องต้นอย่างรวดเร็ว สนับสนุนการรายงานสถานการณ์ให้หน่วยงานที่เกี่ยวข้องทราบ ก่อนออกตรวจสอบพื้นที่จริง</p>
+      <h2 data-en="Problem &amp; Background">โจทย์และที่มา</h2>
+      <p data-en="Typhoon Kajiki brought heavy sustained rainfall to Mae Hong Son Province, damaging Huai Pong Reservoir in Huai Pong Subdistrict, Mueang Mae Hong Son District, and washing out the Highway 108 bridge over Huai Pong Creek, cutting the main route connecting the area.">พายุคาจิกิพัดผ่านและทำให้เกิดฝนตกหนักสะสมในพื้นที่จังหวัดแม่ฮ่องสอน ส่งผลให้อ่างเก็บน้ำห้วยโป่ง ตำบลห้วยโป่ง อำเภอเมืองแม่ฮ่องสอน ได้รับความเสียหาย และสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108 ถูกกระแสน้ำกัดเซาะจนขาด ตัดเส้นทางสัญจรหลักที่เชื่อมพื้นที่</p>
+      <p data-en="Since the affected area was hard to reach during the crisis, Sentinel-2 satellite imagery was used to compare conditions before and after the event, for a fast preliminary damage assessment to support situation reporting to relevant agencies before an on-site inspection.">เนื่องจากพื้นที่ประสบภัยเข้าถึงยากในช่วงวิกฤต จึงใช้ภาพถ่ายดาวเทียม Sentinel-2 เปรียบเทียบสภาพพื้นที่ก่อนและหลังเหตุการณ์ เพื่อประเมินขอบเขตความเสียหายเบื้องต้นอย่างรวดเร็ว สนับสนุนการรายงานสถานการณ์ให้หน่วยงานที่เกี่ยวข้องทราบ ก่อนออกตรวจสอบพื้นที่จริง</p>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ไทม์ไลน์เหตุการณ์</h2>
+      <h2 data-en="Event Timeline">ไทม์ไลน์เหตุการณ์</h2>
       <div class="timeline">
         <div class="t-item">
           <div class="t-dot"></div>
-          <div class="t-org">6 พฤษภาคม 2568</div>
-          <div class="t-role">ภาพถ่ายดาวเทียมพื้นฐานก่อนเกิดเหตุ (Pre-Flood Baseline)</div>
-          <div class="t-desc">สภาพพื้นที่อ่างเก็บน้ำห้วยโป่งและบริเวณโดยรอบเป็นปกติ ใช้เป็นภาพอ้างอิงสำหรับเปรียบเทียบการเปลี่ยนแปลง</div>
+          <div class="t-org" data-en="6 May 2025">6 พฤษภาคม 2568</div>
+          <div class="t-role" data-en="Pre-Flood Baseline Satellite Imagery">ภาพถ่ายดาวเทียมพื้นฐานก่อนเกิดเหตุ (Pre-Flood Baseline)</div>
+          <div class="t-desc" data-en="Normal conditions at Huai Pong Reservoir and the surrounding area, used as a reference image to compare later changes.">สภาพพื้นที่อ่างเก็บน้ำห้วยโป่งและบริเวณโดยรอบเป็นปกติ ใช้เป็นภาพอ้างอิงสำหรับเปรียบเทียบการเปลี่ยนแปลง</div>
         </div>
         <div class="t-item">
           <div class="t-dot"></div>
-          <div class="t-org">9 กันยายน 2568</div>
-          <div class="t-role">ตรวจพบพื้นที่น้ำท่วมบางส่วนจากอิทธิพลพายุ</div>
-          <div class="t-desc">ภาพถ่ายดาวเทียมแสดงพื้นที่ได้รับผลกระทบบางส่วนใน 3 จุด ได้แก่ บ้านผาบ่อง บ้านป่าลาน และบ้านห้วยโป่ง ครอบคลุมตำบลห้วยโป่งและตำบลผาบ่อง เป็นสัญญาณเริ่มต้นก่อนสถานการณ์รุนแรงขึ้น</div>
+          <div class="t-org" data-en="9 September 2025">9 กันยายน 2568</div>
+          <div class="t-role" data-en="Partial flooding detected from storm influence">ตรวจพบพื้นที่น้ำท่วมบางส่วนจากอิทธิพลพายุ</div>
+          <div class="t-desc" data-en="Satellite imagery showed partial impact at 3 points: Ban Pha Bong, Ban Pa Lan, and Ban Huai Pong, covering Huai Pong and Pha Bong Subdistricts — an early signal before the situation worsened.">ภาพถ่ายดาวเทียมแสดงพื้นที่ได้รับผลกระทบบางส่วนใน 3 จุด ได้แก่ บ้านผาบ่อง บ้านป่าลาน และบ้านห้วยโป่ง ครอบคลุมตำบลห้วยโป่งและตำบลผาบ่อง เป็นสัญญาณเริ่มต้นก่อนสถานการณ์รุนแรงขึ้น</div>
         </div>
         <div class="t-item">
           <div class="t-dot"></div>
-          <div class="t-org">11 พฤศจิกายน 2568</div>
-          <div class="t-role">พายุคาจิกิ — อ่างเก็บน้ำห้วยโป่งเสียหาย สะพาน ทล.108 ขาด</div>
-          <div class="t-desc">ภาพถ่ายดาวเทียมหลังเหตุการณ์แสดงพื้นที่ได้รับผลกระทบประมาณ 318 ไร่ บริเวณบ้านห้วยโป่ง ตำบลห้วยโป่ง สอดคล้องกับความเสียหายจริงของอ่างเก็บน้ำและสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108</div>
+          <div class="t-org" data-en="11 November 2025">11 พฤศจิกายน 2568</div>
+          <div class="t-role" data-en="Typhoon Kajiki — Huai Pong Reservoir Damaged, Highway 108 Bridge Washed Out">พายุคาจิกิ — อ่างเก็บน้ำห้วยโป่งเสียหาย สะพาน ทล.108 ขาด</div>
+          <div class="t-desc" data-en="Post-event satellite imagery showed about 318 rai (51 hectares) affected around Ban Huai Pong, Huai Pong Subdistrict, matching the actual damage to the reservoir and the Highway 108 bridge over Huai Pong Creek.">ภาพถ่ายดาวเทียมหลังเหตุการณ์แสดงพื้นที่ได้รับผลกระทบประมาณ 318 ไร่ บริเวณบ้านห้วยโป่ง ตำบลห้วยโป่ง สอดคล้องกับความเสียหายจริงของอ่างเก็บน้ำและสะพานข้ามลำห้วยโป่งบนทางหลวงหมายเลข 108</div>
         </div>
       </div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>วิธีการดำเนินงาน</h2>
+      <h2 data-en="Approach">วิธีการดำเนินงาน</h2>
       <ul>
-        <li>รวบรวมภาพถ่ายดาวเทียม Sentinel-2 ช่วงก่อนเหตุการณ์ (6 พ.ค. 2568) และหลังเหตุการณ์ (11 พ.ย. 2568)</li>
-        <li>ประมวลผลภาพแบบ True Color Composite (TCI) และ False Color Composite (FCI) เพื่อเปรียบเทียบสภาพพื้นที่</li>
-        <li>วิเคราะห์ change detection แบบ multi-temporal เพื่อจำแนกพื้นที่ดินเปิดโล่ง/พื้นที่เมือง (สีชมพูใน FCI) พืชพรรณ (สีเขียว) และแหล่งน้ำ (สีม่วง/น้ำเงิน)</li>
-        <li>จัดทำแผนที่สรุปสถานการณ์น้ำท่วม (Flood Inundated Map) พร้อมพิกัดอ้างอิงและสัญลักษณ์มาตรฐานตามรูปแบบของกรมชลประทาน</li>
+        <li data-en="Collect Sentinel-2 satellite imagery from before (6 May 2025) and after (11 Nov 2025) the event">รวบรวมภาพถ่ายดาวเทียม Sentinel-2 ช่วงก่อนเหตุการณ์ (6 พ.ค. 2568) และหลังเหตุการณ์ (11 พ.ย. 2568)</li>
+        <li data-en="Process True Color Composite (TCI) and False Color Composite (FCI) imagery to compare conditions">ประมวลผลภาพแบบ True Color Composite (TCI) และ False Color Composite (FCI) เพื่อเปรียบเทียบสภาพพื้นที่</li>
+        <li data-en="Run multi-temporal change detection to classify bare soil/built-up areas (pink in FCI), vegetation (green), and water bodies (purple/blue)">วิเคราะห์ change detection แบบ multi-temporal เพื่อจำแนกพื้นที่ดินเปิดโล่ง/พื้นที่เมือง (สีชมพูใน FCI) พืชพรรณ (สีเขียว) และแหล่งน้ำ (สีม่วง/น้ำเงิน)</li>
+        <li data-en="Produce a Flood Inundated Map with reference coordinates and standard symbology following Royal Irrigation Department format">จัดทำแผนที่สรุปสถานการณ์น้ำท่วม (Flood Inundated Map) พร้อมพิกัดอ้างอิงและสัญลักษณ์มาตรฐานตามรูปแบบของกรมชลประทาน</li>
       </ul>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ภาพเหตุการณ์จริงจากพื้นที่ (ภาพถ่ายโดรน/ภาคสนาม)</h2>
+      <h2 data-en="Photos from the Field (Drone/Ground)">ภาพเหตุการณ์จริงจากพื้นที่ (ภาพถ่ายโดรน/ภาคสนาม)</h2>
       <div class="shot-grid">
-        <div class="shot-card" data-full="../assets/img/huai-pong/05-site-road-collapse-wide.jpg" data-caption="ถนนขาดจากแรงกัดเซาะของกระแสน้ำ บริเวณบ้านห้วยโป่ง เศษซากไม้และตะกอนทับถมเต็มพื้นที่สองฝั่ง">
+        <div class="shot-card" data-full="../assets/img/huai-pong/05-site-road-collapse-wide.jpg" data-en-data-caption="A road washed out by the force of the current near Ban Huai Pong, with debris and sediment covering both sides" data-caption="ถนนขาดจากแรงกัดเซาะของกระแสน้ำ บริเวณบ้านห้วยโป่ง เศษซากไม้และตะกอนทับถมเต็มพื้นที่สองฝั่ง">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/05-site-road-collapse-wide.jpg" alt="ภาพถ่ายทางอากาศถนนขาดบริเวณบ้านห้วยโป่ง"></div>
-          <div class="shot-cap"><span class="shot-tag">Aerial · Site Damage</span><span class="shot-desc">ถนนขาดจากแรงกัดเซาะของน้ำ</span></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial · Site Damage</span><span class="shot-desc" data-en="Road washed out by the current">ถนนขาดจากแรงกัดเซาะของน้ำ</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/06-site-drone-bridge-breach.jpg" data-caption="ภาพถ่ายมุมสูงจากโดรนบริเวณสะพานที่ถูกตัดขาด แสดงร่องน้ำกัดเซาะลึกและเศษซากไม้สะสม (8 ก.ย. 2568)">
+        <div class="shot-card" data-full="../assets/img/huai-pong/06-site-drone-bridge-breach.jpg" data-en-data-caption="Aerial drone photo of the breached bridge, showing a deep erosion channel and accumulated debris (8 Sep 2025)" data-caption="ภาพถ่ายมุมสูงจากโดรนบริเวณสะพานที่ถูกตัดขาด แสดงร่องน้ำกัดเซาะลึกและเศษซากไม้สะสม (8 ก.ย. 2568)">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/06-site-drone-bridge-breach.jpg" alt="ภาพโดรนบริเวณสะพานขาดห้วยโป่ง"></div>
-          <div class="shot-cap"><span class="shot-tag">Drone Survey · 08.09.2568</span><span class="shot-desc">จุดที่เสียหายสันทำนบอ่างเก็บน้ำห้วยโป่ง</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Drone Survey · 08.09.2025">Drone Survey · 08.09.2568</span><span class="shot-desc" data-en="Damaged point at the Huai Pong Reservoir dam crest">จุดที่เสียหายสันทำนบอ่างเก็บน้ำห้วยโป่ง</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/07-site-drone-channel-erosion.jpg" data-caption="ภาพถ่ายมุมสูงแสดงร่องน้ำกัดเซาะขนาดใหญ่ต่อเนื่องจากจุดสะพานขาด (8 ก.ย. 2568)">
+        <div class="shot-card" data-full="../assets/img/huai-pong/07-site-drone-channel-erosion.jpg" data-en-data-caption="Aerial photo showing a large erosion channel continuing from the breached bridge point (8 Sep 2025)" data-caption="ภาพถ่ายมุมสูงแสดงร่องน้ำกัดเซาะขนาดใหญ่ต่อเนื่องจากจุดสะพานขาด (8 ก.ย. 2568)">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/07-site-drone-channel-erosion.jpg" alt="ภาพโดรนร่องน้ำกัดเซาะห้วยโป่ง"></div>
-          <div class="shot-cap"><span class="shot-tag">Drone Survey · 08.09.2568</span><span class="shot-desc">ร่องน้ำกัดเซาะต่อเนื่องสันทำนบอ่างเก็บน้ำห้วยโป่ง</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Drone Survey · 08.09.2025">Drone Survey · 08.09.2568</span><span class="shot-desc" data-en="Erosion channel continuing along the reservoir dam crest">ร่องน้ำกัดเซาะต่อเนื่องสันทำนบอ่างเก็บน้ำห้วยโป่ง</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/08-site-drone-channel-wide.jpg" data-caption="ภาพถ่ายมุมสูงแนวลำน้ำห้วยโป่งบริเวณใกล้จุดสะพานที่ได้รับความเสียหาย (8 ก.ย. 2568)">
+        <div class="shot-card" data-full="../assets/img/huai-pong/08-site-drone-channel-wide.jpg" data-en-data-caption="Aerial photo of the Huai Pong Creek channel near the damaged bridge point (8 Sep 2025)" data-caption="ภาพถ่ายมุมสูงแนวลำน้ำห้วยโป่งบริเวณใกล้จุดสะพานที่ได้รับความเสียหาย (8 ก.ย. 2568)">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/08-site-drone-channel-wide.jpg" alt="ภาพโดรนแนวลำน้ำห้วยโป่ง"></div>
-          <div class="shot-cap"><span class="shot-tag">Drone Survey · 08.09.2568</span><span class="shot-desc">แนวลำน้ำใกล้จุดเสียหาย</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Drone Survey · 08.09.2025">Drone Survey · 08.09.2568</span><span class="shot-desc" data-en="Creek channel near the damage point">แนวลำน้ำใกล้จุดเสียหาย</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/09-site-field-inspection.jpg" data-caption="เจ้าหน้าที่ลงพื้นที่ตรวจสอบความเสียหายร่วมกับหน่วยงานที่เกี่ยวข้อง หลังเหตุการณ์น้ำท่วม (8 ก.ย. 2568)">
+        <div class="shot-card" data-full="../assets/img/huai-pong/09-site-field-inspection.jpg" data-en-data-caption="Officials conducting a field inspection with related agencies after the flooding (8 Sep 2025)" data-caption="เจ้าหน้าที่ลงพื้นที่ตรวจสอบความเสียหายร่วมกับหน่วยงานที่เกี่ยวข้อง หลังเหตุการณ์น้ำท่วม (8 ก.ย. 2568)">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/09-site-field-inspection.jpg" alt="เจ้าหน้าที่ลงพื้นที่สำรวจความเสียหายห้วยโป่ง"></div>
-          <div class="shot-cap"><span class="shot-tag">Field Survey · 08.09.2568</span><span class="shot-desc">ลงพื้นที่ตรวจสอบร่วมกับหน่วยงาน</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Field Survey · 08.09.2025">Field Survey · 08.09.2568</span><span class="shot-desc" data-en="Field inspection with related agencies">ลงพื้นที่ตรวจสอบร่วมกับหน่วยงาน</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/10-site-road-temple.jpg" data-caption="ถนนบริเวณวัดในพื้นที่ประสบภัยถูกกระแสน้ำท่วมตัดขาด เศษซากไม้และตะกอนทับถมเส้นทางสัญจร">
+        <div class="shot-card" data-full="../assets/img/huai-pong/10-site-road-temple.jpg" data-en-data-caption="A road near a temple in the affected area cut off by floodwater, with debris and sediment covering the route" data-caption="ถนนบริเวณวัดในพื้นที่ประสบภัยถูกกระแสน้ำท่วมตัดขาด เศษซากไม้และตะกอนทับถมเส้นทางสัญจร">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/10-site-road-temple.jpg" alt="ภาพถ่ายทางอากาศถนนบริเวณวัดถูกน้ำท่วมตัดขาด"></div>
-          <div class="shot-cap"><span class="shot-tag">Aerial · Site Damage</span><span class="shot-desc">เส้นทางสัญจรถูกตัดขาด</span></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial · Site Damage</span><span class="shot-desc" data-en="Access route cut off">เส้นทางสัญจรถูกตัดขาด</span></div>
         </div>
       </div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ภาพประกอบผลงาน (แผนที่วิเคราะห์)</h2>
+      <h2 data-en="Analysis Maps">ภาพประกอบผลงาน (แผนที่วิเคราะห์)</h2>
       <div class="shot-grid">
-        <div class="shot-card" data-full="../assets/img/huai-pong/00-sept-flood-overview-20250909.jpg" data-caption="Flood Inundated Map (9 ก.ย. 2568) — พบพื้นที่น้ำท่วมบางส่วนในตำบลห้วยโป่งและตำบลผาบ่อง 3 จุด ได้แก่ บ้านผาบ่อง บ้านป่าลาน และบ้านห้วยโป่ง (จากภาพถ่ายดาวเทียม Sentinel-2)">
+        <div class="shot-card" data-full="../assets/img/huai-pong/00-sept-flood-overview-20250909.jpg" data-en-data-caption="Flood Inundated Map (9 Sep 2025) — partial flooding found at 3 points in Huai Pong and Pha Bong Subdistricts: Ban Pha Bong, Ban Pa Lan, and Ban Huai Pong (from Sentinel-2 satellite imagery)" data-caption="Flood Inundated Map (9 ก.ย. 2568) — พบพื้นที่น้ำท่วมบางส่วนในตำบลห้วยโป่งและตำบลผาบ่อง 3 จุด ได้แก่ บ้านผาบ่อง บ้านป่าลาน และบ้านห้วยโป่ง (จากภาพถ่ายดาวเทียม Sentinel-2)">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/00-sept-flood-overview-20250909.jpg" alt="แผนที่น้ำท่วมภาพรวม 3 หมู่บ้าน 9 กันยายน 2568"></div>
-          <div class="shot-cap"><span class="shot-tag">Flood Inundated Map · 09.09.2568</span><span class="shot-desc">ภาพรวม 3 หมู่บ้านที่ได้รับผลกระทบ</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Flood Inundated Map · 09.09.2025">Flood Inundated Map · 09.09.2568</span><span class="shot-desc" data-en="Overview of the 3 affected villages">ภาพรวม 3 หมู่บ้านที่ได้รับผลกระทบ</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/01-pre-flood-tci-20250506.jpg" data-caption="ก่อนเกิดเหตุ (True Color, 6 พ.ค. 2568) — สภาพอ่างเก็บน้ำห้วยโป่งปกติ ก่อนพายุคาจิกิพัดผ่าน">
+        <div class="shot-card" data-full="../assets/img/huai-pong/01-pre-flood-tci-20250506.jpg" data-en-data-caption="Before the event (True Color, 6 May 2025) — normal condition of Huai Pong Reservoir before Typhoon Kajiki" data-caption="ก่อนเกิดเหตุ (True Color, 6 พ.ค. 2568) — สภาพอ่างเก็บน้ำห้วยโป่งปกติ ก่อนพายุคาจิกิพัดผ่าน">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/01-pre-flood-tci-20250506.jpg" alt="ภาพถ่ายดาวเทียมก่อนเกิดเหตุ 6 พฤษภาคม 2568"></div>
-          <div class="shot-cap"><span class="shot-tag">Pre-Flood · TCI · 06.05.2568</span><span class="shot-desc">สภาพอ่างเก็บน้ำห้วยโป่งก่อนเกิดเหตุ</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Pre-Flood · TCI · 06.05.2025">Pre-Flood · TCI · 06.05.2568</span><span class="shot-desc" data-en="Huai Pong Reservoir before the event">สภาพอ่างเก็บน้ำห้วยโป่งก่อนเกิดเหตุ</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/02-post-flood-tci-20251107.jpg" data-caption="หลังเกิดเหตุ (True Color, 11 พ.ย. 2568) — อ่างเก็บน้ำห้วยโป่งเปลี่ยนเป็นสีน้ำตาล/ตะกอน สอดคล้องกับความเสียหายของอ่างเก็บน้ำ">
+        <div class="shot-card" data-full="../assets/img/huai-pong/02-post-flood-tci-20251107.jpg" data-en-data-caption="After the event (True Color, 11 Nov 2025) — Huai Pong Reservoir turned brown/sediment-laden, matching the reservoir damage" data-caption="หลังเกิดเหตุ (True Color, 11 พ.ย. 2568) — อ่างเก็บน้ำห้วยโป่งเปลี่ยนเป็นสีน้ำตาล/ตะกอน สอดคล้องกับความเสียหายของอ่างเก็บน้ำ">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/02-post-flood-tci-20251107.jpg" alt="ภาพถ่ายดาวเทียมหลังเกิดเหตุ True Color 11 พฤศจิกายน 2568"></div>
-          <div class="shot-cap"><span class="shot-tag">Post-Flood · TCI · 11.11.2568</span><span class="shot-desc">อ่างเก็บน้ำห้วยโป่งหลังเกิดเหตุ</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Post-Flood · TCI · 11.11.2025">Post-Flood · TCI · 11.11.2568</span><span class="shot-desc" data-en="Huai Pong Reservoir after the event">อ่างเก็บน้ำห้วยโป่งหลังเกิดเหตุ</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/03-post-flood-fci-20251107.jpg" data-caption="หลังเกิดเหตุ (False Color Composite, 11 พ.ย. 2568) — สีชมพูเน้นพื้นที่ดินเปิดโล่ง/พื้นที่ได้รับผลกระทบตามแนวลำน้ำ">
+        <div class="shot-card" data-full="../assets/img/huai-pong/03-post-flood-fci-20251107.jpg" data-en-data-caption="After the event (False Color Composite, 11 Nov 2025) — pink highlights bare soil/affected areas along the waterway" data-caption="หลังเกิดเหตุ (False Color Composite, 11 พ.ย. 2568) — สีชมพูเน้นพื้นที่ดินเปิดโล่ง/พื้นที่ได้รับผลกระทบตามแนวลำน้ำ">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/03-post-flood-fci-20251107.jpg" alt="ภาพถ่ายดาวเทียม False Color Composite 11 พฤศจิกายน 2568"></div>
-          <div class="shot-cap"><span class="shot-tag">Post-Flood · FCI · 11.11.2568</span><span class="shot-desc">False Color เน้นพื้นที่เปิดโล่ง/ผลกระทบ</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Post-Flood · FCI · 11.11.2025">Post-Flood · FCI · 11.11.2568</span><span class="shot-desc" data-en="False Color highlighting bare/affected areas">False Color เน้นพื้นที่เปิดโล่ง/ผลกระทบ</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/huai-pong/04-post-flood-floodarea-20251107.jpg" data-caption="หลังเกิดเหตุ (Water Extent Highlight, 11 พ.ย. 2568) — เน้นแนวขอบเขตน้ำ (สีน้ำเงิน) ตามลำน้ำห้วยโป่งและแม่น้ำปาย">
+        <div class="shot-card" data-full="../assets/img/huai-pong/04-post-flood-floodarea-20251107.jpg" data-en-data-caption="After the event (Water Extent Highlight, 11 Nov 2025) — highlighting the water boundary (blue) along Huai Pong Creek and the Pai River" data-caption="หลังเกิดเหตุ (Water Extent Highlight, 11 พ.ย. 2568) — เน้นแนวขอบเขตน้ำ (สีน้ำเงิน) ตามลำน้ำห้วยโป่งและแม่น้ำปาย">
           <div class="shot-thumb"><img src="../assets/img/huai-pong/04-post-flood-floodarea-20251107.jpg" alt="ภาพถ่ายดาวเทียมแสดงขอบเขตน้ำ 11 พฤศจิกายน 2568"></div>
-          <div class="shot-cap"><span class="shot-tag">Post-Flood · Flood Area · 11.11.2568</span><span class="shot-desc">เน้นแนวขอบเขตน้ำตามลำน้ำ</span></div>
+          <div class="shot-cap"><span class="shot-tag" data-en="Post-Flood · Flood Area · 11.11.2025">Post-Flood · Flood Area · 11.11.2568</span><span class="shot-desc" data-en="Highlighting the water boundary along the creek">เน้นแนวขอบเขตน้ำตามลำน้ำ</span></div>
         </div>
       </div>
-      <div class="note-box">หมายเหตุ: การประเมินผลกระทบและความเสียหายได้จากการวิเคราะห์ภาพถ่ายดาวเทียมโดยประมาณ ยังไม่ได้ผ่านการออกตรวจสอบสภาพพื้นที่จริง (ข้อมูล ณ วันที่วิเคราะห์)</div>
+      <div class="note-box" data-en="Note: The impact and damage estimates are based on satellite imagery analysis only and have not yet been confirmed by an on-site field inspection (data as of the analysis date).">หมายเหตุ: การประเมินผลกระทบและความเสียหายได้จากการวิเคราะห์ภาพถ่ายดาวเทียมโดยประมาณ ยังไม่ได้ผ่านการออกตรวจสอบสภาพพื้นที่จริง (ข้อมูล ณ วันที่วิเคราะห์)</div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ผลลัพธ์และการนำไปใช้</h2>
-      <p>แผนที่ที่จัดทำขึ้นช่วยให้หน่วยงานทราบขอบเขตความเสียหายโดยประมาณ (~318 ไร่ บริเวณบ้านห้วยโป่ง) ได้อย่างรวดเร็วกว่าการรอสำรวจภาคสนามเพียงอย่างเดียว โดยเฉพาะในช่วงที่เส้นทางเข้าพื้นที่ถูกตัดขาดจากสะพาน ทล.108 ที่ชำรุด ใช้เป็นข้อมูลเบื้องต้นประกอบการวางแผนให้ความช่วยเหลือและซ่อมแซมโครงสร้างต่อไป</p>
+      <h2 data-en="Results &amp; Impact">ผลลัพธ์และการนำไปใช้</h2>
+      <p data-en="The maps produced let agencies learn the approximate damage extent (~318 rai around Ban Huai Pong) much faster than waiting on a field survey alone, especially while the access route was cut off by the damaged Highway 108 bridge. This served as preliminary data for planning relief efforts and structural repairs.">แผนที่ที่จัดทำขึ้นช่วยให้หน่วยงานทราบขอบเขตความเสียหายโดยประมาณ (~318 ไร่ บริเวณบ้านห้วยโป่ง) ได้อย่างรวดเร็วกว่าการรอสำรวจภาคสนามเพียงอย่างเดียว โดยเฉพาะในช่วงที่เส้นทางเข้าพื้นที่ถูกตัดขาดจากสะพาน ทล.108 ที่ชำรุด ใช้เป็นข้อมูลเบื้องต้นประกอบการวางแผนให้ความช่วยเหลือและซ่อมแซมโครงสร้างต่อไป</p>
     </div>
 
     <div class="proj-nav">
-      <a href="water-dashboard.html"><i class="ti ti-arrow-left"></i> ผลงานก่อนหน้า</a>
-      <a href="uav-survey.html">ผลงานถัดไป <i class="ti ti-arrow-right"></i></a>
+      <a href="water-dashboard.html"><i class="ti ti-arrow-left"></i> <span data-en="Previous Project">ผลงานก่อนหน้า</span></a>
+      <a href="uav-survey.html"><span data-en="Next Project">ผลงานถัดไป</span> <i class="ti ti-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -167,11 +168,12 @@
 <footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
 
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+  <button class="lightbox-close" id="lightboxClose" data-en-aria-label="Close" aria-label="ปิด"><i class="ti ti-x"></i></button>
   <img id="lightboxImg" src="" alt="">
   <div class="lightbox-cap" id="lightboxCap"></div>
 </div>
 
+<script src="../i18n.js"></script>
 <script src="../motion.js"></script>
 <script>
   const navToggle = document.getElementById('navToggle');

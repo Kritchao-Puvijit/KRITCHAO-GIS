@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
+  <script>try{document.documentElement.setAttribute('data-lang',localStorage.getItem('lang')==='en'?'en':'th');}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kritchao | GIS &amp; Photogrammetry Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,22 +24,22 @@
     <div class="wrap">
       <div class="logo"><span class="dot"></span>KRITCHAO.GIS</div>
       <div class="navlinks">
-        <a href="#about">เกี่ยวกับ</a>
-        <a href="#experience">ประสบการณ์</a>
-        <a href="#skills">ทักษะ</a>
-        <a href="#projects">ผลงาน</a>
-        <a href="#certificates">ใบรับรอง</a>
-        <a href="#contact">ติดต่อ</a>
+        <a href="#about" data-en="About">เกี่ยวกับ</a>
+        <a href="#experience" data-en="Experience">ประสบการณ์</a>
+        <a href="#skills" data-en="Skills">ทักษะ</a>
+        <a href="#projects" data-en="Projects">ผลงาน</a>
+        <a href="#certificates" data-en="Certificates">ใบรับรอง</a>
+        <a href="#contact" data-en="Contact">ติดต่อ</a>
       </div>
-      <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
+      <div class="nav-actions"><button class="lang-toggle" id="langToggle" aria-label="Switch language / สลับภาษา" title="Switch language / สลับภาษา"><span class="lang-th">TH</span><span class="lang-en">EN</span></button><button class="theme-toggle" id="themeToggle" data-en-aria-label="Toggle light/dark theme" data-en-title="Toggle light/dark theme" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" data-en-aria-label="Open menu" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
     </div>
     <div class="nav-dropdown" id="navDropdown">
-      <a href="#about">เกี่ยวกับ</a>
-      <a href="#experience">ประสบการณ์</a>
-      <a href="#skills">ทักษะ</a>
-      <a href="#projects">ผลงาน</a>
-      <a href="#certificates">ใบรับรอง</a>
-      <a href="#contact">ติดต่อ</a>
+      <a href="#about" data-en="About">เกี่ยวกับ</a>
+      <a href="#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="#skills" data-en="Skills">ทักษะ</a>
+      <a href="#projects" data-en="Projects">ผลงาน</a>
+      <a href="#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="#contact" data-en="Contact">ติดต่อ</a>
     </div>
   </nav>
 
@@ -48,7 +49,7 @@
         <div class="kicker">GIS Specialist / Photogrammetry / Remote Sensing</div>
         <div class="title-th">กฤชเชาว์ ภูวิจิตร์</div>
         <h1 class="title"><span class="line1">KRITCHAO</span><br><span class="line2">PUVIJIT</span></h1>
-        <p class="lede">นักวิชาการแผนที่ภาพถ่ายปฏิบัติการและนักภูมิสารสนเทศประจำโครงการชลประทานแม่ฮ่องสอน
+        <p class="lede" data-en="Cartographic and Photogrammetry Officer / Geospatial Specialist at the Mae Hong Son Irrigation Project. Working in GIS, UAV Photogrammetry, and Remote Sensing to support water management and irrigation infrastructure.">นักวิชาการแผนที่ภาพถ่ายปฏิบัติการและนักภูมิสารสนเทศประจำโครงการชลประทานแม่ฮ่องสอน
           ทำงานด้าน GIS, UAV Photogrammetry และ Remote Sensing
           เพื่อสนับสนุนงานบริหารจัดการน้ำและโครงสร้างพื้นฐานชลประทาน</p>
         <div class="role-tags">
@@ -58,12 +59,12 @@
           <span class="role-tag">Remote Sensing</span>
           <span class="role-tag">HTML, JavaScript, Python, SQL</span>
           <span class="role-tag">Web GIS</span>
-          <span class="role-tag">GeoAI (กำลังพัฒนา)</span>
+          <span class="role-tag" data-en="GeoAI (in progress)">GeoAI (กำลังพัฒนา)</span>
         </div>
         <div class="cta-row">
-          <a href="#projects" class="btn btn-primary"><i class="ti ti-map-2"></i> ดูผลงาน</a>
-          <a href="assets/downloads/Kritchao_Puvijit_Portfolio.pdf" download class="btn btn-ghost"><i class="ti ti-download"></i> ดาวน์โหลด PDF</a>
-          <a href="#contact" class="btn btn-ghost"><i class="ti ti-mail"></i> ติดต่อฉัน</a>
+          <a href="#projects" class="btn btn-primary"><i class="ti ti-map-2"></i> <span data-en="View Projects">ดูผลงาน</span></a>
+          <a href="assets/downloads/Kritchao_Puvijit_Portfolio.pdf" download class="btn btn-ghost"><i class="ti ti-download"></i> <span data-en="Download PDF">ดาวน์โหลด PDF</span></a>
+          <a href="#contact" class="btn btn-ghost"><i class="ti ti-mail"></i> <span data-en="Contact Me">ติดต่อฉัน</span></a>
         </div>
       </div>
       <div class="hero-photo">
@@ -77,41 +78,41 @@
   <section id="about" class="fade-in">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-num">01 / เกี่ยวกับฉัน</div>
-        <h2 class="section-title">ผสานภูมิศาสตร์เข้ากับเทคโนโลยี</h2>
+        <div class="section-num" data-en="01 / About Me">01 / เกี่ยวกับฉัน</div>
+        <h2 class="section-title" data-en="Merging Geography with Technology">ผสานภูมิศาสตร์เข้ากับเทคโนโลยี</h2>
       </div>
       <div class="about-grid">
         <div>
-          <p>ผมคือนักภูมิสารสนเทศ (GIS) และนักวิชาการภาพถ่ายทางอากาศ (Photogrammetry)
+          <p data-en="I am a Geographic Information Systems (GIS) and Photogrammetry specialist working in Northern Thailand, focused on <strong>preparing land-use permit maps</strong> for irrigation structures such as weirs and dams, as well as hydrology analysis to support water management.">ผมคือนักภูมิสารสนเทศ (GIS) และนักวิชาการภาพถ่ายทางอากาศ (Photogrammetry)
             ที่ทำงานอยู่ในพื้นที่ภาคเหนือของประเทศไทย โดยเน้นงานด้าน <strong>การจัดทำแผนที่ขออนุญาตใช้พื้นที่</strong>
             สำหรับโครงสร้างชลประทาน เช่น ฝายและเขื่อน รวมถึงงานวิเคราะห์อุทกวิทยาเพื่อสนับสนุนการบริหารจัดการน้ำ</p>
-          <p>สำเร็จการศึกษาระดับปริญญาตรีจาก <strong>คณะสังคมศาสตร์ ภาควิชาภูมิศาสตร์ มหาวิทยาลัยเชียงใหม่</strong>
+          <p data-en="Graduated with a Bachelor's degree from the <strong>Faculty of Social Sciences, Department of Geography, Chiang Mai University</strong>. Started my career through a cooperative education placement at the <strong>Mae Moh Mine, Electricity Generating Authority of Thailand (EGAT)</strong>, before joining<br><strong>the Mae Hong Son Irrigation Project, Royal Irrigation Department</strong> full-time. Responsible for UAV surveys, photogrammetry processing, and spatial analysis with QGIS and ArcGIS Pro for land-use permits for weir construction and water-supply systems.">สำเร็จการศึกษาระดับปริญญาตรีจาก <strong>คณะสังคมศาสตร์ ภาควิชาภูมิศาสตร์ มหาวิทยาลัยเชียงใหม่</strong>
             เริ่มต้นเส้นทางการทำงานจากการสหกิจศึกษาที่ <strong>เหมืองแม่เมาะ การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)</strong>
             ก่อนจะมาทำงานประจำที่<br>
             <strong>โครงการชลประทานแม่ฮ่องสอน กรมชลประทาน</strong> ในปัจจุบัน โดยรับผิดชอบงานสำรวจด้วยอากาศยานไร้คนขับ
             (UAV) การประมวลผลภาพถ่ายทางอากาศ (Photogrammetry) และการวิเคราะห์เชิงพื้นที่ด้วย QGIS และ ArcGIS Pro
             สำหรับการขอใช้พื้นที่ก่อสร้างฝายและระบบส่งน้ำ
           </p>
-          <p>ปัจจุบันกำลังต่อยอดทักษะไปสู่ด้าน <strong>GeoDev และ GeoAI</strong>
+          <p data-en="Currently building skills further in <strong>GeoDev and GeoAI</strong> to create more automated and accurate spatial-analysis tools, such as PostGIS and GeoServer,<br>and Change Detection using satellite imagery (Remote Sensing).">ปัจจุบันกำลังต่อยอดทักษะไปสู่ด้าน <strong>GeoDev และ GeoAI</strong>
             เพื่อสร้างเครื่องมือวิเคราะห์เชิงพื้นที่ที่ทำงานอัตโนมัติและแม่นยำยิ่งขึ้น เช่น PostGIS, GeoServer<br>
             และการทำ Change Detection ด้วยภาพถ่ายดาวเทียม (Remote Sensing)</p>
         </div>
         <div class="stat-block">
           <div class="stat-card">
             <div class="stat-num">05+</div>
-            <div class="stat-label">สาขางานหลักที่เชี่ยวชาญ</div>
+            <div class="stat-label" data-en="core specialties">สาขางานหลักที่เชี่ยวชาญ</div>
           </div>
           <div class="stat-card">
             <div class="stat-num">2</div>
-            <div class="stat-label">หน่วยงานที่ผ่านงานมา</div>
+            <div class="stat-label" data-en="organizations worked with">หน่วยงานที่ผ่านงานมา</div>
           </div>
           <div class="stat-card">
             <div class="stat-num">UAV/RS</div>
-            <div class="stat-label">สำรวจภาคสนามด้วยโดรน/สำรวจระยะไกลด้วยภาพถ่ายดาวเทียม</div>
+            <div class="stat-label" data-en="Drone field survey / satellite remote sensing">สำรวจภาคสนามด้วยโดรน/สำรวจระยะไกลด้วยภาพถ่ายดาวเทียม</div>
           </div>
           <div class="stat-card">
             <div class="stat-num">RID</div>
-            <div class="stat-label">กรมชลประทาน (ปัจจุบัน)</div>
+            <div class="stat-label" data-en="Royal Irrigation Department (current)">กรมชลประทาน (ปัจจุบัน)</div>
           </div>
         </div>
       </div>
@@ -121,8 +122,8 @@
   <section class="vision fade-in">
     <div class="wrap">
       <div class="vision-box">
-        <div class="vision-label">วิสัยทัศน์</div>
-        <p class="vision-text">ผสานเทคโนโลยีภูมิสารสนเทศและ AI<br>เพื่อแปลงพื้นที่ให้เป็นข้อมูลและการตัดสินใจที่แม่นยำ</p>
+        <div class="vision-label" data-en="Vision">วิสัยทัศน์</div>
+        <p class="vision-text" data-en="Combining geospatial technology and AI<br>to turn land into accurate data and decisions.">ผสานเทคโนโลยีภูมิสารสนเทศและ AI<br>เพื่อแปลงพื้นที่ให้เป็นข้อมูลและการตัดสินใจที่แม่นยำ</p>
       </div>
     </div>
   </section>
@@ -130,199 +131,199 @@
   <section id="experience" class="fade-in">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-num">02 / เส้นทางการทำงาน</div>
-        <h2 class="section-title">ประสบการณ์ &amp; การศึกษา</h2>
+        <div class="section-num" data-en="02 / Career Path">02 / เส้นทางการทำงาน</div>
+        <h2 class="section-title" data-en="Experience &amp; Education">ประสบการณ์ &amp; การศึกษา</h2>
         <!-- <p class="section-sub">แก้ไขชื่อสถาบันการศึกษา คณะ/สาขา และปีที่จบการศึกษาให้ตรงกับข้อมูลจริงก่อนเผยแพร่</p> -->
       </div>
       <div class="timeline">
         <div class="t-item">
           <div class="t-dot"></div>
-          <div class="t-org">พ.ค. 2568 — ปัจจุบัน</div>
-          <div class="t-role">นักวิชาการแผนที่และภาพถ่าย — โครงการชลประทานแม่ฮ่องสอน กรมชลประทาน (RID)</div>
-          <div class="t-period">พื้นที่ปฏิบัติงาน: จังหวัดแม่ฮ่องสอน</div>
-          <div class="t-desc">รับผิดชอบงานสำรวจและจัดทำแผนที่ขออนุญาตใช้พื้นที่สำหรับโครงสร้างชลประทาน (ฝาย/เขื่อน)
+          <div class="t-org" data-en="May 2025 — Present">พ.ค. 2568 — ปัจจุบัน</div>
+          <div class="t-role" data-en="Cartographic &amp; Photogrammetry Officer — Mae Hong Son Irrigation Project, Royal Irrigation Department (RID)">นักวิชาการแผนที่และภาพถ่าย — โครงการชลประทานแม่ฮ่องสอน กรมชลประทาน (RID)</div>
+          <div class="t-period" data-en="Work area: Mae Hong Son Province">พื้นที่ปฏิบัติงาน: จังหวัดแม่ฮ่องสอน</div>
+          <div class="t-desc" data-en="Responsible for survey work and land-use permit maps for irrigation structures (weirs/dams). Analyze hydrology and local rainfall data using QGIS and ArcGIS Pro together with UAV data to produce maps and spatial reports. Work with the construction design team to support structural design.">รับผิดชอบงานสำรวจและจัดทำแผนที่ขออนุญาตใช้พื้นที่สำหรับโครงสร้างชลประทาน (ฝาย/เขื่อน)
             วิเคราะห์อุทกวิทยาและข้อมูลปริมาณน้ำฝนในพื้นที่ ใช้ QGIS และ ArcGIS Pro ร่วมกับข้อมูลจาก UAV
             เพื่อผลิตแผนที่และรายงานเชิงพื้นที่ ทำงานร่วมกับทีมออกแบบก่อสร้างเพื่อสนับสนุนข้อมูลประกอบการออกแบบโครงสร้าง</div>
         </div>
         <div class="t-item">
           <div class="t-dot"></div>
-          <div class="t-org">พ.ย. 2567 — ก.พ. 2568</div>
-          <div class="t-role">นักศึกษาสหกิจศึกษาด้าน GIS — เหมืองแม่เมาะ การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)</div>
-          <div class="t-period">สหกิจศึกษา — กฟผ. แม่เมาะ</div>
-          <div class="t-desc">เริ่มต้นเรียนรู้งานภูมิสารสนเทศในบริบทของหน่วยงานพลังงาน ฝึกฝนการสำรวจภาคสนามด้วย RTK GNSS
+          <div class="t-org" data-en="Nov 2024 — Feb 2025">พ.ย. 2567 — ก.พ. 2568</div>
+          <div class="t-role" data-en="GIS Cooperative Education Student — Mae Moh Mine, Electricity Generating Authority of Thailand (EGAT)">นักศึกษาสหกิจศึกษาด้าน GIS — เหมืองแม่เมาะ การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)</div>
+          <div class="t-period" data-en="Cooperative Education — EGAT Mae Moh">สหกิจศึกษา — กฟผ. แม่เมาะ</div>
+          <div class="t-desc" data-en="Started learning geospatial work in the context of an energy-sector organization. Practiced field survey with RTK GNSS and Total Station at Mae Moh Mine, joined the team installing Corner Reflectors for SAR satellite (InSAR) reference at Lam Takhong Reservoir, and trained on fixed-wing UAVs (Wingtra and P220) for large-area survey work.">เริ่มต้นเรียนรู้งานภูมิสารสนเทศในบริบทของหน่วยงานพลังงาน ฝึกฝนการสำรวจภาคสนามด้วย RTK GNSS
             และ Total Station ที่เหมืองแม่เมาะ ร่วมทีมติดตั้ง Corner Reflector สำหรับใช้อ้างอิงข้อมูลดาวเทียม SAR
             (InSAR) ที่อ่างเก็บน้ำลำตะคอง และได้ฝึกใช้งานอากาศยานไร้คนขับปีกตรึง (Fixed-wing UAV) รุ่น Wingtra และ P220
             สำหรับงานสำรวจพื้นที่ขนาดใหญ่</div>
         </div>
         <div class="t-item">
           <div class="t-dot"></div>
-          <div class="t-org">2564 — 2568</div>
-          <div class="t-role">ปริญญาตรี วิทยาศาสตรบัณฑิต (ภูมิศาสตร์)<br>เกียรตินิยมอันดับสอง</div>
-          <div class="t-period">มหาวิทยาลัยเชียงใหม่ — สำเร็จการศึกษา มี.ค. 2568</div>
-          <div class="t-desc">คณะสังคมศาสตร์ ภาควิชาภูมิศาสตร์ มหาวิทยาลัยเชียงใหม่</div>
+          <div class="t-org" data-en="2021 — 2025">2564 — 2568</div>
+          <div class="t-role" data-en="Bachelor of Science (Geography)<br>Second-Class Honors">ปริญญาตรี วิทยาศาสตรบัณฑิต (ภูมิศาสตร์)<br>เกียรตินิยมอันดับสอง</div>
+          <div class="t-period" data-en="Chiang Mai University — Graduated Mar 2025">มหาวิทยาลัยเชียงใหม่ — สำเร็จการศึกษา มี.ค. 2568</div>
+          <div class="t-desc" data-en="Faculty of Social Sciences, Department of Geography, Chiang Mai University">คณะสังคมศาสตร์ ภาควิชาภูมิศาสตร์ มหาวิทยาลัยเชียงใหม่</div>
           <div class="role-tags" style="margin-top:12px;margin-bottom:0;">
-            <span class="role-tag">เกรดเฉลี่ยสะสม (GPAX) 3.35</span>
+            <span class="role-tag" data-en="Cumulative GPA (GPAX) 3.35">เกรดเฉลี่ยสะสม (GPAX) 3.35</span>
           </div>
         </div>
         <div class="t-item">
           <div class="t-dot"></div>
-          <div class="t-org">2561 — 2564</div>
-          <div class="t-role">มัธยมศึกษาตอนปลาย — แผนการเรียนภาษาอังกฤษ–คณิตศาสตร์</div>
-          <div class="t-period">โรงเรียนบุญวาทย์วิทยาลัย จังหวัดลำปาง</div>
+          <div class="t-org" data-en="2018 — 2021">2561 — 2564</div>
+          <div class="t-role" data-en="High School — English–Mathematics Program">มัธยมศึกษาตอนปลาย — แผนการเรียนภาษาอังกฤษ–คณิตศาสตร์</div>
+          <div class="t-period" data-en="Bunyawat Witthayalai School, Lampang Province">โรงเรียนบุญวาทย์วิทยาลัย จังหวัดลำปาง</div>
         </div>
       </div>
 
-      <p class="section-sub" style="margin-top:48px;margin-bottom:24px;">ภาพบรรยากาศการทำงาน โครงการชลประทานแม่ฮ่องสอน — สำรวจภาคสนาม ลงพื้นที่ช่วยเหลือประชาชนหลังอุทกภัย และตรวจราชการร่วมกับผู้บริหาร</p>
+      <p class="section-sub" style="margin-top:48px;margin-bottom:24px;" data-en="Work photos from the Mae Hong Son Irrigation Project — field surveys, flood relief support, and official site inspections with management.">ภาพบรรยากาศการทำงาน โครงการชลประทานแม่ฮ่องสอน — สำรวจภาคสนาม ลงพื้นที่ช่วยเหลือประชาชนหลังอุทกภัย และตรวจราชการร่วมกับผู้บริหาร</p>
       <div class="shot-grid" style="margin-bottom:48px;">
-        <div class="shot-card" data-full="assets/img/rid-job/02-flood-wading-soldier.jpg" data-caption="เจ้าหน้าที่กรมชลประทานลงพื้นที่สำรวจความเสียหายร่วมกับกำลังพลทหาร หลังเกิดอุทกภัย">
+        <div class="shot-card" data-full="assets/img/rid-job/02-flood-wading-soldier.jpg" data-en-data-caption="RID staff conducting a damage survey with military personnel after flooding" data-caption="เจ้าหน้าที่กรมชลประทานลงพื้นที่สำรวจความเสียหายร่วมกับกำลังพลทหาร หลังเกิดอุทกภัย">
           <div class="shot-thumb"><img src="assets/img/rid-job/02-flood-wading-soldier.jpg" alt="เจ้าหน้าที่ลุยน้ำท่วมสำรวจความเสียหาย"></div>
-          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc">สำรวจความเสียหายร่วมกับทหาร</span></div>
+          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc" data-en="Damage survey with the military">สำรวจความเสียหายร่วมกับทหาร</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/03-flood-village-scene.jpg" data-caption="ลงพื้นที่หมู่บ้านประสบอุทกภัย สำรวจความเดือดร้อนของประชาชน">
+        <div class="shot-card" data-full="assets/img/rid-job/03-flood-village-scene.jpg" data-en-data-caption="Visiting a flood-affected village to assess the damage to residents" data-caption="ลงพื้นที่หมู่บ้านประสบอุทกภัย สำรวจความเดือดร้อนของประชาชน">
           <div class="shot-thumb"><img src="assets/img/rid-job/03-flood-village-scene.jpg" alt="ลงพื้นที่หมู่บ้านประสบอุทกภัย"></div>
-          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc">ลงพื้นที่หมู่บ้านประสบภัย</span></div>
+          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc" data-en="Visiting a flood-affected village">ลงพื้นที่หมู่บ้านประสบภัย</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/01-flood-excavator.jpg" data-caption="ประสานรถแบคโฮขุดลอกทางน้ำที่ถูกกิ่งไม้และเศษซากอุดตันหลังน้ำท่วม">
+        <div class="shot-card" data-full="assets/img/rid-job/01-flood-excavator.jpg" data-en-data-caption="Coordinating an excavator to clear debris and branches blocking a waterway after flooding" data-caption="ประสานรถแบคโฮขุดลอกทางน้ำที่ถูกกิ่งไม้และเศษซากอุดตันหลังน้ำท่วม">
           <div class="shot-thumb"><img src="assets/img/rid-job/01-flood-excavator.jpg" alt="รถแบคโฮขุดลอกทางน้ำ"></div>
-          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc">ขุดลอกทางน้ำหลังอุทกภัย</span></div>
+          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc" data-en="Clearing a waterway after flooding">ขุดลอกทางน้ำหลังอุทกภัย</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/04-flood-team-walk.jpg" data-caption="ทีมเจ้าหน้าที่กรมชลประทานเดินสำรวจพื้นที่ประสบภัยน้ำท่วม">
+        <div class="shot-card" data-full="assets/img/rid-job/04-flood-team-walk.jpg" data-en-data-caption="RID staff team walking a flood-affected area during survey" data-caption="ทีมเจ้าหน้าที่กรมชลประทานเดินสำรวจพื้นที่ประสบภัยน้ำท่วม">
           <div class="shot-thumb"><img src="assets/img/rid-job/04-flood-team-walk.jpg" alt="ทีมเจ้าหน้าที่สำรวจพื้นที่ประสบภัย"></div>
-          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc">ทีมสำรวจพื้นที่ประสบภัย</span></div>
+          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc" data-en="Team surveying a flood-affected area">ทีมสำรวจพื้นที่ประสบภัย</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/06-bridge-collapse-scene.jpg" data-caption="จุดถนน/สะพานที่ได้รับความเสียหายจากอุทกภัย เศษซากไม้ทับถมเส้นทางสัญจร">
+        <div class="shot-card" data-full="assets/img/rid-job/06-bridge-collapse-scene.jpg" data-en-data-caption="A road/bridge point damaged by flooding, with debris covering the route" data-caption="จุดถนน/สะพานที่ได้รับความเสียหายจากอุทกภัย เศษซากไม้ทับถมเส้นทางสัญจร">
           <div class="shot-thumb"><img src="assets/img/rid-job/06-bridge-collapse-scene.jpg" alt="จุดถนนเสียหายจากน้ำท่วม"></div>
-          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc">จุดถนนเสียหายจากน้ำท่วม</span></div>
+          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc" data-en="Road damaged by flooding">จุดถนนเสียหายจากน้ำท่วม</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/09-aerial-erosion-closeup.jpg" data-caption="ภาพถ่ายทางอากาศระยะใกล้จุดตลิ่งกัดเซาะข้างโครงสร้างชลประทาน (11 พ.ย. 2568)">
+        <div class="shot-card" data-full="assets/img/rid-job/09-aerial-erosion-closeup.jpg" data-en-data-caption="Close-up aerial photo of a riverbank erosion point beside an irrigation structure (11 Nov 2025)" data-caption="ภาพถ่ายทางอากาศระยะใกล้จุดตลิ่งกัดเซาะข้างโครงสร้างชลประทาน (11 พ.ย. 2568)">
           <div class="shot-thumb"><img src="assets/img/rid-job/09-aerial-erosion-closeup.jpg" alt="ภาพถ่ายทางอากาศจุดตลิ่งกัดเซาะ"></div>
-          <div class="shot-cap"><span class="shot-tag">Aerial Survey</span><span class="shot-desc">จุดตลิ่งกัดเซาะข้างโครงสร้าง</span></div>
+          <div class="shot-cap"><span class="shot-tag">Aerial Survey</span><span class="shot-desc" data-en="Riverbank erosion beside the structure">จุดตลิ่งกัดเซาะข้างโครงสร้าง</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/08-rid-relief-truck.jpg" data-caption="รถบรรทุกโครงการชลประทานแม่ฮ่องสอน ขนย้ายเศษซากไม้ช่วยเหลือประชาชนหลังน้ำท่วม">
+        <div class="shot-card" data-full="assets/img/rid-job/08-rid-relief-truck.jpg" data-en-data-caption="A Mae Hong Son Irrigation Project truck hauling away debris to help residents after flooding" data-caption="รถบรรทุกโครงการชลประทานแม่ฮ่องสอน ขนย้ายเศษซากไม้ช่วยเหลือประชาชนหลังน้ำท่วม">
           <div class="shot-thumb"><img src="assets/img/rid-job/08-rid-relief-truck.jpg" alt="รถบรรทุกกรมชลประทานช่วยเหลือประชาชน"></div>
-          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc">ขนย้ายเศษซากช่วยเหลือประชาชน</span></div>
+          <div class="shot-cap"><span class="shot-tag">Flood Response</span><span class="shot-desc" data-en="Hauling debris to help residents">ขนย้ายเศษซากช่วยเหลือประชาชน</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/07-crowd-suv-inspection.jpg" data-caption="คณะเจ้าหน้าที่ลงพื้นที่ตรวจราชการติดตามสถานการณ์หลังน้ำท่วม">
+        <div class="shot-card" data-full="assets/img/rid-job/07-crowd-suv-inspection.jpg" data-en-data-caption="Officials visiting the site to monitor the situation after flooding" data-caption="คณะเจ้าหน้าที่ลงพื้นที่ตรวจราชการติดตามสถานการณ์หลังน้ำท่วม">
           <div class="shot-thumb"><img src="assets/img/rid-job/07-crowd-suv-inspection.jpg" alt="คณะเจ้าหน้าที่ตรวจราชการ"></div>
-          <div class="shot-cap"><span class="shot-tag">Site Inspection</span><span class="shot-desc">ตรวจราชการติดตามสถานการณ์</span></div>
+          <div class="shot-cap"><span class="shot-tag">Site Inspection</span><span class="shot-desc" data-en="Site inspection monitoring the situation">ตรวจราชการติดตามสถานการณ์</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/10-vip-site-visit.jpg" data-caption="นายอรรถกร ศิริลัทธยากร รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์ (ในขณะนั้น) ลงพื้นที่ตรวจเยี่ยมและให้กำลังใจผู้ประสบภัยน้ำท่วม พร้อมรับฟังรายงานสถานการณ์จากหน่วยงานที่เกี่ยวข้อง">
+        <div class="shot-card" data-full="assets/img/rid-job/10-vip-site-visit.jpg" data-en-data-caption="Mr. Atthakorn Sirilatthayakorn, then Deputy Minister of Agriculture and Cooperatives, visiting and encouraging flood victims while receiving a situation briefing from related agencies" data-caption="นายอรรถกร ศิริลัทธยากร รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์ (ในขณะนั้น) ลงพื้นที่ตรวจเยี่ยมและให้กำลังใจผู้ประสบภัยน้ำท่วม พร้อมรับฟังรายงานสถานการณ์จากหน่วยงานที่เกี่ยวข้อง">
           <div class="shot-thumb"><img src="assets/img/rid-job/10-vip-site-visit.jpg" alt="นายอรรถกร ศิริลัทธยากร ลงพื้นที่ตรวจเยี่ยมผู้ประสบภัยน้ำท่วม"></div>
-          <div class="shot-cap"><span class="shot-tag">VIP Visit</span><span class="shot-desc">นายอรรถกร ศิริลัทธยากร ตรวจเยี่ยมพื้นที่ประสบภัย</span></div>
+          <div class="shot-cap"><span class="shot-tag">VIP Visit</span><span class="shot-desc" data-en="Deputy Minister visiting flood-affected area">นายอรรถกร ศิริลัทธยากร ตรวจเยี่ยมพื้นที่ประสบภัย</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/11-official-forest-meeting.jpg" data-caption="ประชุม/ต้อนรับคณะผู้บริหารลงพื้นที่ตรวจราชการโครงการชลประทาน">
+        <div class="shot-card" data-full="assets/img/rid-job/11-official-forest-meeting.jpg" data-en-data-caption="Meeting/welcoming management on a site inspection of the irrigation project" data-caption="ประชุม/ต้อนรับคณะผู้บริหารลงพื้นที่ตรวจราชการโครงการชลประทาน">
           <div class="shot-thumb"><img src="assets/img/rid-job/11-official-forest-meeting.jpg" alt="ประชุมต้อนรับคณะผู้บริหาร"></div>
-          <div class="shot-cap"><span class="shot-tag">Official Visit</span><span class="shot-desc">ต้อนรับคณะผู้บริหาร</span></div>
+          <div class="shot-cap"><span class="shot-tag">Official Visit</span><span class="shot-desc" data-en="Welcoming management">ต้อนรับคณะผู้บริหาร</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/12-official-ceremony.jpg" data-caption="องคมนตรี พลากร สุวรรณรัฐ ตรวจเยี่ยมพื้นที่โครงการอันเนื่องมาจากพระราชดำริ พร้อมคณะเจ้าหน้าที่โครงการชลประทานแม่ฮ่องสอนร่วมพิธีต้อนรับ">
+        <div class="shot-card" data-full="assets/img/rid-job/12-official-ceremony.jpg" data-en-data-caption="Privy Councillor Palakorn Suwannarat visiting a royally initiated project site, with staff of the Mae Hong Son Irrigation Project joining the welcome ceremony" data-caption="องคมนตรี พลากร สุวรรณรัฐ ตรวจเยี่ยมพื้นที่โครงการอันเนื่องมาจากพระราชดำริ พร้อมคณะเจ้าหน้าที่โครงการชลประทานแม่ฮ่องสอนร่วมพิธีต้อนรับ">
           <div class="shot-thumb"><img src="assets/img/rid-job/12-official-ceremony.jpg" alt="องคมนตรี พลากร สุวรรณรัฐ ตรวจเยี่ยมพื้นที่โครงการ"></div>
-          <div class="shot-cap"><span class="shot-tag">Official Visit</span><span class="shot-desc">องคมนตรี พลากร สุวรรณรัฐ ตรวจเยี่ยมพื้นที่โครงการ</span></div>
+          <div class="shot-cap"><span class="shot-tag">Official Visit</span><span class="shot-desc" data-en="Privy Councillor Palakorn Suwannarat visiting the project site">องคมนตรี พลากร สุวรรณรัฐ ตรวจเยี่ยมพื้นที่โครงการ</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/13-reservoir-signage.jpg" data-caption="ป้ายโครงการชลประทานขนาดกลาง อ่างเก็บน้ำห้วยแม่ฮ่องสอน ตำบลปางหมู อำเภอเมืองแม่ฮ่องสอน">
+        <div class="shot-card" data-full="assets/img/rid-job/13-reservoir-signage.jpg" data-en-data-caption="Signage for the medium-scale Huai Mae Hong Son Reservoir irrigation project, Pang Mu Subdistrict, Mueang Mae Hong Son District" data-caption="ป้ายโครงการชลประทานขนาดกลาง อ่างเก็บน้ำห้วยแม่ฮ่องสอน ตำบลปางหมู อำเภอเมืองแม่ฮ่องสอน">
           <div class="shot-thumb"><img src="assets/img/rid-job/13-reservoir-signage.jpg" alt="ป้ายโครงการอ่างเก็บน้ำห้วยแม่ฮ่องสอน"></div>
-          <div class="shot-cap"><span class="shot-tag">Project Site</span><span class="shot-desc">อ่างเก็บน้ำห้วยแม่ฮ่องสอน</span></div>
+          <div class="shot-cap"><span class="shot-tag">Project Site</span><span class="shot-desc" data-en="Huai Mae Hong Son Reservoir">อ่างเก็บน้ำห้วยแม่ฮ่องสอน</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/14-reservoir-signage-old.jpg" data-caption="ป้ายโครงการอันเนื่องมาจากพระราชดำริ อ่างเก็บน้ำห้วยแม่ลาน้อย ตำบลแม่ลาน้อย อำเภอแม่ลาน้อย">
+        <div class="shot-card" data-full="assets/img/rid-job/14-reservoir-signage-old.jpg" data-en-data-caption="Signage for the royally initiated Huai Mae La Noi Reservoir project, Mae La Noi Subdistrict, Mae La Noi District" data-caption="ป้ายโครงการอันเนื่องมาจากพระราชดำริ อ่างเก็บน้ำห้วยแม่ลาน้อย ตำบลแม่ลาน้อย อำเภอแม่ลาน้อย">
           <div class="shot-thumb"><img src="assets/img/rid-job/14-reservoir-signage-old.jpg" alt="ป้ายโครงการอ่างเก็บน้ำห้วยแม่ลาน้อย"></div>
-          <div class="shot-cap"><span class="shot-tag">Project Site</span><span class="shot-desc">อ่างเก็บน้ำห้วยแม่ลาน้อย</span></div>
+          <div class="shot-cap"><span class="shot-tag">Project Site</span><span class="shot-desc" data-en="Huai Mae La Noi Reservoir">อ่างเก็บน้ำห้วยแม่ลาน้อย</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/15-water-tank-inspection.jpg" data-caption="ตรวจสอบระบบประปาภูเขา/ถังเก็บน้ำในพื้นที่รับผิดชอบ">
+        <div class="shot-card" data-full="assets/img/rid-job/15-water-tank-inspection.jpg" data-en-data-caption="Inspecting a mountain water-supply system/storage tank in the responsible area" data-caption="ตรวจสอบระบบประปาภูเขา/ถังเก็บน้ำในพื้นที่รับผิดชอบ">
           <div class="shot-thumb"><img src="assets/img/rid-job/15-water-tank-inspection.jpg" alt="ตรวจสอบถังเก็บน้ำระบบประปาภูเขา"></div>
-          <div class="shot-cap"><span class="shot-tag">Site Inspection</span><span class="shot-desc">ตรวจสอบระบบประปาภูเขา</span></div>
+          <div class="shot-cap"><span class="shot-tag">Site Inspection</span><span class="shot-desc" data-en="Inspecting a mountain water-supply system">ตรวจสอบระบบประปาภูเขา</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/16-garmin-gps-handheld.jpg" data-caption="ใช้เครื่องรับสัญญาณ GPS Garmin GPSMAP 65s บันทึกพิกัดภาคสนาม">
+        <div class="shot-card" data-full="assets/img/rid-job/16-garmin-gps-handheld.jpg" data-en-data-caption="Using a Garmin GPSMAP 65s GPS receiver to log field coordinates" data-caption="ใช้เครื่องรับสัญญาณ GPS Garmin GPSMAP 65s บันทึกพิกัดภาคสนาม">
           <div class="shot-thumb"><img src="assets/img/rid-job/16-garmin-gps-handheld.jpg" alt="เครื่อง Garmin GPSMAP 65s"></div>
           <div class="shot-cap"><span class="shot-tag">Equipment</span><span class="shot-desc">Garmin GPSMAP 65s</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/17-gnss-rtk-base.jpg" data-caption="เครื่องรับสัญญาณ GNSS RTK ตั้งค่าสถานีฐานสำหรับงานสำรวจพิกัดแม่นยำสูง">
+        <div class="shot-card" data-full="assets/img/rid-job/17-gnss-rtk-base.jpg" data-en-data-caption="Setting up a GNSS RTK base station receiver for high-precision coordinate survey" data-caption="เครื่องรับสัญญาณ GNSS RTK ตั้งค่าสถานีฐานสำหรับงานสำรวจพิกัดแม่นยำสูง">
           <div class="shot-thumb"><img src="assets/img/rid-job/17-gnss-rtk-base.jpg" alt="เครื่องรับสัญญาณ GNSS RTK"></div>
           <div class="shot-cap"><span class="shot-tag">Equipment</span><span class="shot-desc">GNSS RTK Base Station</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/rid-job/18-new-equipment-unboxing.jpg" data-caption="ชุดอุปกรณ์สำรวจ GNSS RTK และคอมพิวเตอร์โน้ตบุ๊กที่จัดหาใหม่ เตรียมพร้อมใช้งานภาคสนาม">
+        <div class="shot-card" data-full="assets/img/rid-job/18-new-equipment-unboxing.jpg" data-en-data-caption="Newly acquired GNSS RTK survey kit and laptop, ready for fieldwork" data-caption="ชุดอุปกรณ์สำรวจ GNSS RTK และคอมพิวเตอร์โน้ตบุ๊กที่จัดหาใหม่ เตรียมพร้อมใช้งานภาคสนาม">
           <div class="shot-thumb"><img src="assets/img/rid-job/18-new-equipment-unboxing.jpg" alt="ชุดอุปกรณ์สำรวจใหม่"></div>
-          <div class="shot-cap"><span class="shot-tag">Equipment</span><span class="shot-desc">ชุดอุปกรณ์สำรวจที่จัดหาใหม่</span></div>
+          <div class="shot-cap"><span class="shot-tag">Equipment</span><span class="shot-desc" data-en="Newly acquired survey kit">ชุดอุปกรณ์สำรวจที่จัดหาใหม่</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/singhanat/field-09-base-group.jpg" data-caption="พลโท วรเทพ บุญญะ แม่ทัพภาคที่ 3 พร้อมคณะทำงานร่วมกับเจ้าหน้าที่หน่วยเฉพาะกิจสิงหนาทที่ฐานปฏิบัติการชายแดน">
+        <div class="shot-card" data-full="assets/img/singhanat/field-09-base-group.jpg" data-en-data-caption="Lt. Gen. Worathep Boonya, Commander of the Third Army Region, and his team with Task Force Singhanat staff at the border outpost" data-caption="พลโท วรเทพ บุญญะ แม่ทัพภาคที่ 3 พร้อมคณะทำงานร่วมกับเจ้าหน้าที่หน่วยเฉพาะกิจสิงหนาทที่ฐานปฏิบัติการชายแดน">
           <div class="shot-thumb"><img src="assets/img/singhanat/field-09-base-group.jpg" alt="คณะทำงานที่ฐานปฏิบัติการชายแดน"></div>
-          <div class="shot-cap"><span class="shot-tag">Border Outpost</span><span class="shot-desc">พลโท วรเทพ บุญญะ แม่ทัพภาคที่ 3 ตรวจเยี่ยมและร่วมถ่ายภาพกับคณะทำงาน ณ ฐานปฏิบัติการชายแดน</span></div>
+          <div class="shot-cap"><span class="shot-tag">Border Outpost</span><span class="shot-desc" data-en="Lt. Gen. Worathep Boonya, Third Army Region Commander, visiting and taking a photo with the team at the border outpost">พลโท วรเทพ บุญญะ แม่ทัพภาคที่ 3 ตรวจเยี่ยมและร่วมถ่ายภาพกับคณะทำงาน ณ ฐานปฏิบัติการชายแดน</span></div>
         </div>
       </div>
 
-      <p class="section-sub" style="margin-top:48px;margin-bottom:24px;">ภาพบรรยากาศการทำงานช่วงสหกิจศึกษา กฟผ. —
+      <p class="section-sub" style="margin-top:48px;margin-bottom:24px;" data-en="Work photos from the EGAT cooperative education period — field survey at Mae Moh Mine, and installing a Corner Reflector at Lam Takhong Reservoir.">ภาพบรรยากาศการทำงานช่วงสหกิจศึกษา กฟผ. —
         สำรวจภาคสนามที่เหมืองแม่เมาะ และติดตั้ง Corner Reflector ที่อ่างเก็บน้ำลำตะคอง</p>
       <div class="shot-grid">
-        <div class="shot-card" data-full="assets/img/egat/01-rtk-survey-field.jpg"
+        <div class="shot-card" data-full="assets/img/egat/01-rtk-survey-field.jpg" data-en-data-caption="Field survey with RTK GNSS alongside my cooperative-education mentor"
           data-caption="สำรวจภาคสนามด้วย RTK GNSS ร่วมกับพี่เลี้ยงสหกิจศึกษา">
           <div class="shot-thumb"><img src="assets/img/egat/01-rtk-survey-field.jpg" alt="สำรวจภาคสนามด้วย RTK GNSS">
           </div>
-          <div class="shot-cap"><span class="shot-tag">Field Survey</span><span class="shot-desc">สำรวจภาคสนามด้วย RTK
+          <div class="shot-cap"><span class="shot-tag">Field Survey</span><span class="shot-desc" data-en="Field survey with RTK GNSS">สำรวจภาคสนามด้วย RTK
               GNSS</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/09-mae-moh-survey.jpg"
+        <div class="shot-card" data-full="assets/img/egat/09-mae-moh-survey.jpg" data-en-data-caption="Level survey with a Digital Level at Mae Moh coal mine"
           data-caption="สำรวจระดับด้วย Digital Level ที่เหมืองถ่านหินแม่เมาะ">
           <div class="shot-thumb"><img src="assets/img/egat/09-mae-moh-survey.jpg" alt="สำรวจที่เหมืองแม่เมาะ"></div>
-          <div class="shot-cap"><span class="shot-tag">กฟผ. แม่เมาะ</span><span class="shot-desc">สำรวจระดับด้วย Digital
+          <div class="shot-cap"><span class="shot-tag" data-en="EGAT Mae Moh">กฟผ. แม่เมาะ</span><span class="shot-desc" data-en="Level survey with a Digital Level">สำรวจระดับด้วย Digital
               Level</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/02-corner-reflector-install-night.jpg"
+        <div class="shot-card" data-full="assets/img/egat/02-corner-reflector-install-night.jpg" data-en-data-caption="Team installing a Corner Reflector base at night at Lam Takhong Reservoir"
           data-caption="ทีมงานติดตั้งฐาน Corner Reflector ในช่วงกลางคืนที่อ่างเก็บน้ำลำตะคอง">
           <div class="shot-thumb"><img src="assets/img/egat/02-corner-reflector-install-night.jpg"
               alt="ติดตั้ง Corner Reflector กลางคืน"></div>
-          <div class="shot-cap"><span class="shot-tag">Lam Takhong Reservoir</span><span class="shot-desc">ทีมติดตั้งฐาน
+          <div class="shot-cap"><span class="shot-tag">Lam Takhong Reservoir</span><span class="shot-desc" data-en="Team installing the Corner Reflector base">ทีมติดตั้งฐาน
               Corner Reflector</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/04-corner-reflector-towers-day.jpg"
+        <div class="shot-card" data-full="assets/img/egat/04-corner-reflector-towers-day.jpg" data-en-data-caption="Corner Reflector base structures at both points at Lam Takhong Reservoir"
           data-caption="โครงสร้างฐานติดตั้ง Corner Reflector ทั้งสองจุดที่อ่างเก็บน้ำลำตะคอง">
           <div class="shot-thumb"><img src="assets/img/egat/04-corner-reflector-towers-day.jpg"
               alt="โครงสร้างฐาน Corner Reflector"></div>
           <div class="shot-cap"><span class="shot-tag">Lam Takhong Reservoir</span><span
-              class="shot-desc">โครงสร้างฐานติดตั้งทั้งสองจุด</span></div>
+              class="shot-desc" data-en="Base structures at both points">โครงสร้างฐานติดตั้งทั้งสองจุด</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/07-corner-reflector-pair-night.jpg"
+        <div class="shot-card" data-full="assets/img/egat/07-corner-reflector-pair-night.jpg" data-en-data-caption="Both Corner Reflector points completed, with the RTK-LANDMOS system for InSAR reference data"
           data-caption="Corner Reflector ทั้งสองจุดติดตั้งแล้วเสร็จ พร้อมระบบ RTK-LANDMOS สำหรับใช้งานอ้างอิงข้อมูล InSAR">
           <div class="shot-thumb"><img src="assets/img/egat/07-corner-reflector-pair-night.jpg"
               alt="Corner Reflector ทั้งสองจุด"></div>
-          <div class="shot-cap"><span class="shot-tag">Lam Takhong Reservoir</span><span class="shot-desc">ครบทั้งสองจุด
+          <div class="shot-cap"><span class="shot-tag">Lam Takhong Reservoir</span><span class="shot-desc" data-en="Both points complete and ready">ครบทั้งสองจุด
               พร้อมใช้งาน</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/10-gnss-rtk-case.jpg"
+        <div class="shot-card" data-full="assets/img/egat/10-gnss-rtk-case.jpg" data-en-data-caption="GNSS RTK equipment set for reference-coordinate survey work"
           data-caption="ชุดอุปกรณ์ GNSS RTK สำหรับงานสำรวจพิกัดอ้างอิง">
           <div class="shot-thumb"><img src="assets/img/egat/10-gnss-rtk-case.jpg" alt="ชุดอุปกรณ์ GNSS RTK"></div>
-          <div class="shot-cap"><span class="shot-tag">Equipment</span><span class="shot-desc">ชุดอุปกรณ์ GNSS
+          <div class="shot-cap"><span class="shot-tag">Equipment</span><span class="shot-desc" data-en="GNSS RTK equipment set">ชุดอุปกรณ์ GNSS
               RTK</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/11-rtk-gnss-training.jpg"
+        <div class="shot-card" data-full="assets/img/egat/11-rtk-gnss-training.jpg" data-en-data-caption="Training on the GNSS RTK receiver with the team"
           data-caption="ฝึกใช้งานเครื่องรับสัญญาณ GNSS RTK ร่วมกับทีม">
           <div class="shot-thumb"><img src="assets/img/egat/11-rtk-gnss-training.jpg" alt="ฝึกใช้งาน GNSS RTK"></div>
-          <div class="shot-cap"><span class="shot-tag">Training</span><span class="shot-desc">ฝึกใช้งานเครื่องรับสัญญาณ
+          <div class="shot-cap"><span class="shot-tag">Training</span><span class="shot-desc" data-en="Training on the GNSS receiver">ฝึกใช้งานเครื่องรับสัญญาณ
               GNSS</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/08-uav-p220-fixedwing.jpg"
+        <div class="shot-card" data-full="assets/img/egat/08-uav-p220-fixedwing.jpg" data-en-data-caption="P220 fixed-wing UAV for large-area survey work"
           data-caption="อากาศยานไร้คนขับปีกตรึงรุ่น P220 สำหรับสำรวจพื้นที่ขนาดใหญ่">
           <div class="shot-thumb"><img src="assets/img/egat/08-uav-p220-fixedwing.jpg" alt="UAV ปีกตรึง P220"></div>
-          <div class="shot-cap"><span class="shot-tag">Fixed-wing UAV</span><span class="shot-desc">P220
+          <div class="shot-cap"><span class="shot-tag">Fixed-wing UAV</span><span class="shot-desc" data-en="P220 for large-area survey">P220
               สำหรับสำรวจพื้นที่ขนาดใหญ่</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/12-uav-wingtra.jpg"
+        <div class="shot-card" data-full="assets/img/egat/12-uav-wingtra.jpg" data-en-data-caption="Wingtra fixed-wing UAV before a survey flight"
           data-caption="อากาศยานไร้คนขับปีกตรึงรุ่น Wingtra ก่อนขึ้นบินสำรวจ">
           <div class="shot-thumb"><img src="assets/img/egat/12-uav-wingtra.jpg" alt="UAV ปีกตรึง Wingtra"></div>
-          <div class="shot-cap"><span class="shot-tag">Fixed-wing UAV</span><span class="shot-desc">Wingtra
+          <div class="shot-cap"><span class="shot-tag">Fixed-wing UAV</span><span class="shot-desc" data-en="Wingtra before a survey flight">Wingtra
               ก่อนขึ้นบินสำรวจ</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/13-matlab-insar-processing.jpg"
+        <div class="shot-card" data-full="assets/img/egat/13-matlab-insar-processing.jpg" data-en-data-caption="Meeting Asst. Prof. Dr. Anuphao Aobpaet to discuss SAR satellite (InSAR) data processing with MATLAB, at the Department of Civil Engineering, Faculty of Engineering, Kasetsart University"
           data-caption="เข้าพบผู้ช่วยศาสตราจารย์ ดร.อนุเผ่า อบแพทย์ เพื่อปรึกษาแนวทางการประมวลผลข้อมูลดาวเทียม SAR (InSAR) ด้วยโปรแกรม MATLAB ที่ภาควิชาวิศวกรรมโยธา คณะวิศวกรรมศาสตร์ มหาวิทยาลัยเกษตรศาสตร์">
           <div class="shot-thumb"><img src="assets/img/egat/13-matlab-insar-processing.jpg" alt="ประมวลผลข้อมูล InSAR ด้วย MATLAB"></div>
-          <div class="shot-cap"><span class="shot-tag">InSAR Processing</span><span class="shot-desc">ปรึกษา ผศ.ดร.อนุเผ่า อบแพทย์ เรื่องการประมวลผล InSAR</span></div>
+          <div class="shot-cap"><span class="shot-tag">InSAR Processing</span><span class="shot-desc" data-en="Consulting Asst. Prof. Dr. Anuphao Aobpaet on InSAR processing">ปรึกษา ผศ.ดร.อนุเผ่า อบแพทย์ เรื่องการประมวลผล InSAR</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/15-rtk-landmos-banner.jpg"
+        <div class="shot-card" data-full="assets/img/egat/15-rtk-landmos-banner.jpg" data-en-data-caption="Photo with academic advisor Dr. Chawis Srimanee and the team in front of the RTK-LANDMOS ground-movement monitoring project banner"
           data-caption="ถ่ายภาพร่วมกับอาจารย์ ดร.ชวิศ ศรีมณี อาจารย์ที่ปรึกษา และทีมงานหน้าป้ายโครงการ RTK-LANDMOS ระบบเฝ้าระวังการเคลื่อนตัวของพื้นดิน">
           <div class="shot-thumb"><img src="assets/img/egat/15-rtk-landmos-banner.jpg" alt="ทีมงานหน้าป้ายโครงการ RTK-LANDMOS"></div>
-          <div class="shot-cap"><span class="shot-tag">RTK-LANDMOS</span><span class="shot-desc">ถ่ายภาพร่วมกับอาจารย์ ดร.ชวิศ ศรีมณี อาจารย์ที่ปรึกษา และทีมงานหน้าป้ายโครงการ RTK-LANDMOS ระบบเฝ้าระวังการเคลื่อนตัวของพื้นดิน</span></div>
+          <div class="shot-cap"><span class="shot-tag">RTK-LANDMOS</span><span class="shot-desc" data-en="Photo with advisor Dr. Chawis Srimanee and the team in front of the RTK-LANDMOS project banner">ถ่ายภาพร่วมกับอาจารย์ ดร.ชวิศ ศรีมณี อาจารย์ที่ปรึกษา และทีมงานหน้าป้ายโครงการ RTK-LANDMOS ระบบเฝ้าระวังการเคลื่อนตัวของพื้นดิน</span></div>
         </div>
-        <div class="shot-card" data-full="assets/img/egat/16-fieldwork-group-photo.jpg"
+        <div class="shot-card" data-full="assets/img/egat/16-fieldwork-group-photo.jpg" data-en-data-caption="Mae Moh Mine rehabilitation team on a field visit together with the Royal Forest Department"
           data-caption="คณะทำงานกองฟื้นฟูเหมืองแม่เมาะลงพื้นที่ภาคสนามร่วมกับกรมป่าไม้">
           <div class="shot-thumb"><img src="assets/img/egat/16-fieldwork-group-photo.jpg" alt="คณะทำงานลงพื้นที่ภาคสนาม"></div>
-          <div class="shot-cap"><span class="shot-tag">Fieldwork</span><span class="shot-desc">กองฟื้นฟูเหมืองแม่เมาะ ร่วมกับกรมป่าไม้</span></div>
+          <div class="shot-cap"><span class="shot-tag">Fieldwork</span><span class="shot-desc" data-en="Mae Moh Mine rehabilitation team with the Royal Forest Department">กองฟื้นฟูเหมืองแม่เมาะ ร่วมกับกรมป่าไม้</span></div>
         </div>
       </div>
     </div>
@@ -331,8 +332,8 @@
   <section id="skills" class="fade-in">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-num">03 / เครื่องมือที่ใช้</div>
-        <h2 class="section-title">ทักษะ &amp; เทคโนโลยี</h2>
+        <div class="section-num" data-en="03 / Tools I Use">03 / เครื่องมือที่ใช้</div>
+        <h2 class="section-title" data-en="Skills &amp; Technology">ทักษะ &amp; เทคโนโลยี</h2>
       </div>
       <div class="skill-grid">
         <div class="skill-card"><i class="ti ti-map"></i>
@@ -341,7 +342,7 @@
             <li>QGIS</li>
             <li>ArcMap</li>
             <li>ArcGIS Pro</li>
-            <li>การจัดทำแผนที่ขออนุญาต</li>
+            <li data-en="Land-use Permit Mapping">การจัดทำแผนที่ขออนุญาต</li>
             <li>Cartographic Design</li>
           </ul>
         </div>
@@ -400,18 +401,18 @@
   <section id="projects" class="fade-in">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-num">04 / ผลงานคัดสรร</div>
-        <h2 class="section-title">ผลงานคัดสรรเชิงประจักษ์</h2>
-        <p class="section-sub">คลิกเพื่อดูรายละเอียดของแต่ละผลงาน</p>
+        <div class="section-num" data-en="04 / Selected Work">04 / ผลงานคัดสรร</div>
+        <h2 class="section-title" data-en="Selected Projects">ผลงานคัดสรรเชิงประจักษ์</h2>
+        <p class="section-sub" data-en="Click a project to see the details">คลิกเพื่อดูรายละเอียดของแต่ละผลงาน</p>
       </div>
 
       <div class="filter-row">
-        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="filter-btn active" data-filter="all" data-en="All">ทั้งหมด</button>
         <button class="filter-btn" data-filter="webmap">Webmap</button>
         <button class="filter-btn" data-filter="photo">Photogrammetry</button>
         <button class="filter-btn" data-filter="rs">RS Change Detection</button>
-        <button class="filter-btn" data-filter="gis">GIS ทั่วไป</button>
-        <button class="filter-btn" data-filter="permit">แผนที่ขออนุญาต</button>
+        <button class="filter-btn" data-filter="gis" data-en="General GIS">GIS ทั่วไป</button>
+        <button class="filter-btn" data-filter="permit" data-en="Permit Maps">แผนที่ขออนุญาต</button>
       </div>
 
       <div class="proj-grid" id="projGrid">
@@ -420,8 +421,8 @@
           <div class="proj-thumb"><span class="proj-cat">Webmap</span><img src="assets/img/water-dashboard-preview.jpg"
               alt="MHS Water - แผนที่ติดตามปริมาณฝนแบบเรียลไทม์"></div>
           <div class="proj-body">
-            <h3>MHS Water — ระบบติดตามสถานการณ์น้ำแบบ<span class="nb">เรียลไทม์</span></h3>
-            <p>เว็บแอปแสดงระดับน้ำและปริมาณฝนในพื้นที่จังหวัดแม่ฮ่องสอนแบบเรียลไทม์ เชื่อมข้อมูลจาก ThaiWater API
+            <h3 data-en="MHS Water — Real-time Water Monitoring System">MHS Water — ระบบติดตามสถานการณ์น้ำแบบ<span class="nb">เรียลไทม์</span></h3>
+            <p data-en="A web app showing real-time water levels and rainfall for Mae Hong Son Province, linking ThaiWater API data and rain radar into an interactive map (live and working).">เว็บแอปแสดงระดับน้ำและปริมาณฝนในพื้นที่จังหวัดแม่ฮ่องสอนแบบเรียลไทม์ เชื่อมข้อมูลจาก ThaiWater API
               และเรดาร์ฝนเข้ากับแผนที่เชิงโต้ตอบ (ใช้งานได้จริง)</p>
             <div class="proj-tools"><span>Leaflet</span><span>Chart.js</span><span>ThaiWater API</span></div>
           </div>
@@ -432,8 +433,8 @@
               src="assets/img/huai-pong/03-post-flood-fci-20251107.jpg"
               alt="วิเคราะห์ความเสียหายอ่างเก็บน้ำห้วยโป่งจากพายุคาจิกิ"></div>
           <div class="proj-body">
-            <h3>วิเคราะห์ความเสียหาย<span class="nb">อ่างเก็บน้ำห้วยโป่ง</span><span class="nb">จากพายุคาจิกิ</span></h3>
-            <p>เปรียบเทียบภาพถ่ายดาวเทียม Sentinel-2 ก่อน-หลังพายุคาจิกิ ที่ทำให้อ่างเก็บน้ำห้วยโป่งเสียหายและสะพาน
+            <h3 data-en="Damage Analysis — Huai Pong Reservoir from Typhoon Kajiki">วิเคราะห์ความเสียหาย<span class="nb">อ่างเก็บน้ำห้วยโป่ง</span><span class="nb">จากพายุคาจิกิ</span></h3>
+            <p data-en="Comparing Sentinel-2 satellite imagery before and after Typhoon Kajiki, which damaged Huai Pong Reservoir and washed out the Highway 108 bridge (live and working).">เปรียบเทียบภาพถ่ายดาวเทียม Sentinel-2 ก่อน-หลังพายุคาจิกิ ที่ทำให้อ่างเก็บน้ำห้วยโป่งเสียหายและสะพาน
               ทล.108 ขาด (ใช้งานได้จริง)</p>
             <div class="proj-tools"><span>Sentinel-2</span><span>Change Detection</span><span>QGIS</span></div>
           </div>
@@ -442,41 +443,41 @@
         <a class="proj-card" data-cat="photo" href="projects/uav-survey.html">
           <div class="proj-thumb"><span class="proj-cat">Photogrammetry</span><img src="assets/img/uav-survey/09-densecloud-bridge.jpg" alt="สำรวจภูมิประเทศด้วย UAV อ่างเก็บน้ำและสะพานห้วยโป่ง"></div>
           <div class="proj-body">
-            <h3>สำรวจภูมิประเทศด้วย UAV <span class="nb">อ่างเก็บน้ำ</span>-<span class="nb">สะพานห้วยโป่ง</span></h3>
-            <p>บินสำรวจด้วยโดรน DJI Air 2S ประมวลผลด้วย Metashape/WebODM ผลิต Point Cloud, DEM/DSM และ Orthomosaic พื้นที่เสียหายจากพายุคาจิกิ</p>
+            <h3 data-en="UAV Terrain Survey — Huai Pong Reservoir &amp; Bridge">สำรวจภูมิประเทศด้วย UAV <span class="nb">อ่างเก็บน้ำ</span>-<span class="nb">สะพานห้วยโป่ง</span></h3>
+            <p data-en="Drone survey flight with the DJI Air 2S, processed with Metashape/WebODM to produce a Point Cloud, DEM/DSM, and Orthomosaic of the area damaged by Typhoon Kajiki.">บินสำรวจด้วยโดรน DJI Air 2S ประมวลผลด้วย Metashape/WebODM ผลิต Point Cloud, DEM/DSM และ Orthomosaic พื้นที่เสียหายจากพายุคาจิกิ</p>
             <div class="proj-tools"><span>UAV</span><span>Metashape</span><span>WebODM</span></div>
           </div>
         </a>
 
         <a class="proj-card" data-cat="gis" href="projects/terrain-mapping.html">
-          <div class="proj-thumb"><span class="proj-cat">GIS ทั่วไป</span><img
+          <div class="proj-thumb"><span class="proj-cat" data-en="General GIS">GIS ทั่วไป</span><img
               src="assets/img/terrain-mapping/03-mueang-mhs.jpg"
               alt="จัดทำแผนที่ภูมิประเทศและอุทกศาสตร์ จังหวัดแม่ฮ่องสอน"></div>
           <div class="proj-body">
-            <h3>จัดทำแผนที่ภูมิประเทศและอุทกศาสตร์ <span class="nb">จ.แม่ฮ่องสอน</span></h3>
-            <p>แผนที่ระดับความสูง (Hypsometric Map) ครบทั้ง 7 อำเภอ พร้อมแผนที่ปริมาณฝนเฉลี่ยสะสมรายปีทั้งจังหวัด</p>
+            <h3 data-en="Terrain &amp; Hydrology Mapping — Mae Hong Son Province">จัดทำแผนที่ภูมิประเทศและอุทกศาสตร์ <span class="nb">จ.แม่ฮ่องสอน</span></h3>
+            <p data-en="Hypsometric (elevation) maps covering all 7 districts, with a province-wide annual average rainfall map.">แผนที่ระดับความสูง (Hypsometric Map) ครบทั้ง 7 อำเภอ พร้อมแผนที่ปริมาณฝนเฉลี่ยสะสมรายปีทั้งจังหวัด</p>
             <div class="proj-tools"><span>QGIS</span><span>DEM Analysis</span><span>Rainfall Mapping</span></div>
           </div>
         </a>
 
         <a class="proj-card" data-cat="permit" href="projects/permit-map.html">
-          <div class="proj-thumb"><span class="proj-cat">แผนที่ขออนุญาต</span><img
+          <div class="proj-thumb"><span class="proj-cat" data-en="Permit Maps">แผนที่ขออนุญาต</span><img
               src="assets/img/permit-map/01-paiwatershed-permit-attachment.jpg"
               alt="จัดทำแผนที่ขออนุญาตใช้พื้นที่ก่อสร้างโครงการชลประทาน"></div>
           <div class="proj-body">
-            <h3>จัดทำแผนที่ขออนุญาตใช้พื้นที่ก่อสร้าง<span class="nb">โครงการชลประทาน</span></h3>
-            <p>ผลิตแผนที่และเอกสารประกอบสำหรับขออนุญาตใช้พื้นที่ก่อสร้างโครงสร้างชลประทาน ตามมาตรฐานของกรมชลประทาน</p>
+            <h3 data-en="Land-Use Permit Maps for Irrigation Construction">จัดทำแผนที่ขออนุญาตใช้พื้นที่ก่อสร้าง<span class="nb">โครงการชลประทาน</span></h3>
+            <p data-en="Producing maps and supporting documents for land-use permits for irrigation structures, following Royal Irrigation Department standards.">ผลิตแผนที่และเอกสารประกอบสำหรับขออนุญาตใช้พื้นที่ก่อสร้างโครงสร้างชลประทาน ตามมาตรฐานของกรมชลประทาน</p>
             <div class="proj-tools"><span>ArcGIS Pro</span><span>Cartography</span><span>Permit Docs</span></div>
           </div>
         </a>
 
         <a class="proj-card" data-cat="permit" href="projects/singhanat-water.html">
-          <div class="proj-thumb"><span class="proj-cat">แผนที่ขออนุญาต</span><img
+          <div class="proj-thumb"><span class="proj-cat" data-en="Permit Maps">แผนที่ขออนุญาต</span><img
               src="assets/img/singhanat/road-05-doimuser-aerial.jpg"
               alt="ขออนุญาตทำถนนชายแดนและจัดหาน้ำสนับสนุนฐานปฏิบัติการ"></div>
           <div class="proj-body">
-            <h3>ขออนุญาตทำถนนชายแดนและจัดหาน้ำสนับสนุนฐาน<span class="nb">ปฏิบัติการ</span><span class="nb">หน่วยเฉพาะกิจสิงหนาท</span></h3>
-            <p>แผนที่ขออนุญาตถนนเข้าฐานปฏิบัติการชายแดน 4 เส้นทาง พร้อมจัดหาน้ำสนับสนุนหมู่บ้าน
+            <h3 data-en="Border Road Permits &amp; Water Supply for Task Force Singhanat Outpost">ขออนุญาตทำถนนชายแดนและจัดหาน้ำสนับสนุนฐาน<span class="nb">ปฏิบัติการ</span><span class="nb">หน่วยเฉพาะกิจสิงหนาท</span></h3>
+            <p data-en="Permit maps for 4 access roads to the border outpost, plus village water-supply planning together with the Mae Hong Son Irrigation Project.">แผนที่ขออนุญาตถนนเข้าฐานปฏิบัติการชายแดน 4 เส้นทาง พร้อมจัดหาน้ำสนับสนุนหมู่บ้าน
               ร่วมกับโครงการชลประทานแม่ฮ่องสอน</p>
             <div class="proj-tools"><span>QGIS</span><span>Elevation Survey</span><span>Permit Docs</span></div>
           </div>
@@ -487,8 +488,8 @@
               src="assets/img/gee-chiangmai/01-split-compare.jpg"
               alt="เปรียบเทียบภาพถ่ายดาวเทียมรายปีด้วย Google Earth Engine อำเภอเมืองเชียงใหม่"></div>
           <div class="proj-body">
-            <h3>เปรียบเทียบภาพถ่ายดาวเทียมรายปี <span class="nb">ด้วย Google Earth Engine</span></h3>
-            <p>GEE Application แบบ split-view เทียบภาพ Sentinel-2/Landsat ระหว่างปีที่เลือกได้อิสระ พร้อม NDVI, NDBI
+            <h3 data-en="Year-by-Year Satellite Comparison <span class=&quot;nb&quot;>with Google Earth Engine</span>">เปรียบเทียบภาพถ่ายดาวเทียมรายปี <span class="nb">ด้วย Google Earth Engine</span></h3>
+            <p data-en="A split-view GEE application comparing Sentinel-2/Landsat imagery between any two chosen years, with NDVI, NDBI, and Pansharpen (live and working).">GEE Application แบบ split-view เทียบภาพ Sentinel-2/Landsat ระหว่างปีที่เลือกได้อิสระ พร้อม NDVI, NDBI
               และ Pansharpen (ใช้งานได้จริง)</p>
             <div class="proj-tools"><span>Google Earth Engine</span><span>Sentinel-2</span><span>Landsat 8/9</span></div>
           </div>
@@ -501,31 +502,33 @@
   <section id="certificates" class="fade-in">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-num">05 / ใบรับรอง</div>
-        <h2 class="section-title">ประกาศนียบัตร &amp; ใบรับรอง</h2>
-        <p class="section-sub">คลิกที่ภาพเพื่อดูแบบเต็มขนาด</p>
+        <div class="section-num" data-en="05 / Certificates">05 / ใบรับรอง</div>
+        <h2 class="section-title" data-en="Diplomas &amp; Certificates">ประกาศนียบัตร &amp; ใบรับรอง</h2>
+        <p class="section-sub" data-en="Click an image to view it full size">คลิกที่ภาพเพื่อดูแบบเต็มขนาด</p>
       </div>
 
       <div class="cert-grid">
         <div class="cert-card" data-full="assets/img/certificates/degree-certificate.jpg"
+          data-en-data-caption="Bachelor of Science Degree (Geography), Second-Class Honors, Chiang Mai University"
           data-caption="ปริญญาบัตร วิทยาศาสตรบัณฑิต (ภูมิศาสตร์) เกียรตินิยมอันดับสอง มหาวิทยาลัยเชียงใหม่">
           <div class="cert-thumb"><img src="assets/img/certificates/degree-certificate.jpg"
               alt="ปริญญาบัตร วิทยาศาสตรบัณฑิต (ภูมิศาสตร์) มหาวิทยาลัยเชียงใหม่"></div>
           <div class="cert-overlay"><i class="ti ti-zoom-in"></i></div>
           <div class="cert-body">
-            <h3>วิทยาศาสตรบัณฑิต (ภูมิศาสตร์)</h3>
-            <p>เกียรตินิยมอันดับสอง · ม.เชียงใหม่ · มี.ค. 2568</p>
+            <h3 data-en="Bachelor of Science (Geography)">วิทยาศาสตรบัณฑิต (ภูมิศาสตร์)</h3>
+            <p data-en="Second-Class Honors · Chiang Mai University · Mar 2025">เกียรตินิยมอันดับสอง · ม.เชียงใหม่ · มี.ค. 2568</p>
           </div>
         </div>
 
         <div class="cert-card" data-full="assets/img/certificates/chiangmai-school-of-city.jpg"
+          data-en-data-caption="Chiangmai School of City 2023 — Department of Geography, Faculty of Social Sciences, Chiang Mai University"
           data-caption="Chiangmai School of City 2023 — ภาควิชาภูมิศาสตร์ คณะสังคมศาสตร์ มหาวิทยาลัยเชียงใหม่">
           <div class="cert-thumb"><img src="assets/img/certificates/chiangmai-school-of-city.jpg"
               alt="ประกาศนียบัตร Chiangmai School of City 2023"></div>
           <div class="cert-overlay"><i class="ti ti-zoom-in"></i></div>
           <div class="cert-body">
             <h3>Chiangmai School of City 2023</h3>
-            <p>ภาควิชาภูมิศาสตร์ ม.เชียงใหม่ · พ.ย. 2566</p>
+            <p data-en="Department of Geography, Chiang Mai University · Nov 2023">ภาควิชาภูมิศาสตร์ ม.เชียงใหม่ · พ.ย. 2566</p>
           </div>
         </div>
 
@@ -536,18 +539,19 @@
           <div class="cert-overlay"><i class="ti ti-zoom-in"></i></div>
           <div class="cert-body">
             <h3>Foundations of GeoAI with Google Earth Engine</h3>
-            <p>GeoAI Weekend Series · ก.ค. 2569</p>
+            <p data-en="GeoAI Weekend Series · Jul 2026">GeoAI Weekend Series · ก.ค. 2569</p>
           </div>
         </div>
 
         <div class="cert-card" data-full="assets/img/certificates/egat-internship.jpg"
+          data-en-data-caption="Cooperative Education Certificate — Electricity Generating Authority of Thailand (EGAT)"
           data-caption="หนังสือรับรองการสหกิจศึกษา — การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)">
           <div class="cert-thumb"><img src="assets/img/certificates/egat-internship.jpg"
               alt="หนังสือรับรองการสหกิจศึกษา การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย"></div>
           <div class="cert-overlay"><i class="ti ti-zoom-in"></i></div>
           <div class="cert-body">
-            <h3>หนังสือรับรองการสหกิจศึกษา</h3>
-            <p>การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)</p>
+            <h3 data-en="Cooperative Education Certificate">หนังสือรับรองการสหกิจศึกษา</h3>
+            <p data-en="Electricity Generating Authority of Thailand (EGAT)">การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)</p>
           </div>
         </div>
 
@@ -563,13 +567,14 @@
         </div>
 
         <div class="cert-card" data-full="assets/img/certificates/civil-service-exam.jpg"
+          data-en-data-caption="Certificate for passing the General Aptitude Test (Part A), Bachelor's level, Office of the Civil Service Commission"
           data-caption="หนังสือรับรองผลการสอบผ่านการวัดความรู้ความสามารถทั่วไป (ภาค ก.) ระดับปริญญาตรี สำนักงาน ก.พ.">
           <div class="cert-thumb"><img src="assets/img/certificates/civil-service-exam.jpg"
               alt="หนังสือรับรองผลสอบภาค ก. สำนักงาน ก.พ."></div>
           <div class="cert-overlay"><i class="ti ti-zoom-in"></i></div>
           <div class="cert-body">
-            <h3>หนังสือรับรองผลสอบภาค ก. (ก.พ.)</h3>
-            <p>ระดับปริญญาตรี · สำนักงาน ก.พ.</p>
+            <h3 data-en="Civil Service Exam Part A Certificate (OCSC)">หนังสือรับรองผลสอบภาค ก. (ก.พ.)</h3>
+            <p data-en="Bachelor's level · Office of the Civil Service Commission">ระดับปริญญาตรี · สำนักงาน ก.พ.</p>
           </div>
         </div>
       </div>
@@ -579,10 +584,11 @@
   <section id="contact" class="fade-in">
     <div class="wrap">
       <div class="contact-card">
-        <h2>สนใจร่วมงาน หรือพูดคุยเรื่อง GIS?</h2>
-        <p>เปิดรับโอกาสความร่วมมือด้านภูมิสารสนเทศ การสำรวจด้วยโดรน และการวิเคราะห์ข้อมูลเชิงพื้นที่
+        <h2 data-en="Interested in working together, or talking GIS?">สนใจร่วมงาน หรือพูดคุยเรื่อง GIS?</h2>
+        <p data-en="Open to opportunities in geospatial work, drone survey, and spatial data analysis. Reach out through the channels below.">เปิดรับโอกาสความร่วมมือด้านภูมิสารสนเทศ การสำรวจด้วยโดรน และการวิเคราะห์ข้อมูลเชิงพื้นที่
           ติดต่อได้ตามช่องทางด้านล่าง</p>
         <div class="contact-links">
+          <a href="tel:+66833218045"><i class="ti ti-phone"></i> 083-321-8045</a>
           <a href="mailto:kritchaopuvijit@gmail.com"><i class="ti ti-mail"></i> kritchaopuvijit@gmail.com</a>
           <a href="https://www.linkedin.com/in/kritchao-puvijit-7107623b7" target="_blank" rel="noopener"><i
               class="ti ti-brand-linkedin"></i> LinkedIn</a>
@@ -595,11 +601,12 @@
   <footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
 
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+    <button class="lightbox-close" id="lightboxClose" data-en-aria-label="Close" aria-label="ปิด"><i class="ti ti-x"></i></button>
     <img id="lightboxImg" src="" alt="">
     <div class="lightbox-cap" id="lightboxCap"></div>
   </div>
 
+  <script src="i18n.js"></script>
   <script src="motion.js"></script>
   <script>
     const navToggle = document.getElementById('navToggle');

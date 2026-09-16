@@ -91,6 +91,19 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 :root[data-theme="light"] .theme-toggle .ti-sun{display:none;}
 :root[data-theme="light"] .theme-toggle .ti-moon{display:block;}
 
+.lang-toggle{
+  display:flex;align-items:center;height:38px;padding:3px;gap:1px;flex-shrink:0;
+  background:transparent;border:1px solid var(--border-strong);border-radius:8px;
+  cursor:pointer;transition:border-color .2s;font-family:var(--mono);
+}
+.lang-toggle:hover{border-color:var(--accent);}
+.lang-toggle span{
+  padding:5px 8px;font-size:11.5px;font-weight:600;letter-spacing:.02em;line-height:1;
+  color:var(--text-dim);border-radius:5px;transition:all .2s;
+}
+:root:not([data-lang="en"]) .lang-toggle .lang-th{background:var(--accent);color:var(--on-accent);}
+:root[data-lang="en"] .lang-toggle .lang-en{background:var(--accent);color:var(--on-accent);}
+
 .nav-toggle{
   display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;
   width:40px;height:40px;padding:0;

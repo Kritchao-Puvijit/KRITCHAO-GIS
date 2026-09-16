@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
   <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
+  <script>try{document.documentElement.setAttribute('data-lang',localStorage.getItem('lang')==='en'?'en':'th');}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>จัดทำแผนที่ภูมิประเทศและอุทกศาสตร์ จังหวัดแม่ฮ่องสอน | Kritchao Portfolio</title>
+<title data-en="Terrain &amp; Hydrology Mapping — Mae Hong Son Province | Kritchao Portfolio">จัดทำแผนที่ภูมิประเทศและอุทกศาสตร์ จังหวัดแม่ฮ่องสอน | Kritchao Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
@@ -18,105 +19,105 @@
   <div class="wrap">
     <a href="../index.html" class="logo"><span class="dot"></span>KRITCHAO.GIS</a>
     <div class="navlinks">
-      <a href="../index.html#about">เกี่ยวกับ</a>
-      <a href="../index.html#experience">ประสบการณ์</a>
-      <a href="../index.html#skills">ทักษะ</a>
-      <a href="../index.html#projects" class="active">ผลงาน</a>
-      <a href="../index.html#certificates">ใบรับรอง</a>
-      <a href="../index.html#contact">ติดต่อ</a>
+      <a href="../index.html#about" data-en="About">เกี่ยวกับ</a>
+      <a href="../index.html#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="../index.html#skills" data-en="Skills">ทักษะ</a>
+      <a href="../index.html#projects" class="active" data-en="Projects">ผลงาน</a>
+      <a href="../index.html#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="../index.html#contact" data-en="Contact">ติดต่อ</a>
     </div>
-    <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
+    <div class="nav-actions"><button class="lang-toggle" id="langToggle" aria-label="Switch language / สลับภาษา" title="Switch language / สลับภาษา"><span class="lang-th">TH</span><span class="lang-en">EN</span></button><button class="theme-toggle" id="themeToggle" data-en-aria-label="Toggle light/dark theme" data-en-title="Toggle light/dark theme" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" data-en-aria-label="Open menu" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
   </div>
   <div class="nav-dropdown" id="navDropdown">
-      <a href="../index.html#about">เกี่ยวกับ</a>
-      <a href="../index.html#experience">ประสบการณ์</a>
-      <a href="../index.html#skills">ทักษะ</a>
-      <a href="../index.html#projects">ผลงาน</a>
-      <a href="../index.html#certificates">ใบรับรอง</a>
-      <a href="../index.html#contact">ติดต่อ</a>
+      <a href="../index.html#about" data-en="About">เกี่ยวกับ</a>
+      <a href="../index.html#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="../index.html#skills" data-en="Skills">ทักษะ</a>
+      <a href="../index.html#projects" data-en="Projects">ผลงาน</a>
+      <a href="../index.html#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="../index.html#contact" data-en="Contact">ติดต่อ</a>
   </div>
 </nav>
 
 <section class="proj-hero">
   <div class="wrap">
-    <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>GIS ทั่วไป</span></div>
-    <div class="proj-cat-badge">GIS ทั่วไป / Terrain &amp; Hydrology Mapping</div>
-    <h1>จัดทำแผนที่ภูมิประเทศและอุทกศาสตร์ <span class="nb">จังหวัดแม่ฮ่องสอน</span></h1>
-    <p class="proj-lede">จัดทำแผนที่ระดับความสูงภูมิประเทศ (Hypsometric Map) พร้อมแหล่งน้ำครบทั้ง 7 อำเภอของจังหวัดแม่ฮ่องสอน และแผนที่การกระจายตัวของปริมาณฝนเฉลี่ยสะสมรายปีทั้งจังหวัด เพื่อใช้เป็นข้อมูลพื้นฐานสนับสนุนงานบริหารจัดการน้ำและวางแผนโครงการชลประทาน</p>
+    <div class="breadcrumb"><a href="../index.html#projects" data-en="Projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span data-en="General GIS">GIS ทั่วไป</span></div>
+    <div class="proj-cat-badge" data-en="General GIS / Terrain &amp; Hydrology Mapping">GIS ทั่วไป / Terrain &amp; Hydrology Mapping</div>
+    <h1 data-en="Terrain &amp; Hydrology Mapping <span class=&quot;nb&quot;>Mae Hong Son Province</span>">จัดทำแผนที่ภูมิประเทศและอุทกศาสตร์ <span class="nb">จังหวัดแม่ฮ่องสอน</span></h1>
+    <p class="proj-lede" data-en="Produced hypsometric (elevation) maps with water bodies covering all 7 districts of Mae Hong Son Province, plus a province-wide annual average rainfall distribution map, to serve as baseline data supporting water management and irrigation project planning.">จัดทำแผนที่ระดับความสูงภูมิประเทศ (Hypsometric Map) พร้อมแหล่งน้ำครบทั้ง 7 อำเภอของจังหวัดแม่ฮ่องสอน และแผนที่การกระจายตัวของปริมาณฝนเฉลี่ยสะสมรายปีทั้งจังหวัด เพื่อใช้เป็นข้อมูลพื้นฐานสนับสนุนงานบริหารจัดการน้ำและวางแผนโครงการชลประทาน</p>
   </div>
 </section>
 
 <section style="padding-top:0;border-top:none;">
   <div class="wrap">
     <div class="meta-row">
-      <div class="meta-item"><div class="meta-label">หมวดหมู่</div><div class="meta-value">GIS ทั่วไป / Terrain Mapping</div></div>
-      <div class="meta-item"><div class="meta-label">พื้นที่ศึกษา</div><div class="meta-value">ทั้ง 7 อำเภอ จังหวัดแม่ฮ่องสอน</div></div>
-      <div class="meta-item"><div class="meta-label">แหล่งข้อมูล</div><div class="meta-value">DEM จากดาวเทียม Sentinel-1 SAR (ASF)</div></div>
-      <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">QGIS, ArcGIS Pro, Interpolation</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Category">หมวดหมู่</div><div class="meta-value" data-en="General GIS / Terrain Mapping">GIS ทั่วไป / Terrain Mapping</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Study Area">พื้นที่ศึกษา</div><div class="meta-value" data-en="All 7 districts, Mae Hong Son Province">ทั้ง 7 อำเภอ จังหวัดแม่ฮ่องสอน</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Data Sources">แหล่งข้อมูล</div><div class="meta-value" data-en="DEM from Sentinel-1 SAR satellite (ASF)">DEM จากดาวเทียม Sentinel-1 SAR (ASF)</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Tools">เครื่องมือ</div><div class="meta-value">QGIS, ArcGIS Pro, Interpolation</div></div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>โจทย์และที่มา</h2>
-      <p>จังหวัดแม่ฮ่องสอนมีภูมิประเทศเป็นภูเขาสูงชันสลับซับซ้อน ระดับความสูงและปริมาณฝนแปรผันมากในแต่ละพื้นที่ หน่วยงานจึงจำเป็นต้องมีแผนที่ภูมิประเทศและข้อมูลฝนที่ครอบคลุมทั้งจังหวัดในรูปแบบที่อ่านง่าย ใช้เป็นข้อมูลอ้างอิงเบื้องต้นสำหรับงานสำรวจ วางแผนโครงการชลประทาน และการบริหารจัดการน้ำในภาพรวม โดยไม่ผูกกับการขออนุญาตใช้พื้นที่โครงการใดโครงการหนึ่งโดยเฉพาะ</p>
+      <h2 data-en="Problem &amp; Background">โจทย์และที่มา</h2>
+      <p data-en="Mae Hong Son Province has steep, complex mountainous terrain, with elevation and rainfall varying widely across the area. The agency needed easy-to-read terrain and rainfall maps covering the whole province, to serve as baseline reference data for surveys, irrigation project planning, and overall water management — not tied to any single project's land-use permit.">จังหวัดแม่ฮ่องสอนมีภูมิประเทศเป็นภูเขาสูงชันสลับซับซ้อน ระดับความสูงและปริมาณฝนแปรผันมากในแต่ละพื้นที่ หน่วยงานจึงจำเป็นต้องมีแผนที่ภูมิประเทศและข้อมูลฝนที่ครอบคลุมทั้งจังหวัดในรูปแบบที่อ่านง่าย ใช้เป็นข้อมูลอ้างอิงเบื้องต้นสำหรับงานสำรวจ วางแผนโครงการชลประทาน และการบริหารจัดการน้ำในภาพรวม โดยไม่ผูกกับการขออนุญาตใช้พื้นที่โครงการใดโครงการหนึ่งโดยเฉพาะ</p>
     </div>
 
     <div class="content-block fade-in">
-      <h2>วิธีการดำเนินงาน</h2>
+      <h2 data-en="Approach">วิธีการดำเนินงาน</h2>
       <ul>
-        <li>ประมวลผลข้อมูล DEM จากภาพถ่ายดาวเทียม Sentinel-1 SAR ความละเอียด 10 เมตร (Alaska Satellite Facility)</li>
-        <li>จัดทำแผนที่ Hypsometric Map แสดงระดับความสูงและแหล่งน้ำ (แม่น้ำ/ลำห้วย) แยกรายอำเภอ ครบทั้ง 7 อำเภอ</li>
-        <li>สร้างกราฟตัดขวางแสดงค่าระดับความสูง (Elevation Profile) ตามแนวที่กำหนดในแต่ละอำเภอ เพื่อให้เห็นลักษณะภูมิประเทศเชิงลึก</li>
-        <li>วิเคราะห์และจัดทำแผนที่การกระจายตัวของปริมาณฝนเฉลี่ยสะสมรายปี (10 ปี ย้อนหลัง) ด้วยกระบวนการ Interpolation จากข้อมูลสถานีของหลายหน่วยงาน (กรมชลประทาน กรมทรัพยากรน้ำ กรมอุตุนิยมวิทยา ปภ. ฯลฯ)</li>
-        <li>ออกแบบเลย์เอาต์แผนที่ตามมาตรฐานของกรมชลประทาน พร้อมสัญลักษณ์ มาตราส่วน และ inset map ระบุตำแหน่ง</li>
+        <li data-en="Process DEM data from Sentinel-1 SAR satellite imagery at 10-meter resolution (Alaska Satellite Facility)">ประมวลผลข้อมูล DEM จากภาพถ่ายดาวเทียม Sentinel-1 SAR ความละเอียด 10 เมตร (Alaska Satellite Facility)</li>
+        <li data-en="Produce Hypsometric Maps showing elevation and water bodies (rivers/creeks) per district, covering all 7 districts">จัดทำแผนที่ Hypsometric Map แสดงระดับความสูงและแหล่งน้ำ (แม่น้ำ/ลำห้วย) แยกรายอำเภอ ครบทั้ง 7 อำเภอ</li>
+        <li data-en="Build elevation profile cross-sections along defined lines in each district for a deeper view of terrain characteristics">สร้างกราฟตัดขวางแสดงค่าระดับความสูง (Elevation Profile) ตามแนวที่กำหนดในแต่ละอำเภอ เพื่อให้เห็นลักษณะภูมิประเทศเชิงลึก</li>
+        <li data-en="Analyze and produce a 10-year annual average rainfall distribution map using interpolation from station data of multiple agencies (Royal Irrigation Department, Department of Water Resources, Meteorological Department, DDPM, etc.)">วิเคราะห์และจัดทำแผนที่การกระจายตัวของปริมาณฝนเฉลี่ยสะสมรายปี (10 ปี ย้อนหลัง) ด้วยกระบวนการ Interpolation จากข้อมูลสถานีของหลายหน่วยงาน (กรมชลประทาน กรมทรัพยากรน้ำ กรมอุตุนิยมวิทยา ปภ. ฯลฯ)</li>
+        <li data-en="Design map layouts following Royal Irrigation Department standards, with symbology, scale, and a location inset map">ออกแบบเลย์เอาต์แผนที่ตามมาตรฐานของกรมชลประทาน พร้อมสัญลักษณ์ มาตราส่วน และ inset map ระบุตำแหน่ง</li>
       </ul>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ภาพประกอบผลงาน</h2>
+      <h2 data-en="Project Maps">ภาพประกอบผลงาน</h2>
       <div class="shot-grid">
-        <div class="shot-card" data-full="../assets/img/terrain-mapping/08-rainfall-distribution.jpg" data-caption="แผนที่การกระจายตัวของปริมาณฝนเฉลี่ยสะสมรายปี 10 ปี (2558-2568) ทั้งจังหวัดแม่ฮ่องสอน จัดทำด้วยกระบวนการ Interpolation">
+        <div class="shot-card" data-full="../assets/img/terrain-mapping/08-rainfall-distribution.jpg" data-en-data-caption="10-year (2015-2025) annual average rainfall distribution map for all of Mae Hong Son Province, produced by interpolation" data-caption="แผนที่การกระจายตัวของปริมาณฝนเฉลี่ยสะสมรายปี 10 ปี (2558-2568) ทั้งจังหวัดแม่ฮ่องสอน จัดทำด้วยกระบวนการ Interpolation">
           <div class="shot-thumb"><img src="../assets/img/terrain-mapping/08-rainfall-distribution.jpg" alt="แผนที่ปริมาณฝนเฉลี่ยสะสมรายปี จังหวัดแม่ฮ่องสอน"></div>
-          <div class="shot-cap"><span class="shot-tag">Rainfall Distribution</span><span class="shot-desc">ปริมาณฝนเฉลี่ยสะสม 10 ปี ทั้งจังหวัด</span></div>
+          <div class="shot-cap"><span class="shot-tag">Rainfall Distribution</span><span class="shot-desc" data-en="10-year average rainfall, whole province">ปริมาณฝนเฉลี่ยสะสม 10 ปี ทั้งจังหวัด</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/terrain-mapping/03-mueang-mhs.jpg" data-caption="Hypsometric Map อำเภอเมืองแม่ฮ่องสอน — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
+        <div class="shot-card" data-full="../assets/img/terrain-mapping/03-mueang-mhs.jpg" data-en-data-caption="Hypsometric Map — Mueang Mae Hong Son District — terrain elevation and water bodies" data-caption="Hypsometric Map อำเภอเมืองแม่ฮ่องสอน — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
           <div class="shot-thumb"><img src="../assets/img/terrain-mapping/03-mueang-mhs.jpg" alt="แผนที่ระดับความสูง อำเภอเมืองแม่ฮ่องสอน"></div>
-          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc">อำเภอเมืองแม่ฮ่องสอน</span></div>
+          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc" data-en="Mueang Mae Hong Son District">อำเภอเมืองแม่ฮ่องสอน</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/terrain-mapping/01-pai.jpg" data-caption="Hypsometric Map อำเภอปาย — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
+        <div class="shot-card" data-full="../assets/img/terrain-mapping/01-pai.jpg" data-en-data-caption="Hypsometric Map — Pai District — terrain elevation and water bodies" data-caption="Hypsometric Map อำเภอปาย — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
           <div class="shot-thumb"><img src="../assets/img/terrain-mapping/01-pai.jpg" alt="แผนที่ระดับความสูง อำเภอปาย"></div>
-          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc">อำเภอปาย</span></div>
+          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc" data-en="Pai District">อำเภอปาย</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/terrain-mapping/02-pang-mapha.jpg" data-caption="Hypsometric Map อำเภอปางมะผ้า — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
+        <div class="shot-card" data-full="../assets/img/terrain-mapping/02-pang-mapha.jpg" data-en-data-caption="Hypsometric Map — Pang Mapha District — terrain elevation and water bodies" data-caption="Hypsometric Map อำเภอปางมะผ้า — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
           <div class="shot-thumb"><img src="../assets/img/terrain-mapping/02-pang-mapha.jpg" alt="แผนที่ระดับความสูง อำเภอปางมะผ้า"></div>
-          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc">อำเภอปางมะผ้า</span></div>
+          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc" data-en="Pang Mapha District">อำเภอปางมะผ้า</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/terrain-mapping/04-khun-yuam.jpg" data-caption="Hypsometric Map อำเภอขุนยวม — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
+        <div class="shot-card" data-full="../assets/img/terrain-mapping/04-khun-yuam.jpg" data-en-data-caption="Hypsometric Map — Khun Yuam District — terrain elevation and water bodies" data-caption="Hypsometric Map อำเภอขุนยวม — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
           <div class="shot-thumb"><img src="../assets/img/terrain-mapping/04-khun-yuam.jpg" alt="แผนที่ระดับความสูง อำเภอขุนยวม"></div>
-          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc">อำเภอขุนยวม</span></div>
+          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc" data-en="Khun Yuam District">อำเภอขุนยวม</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/terrain-mapping/05-mae-la-noi.jpg" data-caption="Hypsometric Map อำเภอแม่ลาน้อย — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
+        <div class="shot-card" data-full="../assets/img/terrain-mapping/05-mae-la-noi.jpg" data-en-data-caption="Hypsometric Map — Mae La Noi District — terrain elevation and water bodies" data-caption="Hypsometric Map อำเภอแม่ลาน้อย — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
           <div class="shot-thumb"><img src="../assets/img/terrain-mapping/05-mae-la-noi.jpg" alt="แผนที่ระดับความสูง อำเภอแม่ลาน้อย"></div>
-          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc">อำเภอแม่ลาน้อย</span></div>
+          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc" data-en="Mae La Noi District">อำเภอแม่ลาน้อย</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/terrain-mapping/06-mae-sariang.jpg" data-caption="Hypsometric Map อำเภอแม่สะเรียง — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
+        <div class="shot-card" data-full="../assets/img/terrain-mapping/06-mae-sariang.jpg" data-en-data-caption="Hypsometric Map — Mae Sariang District — terrain elevation and water bodies" data-caption="Hypsometric Map อำเภอแม่สะเรียง — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
           <div class="shot-thumb"><img src="../assets/img/terrain-mapping/06-mae-sariang.jpg" alt="แผนที่ระดับความสูง อำเภอแม่สะเรียง"></div>
-          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc">อำเภอแม่สะเรียง</span></div>
+          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc" data-en="Mae Sariang District">อำเภอแม่สะเรียง</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/terrain-mapping/07-sop-moei.jpg" data-caption="Hypsometric Map อำเภอสบเมย — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
+        <div class="shot-card" data-full="../assets/img/terrain-mapping/07-sop-moei.jpg" data-en-data-caption="Hypsometric Map — Sop Moei District — terrain elevation and water bodies" data-caption="Hypsometric Map อำเภอสบเมย — ระดับความสูงภูมิประเทศและแหล่งน้ำ">
           <div class="shot-thumb"><img src="../assets/img/terrain-mapping/07-sop-moei.jpg" alt="แผนที่ระดับความสูง อำเภอสบเมย"></div>
-          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc">อำเภอสบเมย</span></div>
+          <div class="shot-cap"><span class="shot-tag">Hypsometric Map</span><span class="shot-desc" data-en="Sop Moei District">อำเภอสบเมย</span></div>
         </div>
       </div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ผลลัพธ์และการนำไปใช้</h2>
-      <p>ชุดแผนที่ที่จัดทำขึ้นใช้เป็นข้อมูลพื้นฐานอ้างอิงสำหรับทีมสำรวจและวางแผนงานชลประทานทั้งจังหวัด ช่วยให้เห็นภาพรวมลักษณะภูมิประเทศ ทิศทางลำน้ำ และแนวโน้มปริมาณฝนในแต่ละพื้นที่ได้อย่างรวดเร็ว โดยไม่ต้องรอข้อมูลเฉพาะโครงการ เหมาะสำหรับการนำเสนอภาพรวมและประกอบการตัดสินใจเบื้องต้นก่อนลงพื้นที่จริง</p>
+      <h2 data-en="Results &amp; Impact">ผลลัพธ์และการนำไปใช้</h2>
+      <p data-en="The map set serves as baseline reference data for the survey team and province-wide irrigation planning, giving a quick overview of terrain, waterway direction, and rainfall trends in each area without waiting on project-specific data — well-suited for overview presentations and preliminary decisions before a field visit.">ชุดแผนที่ที่จัดทำขึ้นใช้เป็นข้อมูลพื้นฐานอ้างอิงสำหรับทีมสำรวจและวางแผนงานชลประทานทั้งจังหวัด ช่วยให้เห็นภาพรวมลักษณะภูมิประเทศ ทิศทางลำน้ำ และแนวโน้มปริมาณฝนในแต่ละพื้นที่ได้อย่างรวดเร็ว โดยไม่ต้องรอข้อมูลเฉพาะโครงการ เหมาะสำหรับการนำเสนอภาพรวมและประกอบการตัดสินใจเบื้องต้นก่อนลงพื้นที่จริง</p>
     </div>
 
     <div class="proj-nav">
-      <a href="uav-survey.html"><i class="ti ti-arrow-left"></i> ผลงานก่อนหน้า</a>
-      <a href="permit-map.html">ผลงานถัดไป <i class="ti ti-arrow-right"></i></a>
+      <a href="uav-survey.html"><i class="ti ti-arrow-left"></i> <span data-en="Previous Project">ผลงานก่อนหน้า</span></a>
+      <a href="permit-map.html"><span data-en="Next Project">ผลงานถัดไป</span> <i class="ti ti-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -124,11 +125,12 @@
 <footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
 
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+  <button class="lightbox-close" id="lightboxClose" data-en-aria-label="Close" aria-label="ปิด"><i class="ti ti-x"></i></button>
   <img id="lightboxImg" src="" alt="">
   <div class="lightbox-cap" id="lightboxCap"></div>
 </div>
 
+<script src="../i18n.js"></script>
 <script src="../motion.js"></script>
 <script>
   const navToggle = document.getElementById('navToggle');

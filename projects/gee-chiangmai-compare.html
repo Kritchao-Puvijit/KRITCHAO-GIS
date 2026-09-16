@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
   <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
+  <script>try{document.documentElement.setAttribute('data-lang',localStorage.getItem('lang')==='en'?'en':'th');}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>เปรียบเทียบภาพถ่ายดาวเทียมรายปีด้วย Google Earth Engine | Kritchao Portfolio</title>
+<title data-en="Year-by-Year Satellite Comparison with Google Earth Engine | Kritchao Portfolio">เปรียบเทียบภาพถ่ายดาวเทียมรายปีด้วย Google Earth Engine | Kritchao Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
@@ -36,33 +37,33 @@
   <div class="wrap">
     <a href="../index.html" class="logo"><span class="dot"></span>KRITCHAO.GIS</a>
     <div class="navlinks">
-      <a href="../index.html#about">เกี่ยวกับ</a>
-      <a href="../index.html#experience">ประสบการณ์</a>
-      <a href="../index.html#skills">ทักษะ</a>
-      <a href="../index.html#projects" class="active">ผลงาน</a>
-      <a href="../index.html#certificates">ใบรับรอง</a>
-      <a href="../index.html#contact">ติดต่อ</a>
+      <a href="../index.html#about" data-en="About">เกี่ยวกับ</a>
+      <a href="../index.html#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="../index.html#skills" data-en="Skills">ทักษะ</a>
+      <a href="../index.html#projects" class="active" data-en="Projects">ผลงาน</a>
+      <a href="../index.html#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="../index.html#contact" data-en="Contact">ติดต่อ</a>
     </div>
-    <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
+    <div class="nav-actions"><button class="lang-toggle" id="langToggle" aria-label="Switch language / สลับภาษา" title="Switch language / สลับภาษา"><span class="lang-th">TH</span><span class="lang-en">EN</span></button><button class="theme-toggle" id="themeToggle" data-en-aria-label="Toggle light/dark theme" data-en-title="Toggle light/dark theme" aria-label="สลับธีมสว่าง/มืด" title="สลับธีมสว่าง/มืด"><i class="ti ti-sun"></i><i class="ti ti-moon"></i></button><button class="nav-toggle" id="navToggle" data-en-aria-label="Open menu" aria-label="เปิดเมนู"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button></div>
   </div>
   <div class="nav-dropdown" id="navDropdown">
-      <a href="../index.html#about">เกี่ยวกับ</a>
-      <a href="../index.html#experience">ประสบการณ์</a>
-      <a href="../index.html#skills">ทักษะ</a>
-      <a href="../index.html#projects">ผลงาน</a>
-      <a href="../index.html#certificates">ใบรับรอง</a>
-      <a href="../index.html#contact">ติดต่อ</a>
+      <a href="../index.html#about" data-en="About">เกี่ยวกับ</a>
+      <a href="../index.html#experience" data-en="Experience">ประสบการณ์</a>
+      <a href="../index.html#skills" data-en="Skills">ทักษะ</a>
+      <a href="../index.html#projects" data-en="Projects">ผลงาน</a>
+      <a href="../index.html#certificates" data-en="Certificates">ใบรับรอง</a>
+      <a href="../index.html#contact" data-en="Contact">ติดต่อ</a>
   </div>
 </nav>
 
 <section class="proj-hero">
   <div class="wrap">
-    <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>RS Change Detection</span></div>
+    <div class="breadcrumb"><a href="../index.html#projects" data-en="Projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>RS Change Detection</span></div>
     <div class="proj-cat-badge">Remote Sensing / Google Earth Engine</div>
-    <h1>เปรียบเทียบภาพถ่ายดาวเทียมรายปีแบบ<span class="nb">อินเทอร์แอกทีฟ</span> <span class="nb">อำเภอเมืองเชียงใหม่</span></h1>
-    <p class="proj-lede">GEE Application แบบ split-view เปรียบเทียบภาพถ่ายดาวเทียม Sentinel-2 <span class="nb">และ Landsat 8/9</span> ระหว่างปีที่เลือกได้อิสระทั้งสองฝั่ง แสดงได้ทั้งภาพสีจริง (True Color) ภาพ False Color, ดัชนีพืชพรรณ (NDVI), ดัชนีพื้นที่เมือง (NDBI) รวมถึงภาพขาวดำความละเอียดสูงและภาพ Pansharpen ของ Landsat เพื่อติดตามการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองในแต่ละปี</p>
+    <h1 data-en="<span class=&quot;nb&quot;>Interactive</span> Year-by-Year Satellite Comparison <span class=&quot;nb&quot;>Mueang Chiang Mai District</span>">เปรียบเทียบภาพถ่ายดาวเทียมรายปีแบบ<span class="nb">อินเทอร์แอกทีฟ</span> <span class="nb">อำเภอเมืองเชียงใหม่</span></h1>
+    <p class="proj-lede" data-en="A split-view GEE application comparing Sentinel-2 <span class=&quot;nb&quot;>and Landsat 8/9</span> satellite imagery between any two independently chosen years, showing True Color, False Color, vegetation index (NDVI), built-up index (NDBI), plus high-resolution panchromatic and Pansharpened Landsat imagery, to track land-use change and urban growth year by year.">GEE Application แบบ split-view เปรียบเทียบภาพถ่ายดาวเทียม Sentinel-2 <span class="nb">และ Landsat 8/9</span> ระหว่างปีที่เลือกได้อิสระทั้งสองฝั่ง แสดงได้ทั้งภาพสีจริง (True Color) ภาพ False Color, ดัชนีพืชพรรณ (NDVI), ดัชนีพื้นที่เมือง (NDBI) รวมถึงภาพขาวดำความละเอียดสูงและภาพ Pansharpen ของ Landsat เพื่อติดตามการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองในแต่ละปี</p>
     <div class="cta-row" style="margin-top:28px;">
-      <a href="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" target="_blank" rel="noopener" class="btn btn-primary"><i class="ti ti-external-link"></i> เปิดแอปจริง</a>
+      <a href="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" target="_blank" rel="noopener" class="btn btn-primary"><i class="ti ti-external-link"></i> <span data-en="Open Live App">เปิดแอปจริง</span></a>
     </div>
   </div>
 </section>
@@ -70,54 +71,54 @@
 <section style="padding-top:0;border-top:none;">
   <div class="wrap">
     <div class="meta-row">
-      <div class="meta-item"><div class="meta-label">หมวดหมู่</div><div class="meta-value">Remote Sensing / GEE App</div></div>
-      <div class="meta-item"><div class="meta-label">พื้นที่ศึกษา</div><div class="meta-value">อำเภอเมืองเชียงใหม่ จังหวัดเชียงใหม่</div></div>
-      <div class="meta-item"><div class="meta-label">แหล่งข้อมูล</div><div class="meta-value">Sentinel-2, Landsat 8/9</div></div>
-      <div class="meta-item"><div class="meta-label">เครื่องมือ</div><div class="meta-value">Google Earth Engine, JavaScript</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Category">หมวดหมู่</div><div class="meta-value">Remote Sensing / GEE App</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Study Area">พื้นที่ศึกษา</div><div class="meta-value" data-en="Mueang Chiang Mai District, Chiang Mai Province">อำเภอเมืองเชียงใหม่ จังหวัดเชียงใหม่</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Data Sources">แหล่งข้อมูล</div><div class="meta-value">Sentinel-2, Landsat 8/9</div></div>
+      <div class="meta-item"><div class="meta-label" data-en="Tools">เครื่องมือ</div><div class="meta-value">Google Earth Engine, JavaScript</div></div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>โจทย์และที่มา</h2>
-      <p>การติดตามการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองอย่างต่อเนื่องเป็นข้อมูลสำคัญสำหรับงานด้านนโยบายที่ดินและการบริหารจัดการทรัพยากรธรรมชาติ จึงพัฒนาเครื่องมือเปรียบเทียบภาพถ่ายดาวเทียมรายปีแบบ<span class="nb">อินเทอร์แอกทีฟ</span> ให้ผู้ใช้เลือกปีและประเภทภาพได้อิสระทั้งสองฝั่งของหน้าจอ แล้วลากแถบกลางเพื่อเทียบความแตกต่าง โดยไม่ต้องเปิดโปรแกรม GIS หรือดาวน์โหลดภาพเอง</p>
+      <h2 data-en="Problem &amp; Background">โจทย์และที่มา</h2>
+      <p data-en="Continuously tracking land-use change and urban growth is important data for land policy and natural resource management work. This led to building an <span class=&quot;nb&quot;>interactive</span> year-by-year satellite comparison tool, letting users independently choose the year and image type on each side of the screen, then drag the center slider to compare differences — without opening a GIS program or downloading imagery themselves.">การติดตามการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองอย่างต่อเนื่องเป็นข้อมูลสำคัญสำหรับงานด้านนโยบายที่ดินและการบริหารจัดการทรัพยากรธรรมชาติ จึงพัฒนาเครื่องมือเปรียบเทียบภาพถ่ายดาวเทียมรายปีแบบ<span class="nb">อินเทอร์แอกทีฟ</span> ให้ผู้ใช้เลือกปีและประเภทภาพได้อิสระทั้งสองฝั่งของหน้าจอ แล้วลากแถบกลางเพื่อเทียบความแตกต่าง โดยไม่ต้องเปิดโปรแกรม GIS หรือดาวน์โหลดภาพเอง</p>
     </div>
 
     <div class="content-block fade-in">
-      <h2>วิธีการดำเนินงาน</h2>
+      <h2 data-en="Approach">วิธีการดำเนินงาน</h2>
       <ul>
-        <li>ดึงภาพ Sentinel-2 (Surface Reflectance) และ Landsat 8/9 (TOA) ผ่าน Google Earth Engine<br>
+        <li data-en="Pull Sentinel-2 (Surface Reflectance) and Landsat 8/9 (TOA) imagery via Google Earth Engine<br>for each year, to get low-cloud images and fast processing">ดึงภาพ Sentinel-2 (Surface Reflectance) และ Landsat 8/9 (TOA) ผ่าน Google Earth Engine<br>
           ของแต่ละปี เพื่อให้ได้ภาพเมฆน้อยและประมวลผลเร็ว</li>
-        <li>กรองเมฆด้วย CLOUDY_PIXEL_PERCENTAGE / CLOUD_COVER แล้วทำ median composite รายปี</li>
-        <li>คำนวณดัชนี NDVI และ NDBI จากค่าการสะท้อนแสงแต่ละแบนด์</li>
-        <li>ทำ Pan-sharpening ภาพ Landsat ด้วยเทคนิค HSV swap (แทนช่อง Value ด้วยแบนด์ขาวดำความละเอียด 15m) เพื่อเพิ่มความคมชัดของภาพสี</li>
-        <li>ออกแบบ UI แบบ Split-panel (wipe compare) ด้วย GEE UI API พร้อม dropdown เลือกแหล่งภาพ/ปี/ประเภทภาพอิสระทั้งสองฝั่ง แล้ว publish เป็น GEE Application</li>
+        <li data-en="Filter clouds using CLOUDY_PIXEL_PERCENTAGE / CLOUD_COVER, then build an annual median composite">กรองเมฆด้วย CLOUDY_PIXEL_PERCENTAGE / CLOUD_COVER แล้วทำ median composite รายปี</li>
+        <li data-en="Calculate NDVI and NDBI indices from each band's reflectance values">คำนวณดัชนี NDVI และ NDBI จากค่าการสะท้อนแสงแต่ละแบนด์</li>
+        <li data-en="Pan-sharpen Landsat imagery using an HSV-swap technique (replacing the Value channel with the 15m panchromatic band) to increase color-image sharpness">ทำ Pan-sharpening ภาพ Landsat ด้วยเทคนิค HSV swap (แทนช่อง Value ด้วยแบนด์ขาวดำความละเอียด 15m) เพื่อเพิ่มความคมชัดของภาพสี</li>
+        <li data-en="Design a split-panel (wipe compare) UI with the GEE UI API, with dropdowns to independently choose image source/year/type on each side, then publish as a GEE Application">ออกแบบ UI แบบ Split-panel (wipe compare) ด้วย GEE UI API พร้อม dropdown เลือกแหล่งภาพ/ปี/ประเภทภาพอิสระทั้งสองฝั่ง แล้ว publish เป็น GEE Application</li>
       </ul>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ตัวอย่างการใช้งานจริง (Live Demo)</h2>
+      <h2 data-en="Live Demo">ตัวอย่างการใช้งานจริง (Live Demo)</h2>
       <div class="live-frame-label">
-        <span><span class="live-dot"></span>เปรียบเทียบภาพถ่ายดาวเทียมรายปี</span>
-        <a href="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" target="_blank" rel="noopener">เปิดแบบเต็มหน้าจอ <i class="ti ti-arrow-up-right"></i></a>
+        <span><span class="live-dot"></span><span data-en="Year-by-Year Satellite Comparison">เปรียบเทียบภาพถ่ายดาวเทียมรายปี</span></span>
+        <a href="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" target="_blank" rel="noopener"><span data-en="Open Full Screen">เปิดแบบเต็มหน้าจอ</span> <i class="ti ti-arrow-up-right"></i></a>
       </div>
       <div class="live-frame-wrap">
         <iframe class="live-frame live-frame-tall" src="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" loading="lazy" title="เปรียบเทียบภาพถ่ายดาวเทียมรายปี - อำเภอเมืองเชียงใหม่"></iframe>
       </div>
 
       <div class="shot-grid" style="margin-top:20px;">
-        <div class="shot-card" data-full="../assets/img/gee-chiangmai/01-split-compare.jpg" data-caption="เปรียบเทียบ Sentinel-2 True Color ปี 2016 (ซ้าย) กับปี 2025 (ขวา) บริเวณอำเภอเมืองเชียงใหม่">
+        <div class="shot-card" data-full="../assets/img/gee-chiangmai/01-split-compare.jpg" data-en-data-caption="Comparing Sentinel-2 True Color imagery from 2016 (left) and 2025 (right) over Mueang Chiang Mai District" data-caption="เปรียบเทียบ Sentinel-2 True Color ปี 2016 (ซ้าย) กับปี 2025 (ขวา) บริเวณอำเภอเมืองเชียงใหม่">
           <div class="shot-thumb"><img src="../assets/img/gee-chiangmai/01-split-compare.jpg" alt="Sentinel-2 True Color เทียบปี 2016 กับ 2025"></div>
-          <div class="shot-cap"><span class="shot-tag">Sentinel-2 · Split View</span><span class="shot-desc">True Color ปี 2016 vs 2025</span></div>
+          <div class="shot-cap"><span class="shot-tag">Sentinel-2 · Split View</span><span class="shot-desc" data-en="True Color, 2016 vs 2025">True Color ปี 2016 vs 2025</span></div>
         </div>
-        <div class="shot-card" data-full="../assets/img/gee-chiangmai/02-landsat-pansharpen.jpg" data-caption="เทียบ Sentinel-2 True Color ปี 2016 (ซ้าย) กับ Landsat 8/9 Pansharpen ปี 2025 (ขวา) แสดงความคมชัดที่เพิ่มขึ้นจาก Pan-sharpening">
+        <div class="shot-card" data-full="../assets/img/gee-chiangmai/02-landsat-pansharpen.jpg" data-en-data-caption="Comparing Sentinel-2 True Color from 2016 (left) with Landsat 8/9 Pansharpen from 2025 (right), showing the sharpness gained from pan-sharpening" data-caption="เทียบ Sentinel-2 True Color ปี 2016 (ซ้าย) กับ Landsat 8/9 Pansharpen ปี 2025 (ขวา) แสดงความคมชัดที่เพิ่มขึ้นจาก Pan-sharpening">
           <div class="shot-thumb"><img src="../assets/img/gee-chiangmai/02-landsat-pansharpen.jpg" alt="Landsat 8/9 Pansharpen เทียบกับ Sentinel-2"></div>
-          <div class="shot-cap"><span class="shot-tag">Landsat 8/9 · Pansharpen</span><span class="shot-desc">สลับแหล่งภาพและประเภทภาพได้อิสระ</span></div>
+          <div class="shot-cap"><span class="shot-tag">Landsat 8/9 · Pansharpen</span><span class="shot-desc" data-en="Freely switch image source and type">สลับแหล่งภาพและประเภทภาพได้อิสระ</span></div>
         </div>
       </div>
     </div>
 
     <div class="content-block fade-in">
-      <h2>ตัวอย่างโค้ด GEE JavaScript (Full Source)</h2>
-      <p>สคริปต์เต็มที่ใช้สร้างแอปนี้ เขียนด้วย GEE JavaScript API รันบน Google Earth Engine ครอบคลุมตั้งแต่การดึงข้อมูลดาวเทียม คำนวณดัชนี ทำ Pan-sharpening จนถึงสร้าง UI แบบ split-view</p>
+      <h2 data-en="GEE JavaScript Code (Full Source)">ตัวอย่างโค้ด GEE JavaScript (Full Source)</h2>
+      <p data-en="The complete script used to build this app, written with the GEE JavaScript API running on Google Earth Engine, covering everything from pulling satellite data and calculating indices to pan-sharpening and building the split-view UI.">สคริปต์เต็มที่ใช้สร้างแอปนี้ เขียนด้วย GEE JavaScript API รันบน Google Earth Engine ครอบคลุมตั้งแต่การดึงข้อมูลดาวเทียม คำนวณดัชนี ทำ Pan-sharpening จนถึงสร้าง UI แบบ split-view</p>
       <div class="code-block-wrap">
         <div class="code-block-label"><i class="ti ti-brand-javascript"></i> main.js — Google Earth Engine Code Editor</div>
         <pre class="code-block"><code class="language-javascript">/**
@@ -404,14 +405,14 @@ ui.root.add(appLayout);
     </div>
 
     <div class="content-block fade-in">
-      <h2>ผลลัพธ์และการนำไปใช้</h2>
-      <p>เครื่องมือนี้ช่วยให้เห็นการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองเชียงใหม่ในแต่ละปีได้ทันทีผ่านเบราว์เซอร์<br>
+      <h2 data-en="Results &amp; Impact">ผลลัพธ์และการนำไปใช้</h2>
+      <p data-en="This tool lets anyone see land-use change and Chiang Mai's urban growth year by year instantly through a browser,<br>without opening a GIS program. Published as a public GEE Application, accessible anywhere — well-suited for natural resource tracking and land policy work that needs to reference multiple years of satellite imagery.">เครื่องมือนี้ช่วยให้เห็นการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองเชียงใหม่ในแต่ละปีได้ทันทีผ่านเบราว์เซอร์<br>
         โดยไม่ต้องเปิดโปรแกรม GIS เผยแพร่เป็น GEE Application สาธารณะ เข้าถึงได้ทุกที่ เหมาะสำหรับงานติดตามทรัพยากรธรรมชาติและนโยบายที่ดินที่ต้องอ้างอิงข้อมูลภาพถ่ายดาวเทียมย้อนหลังหลายปี</p>
     </div>
 
     <div class="proj-nav">
-      <a href="singhanat-water.html"><i class="ti ti-arrow-left"></i> ผลงานก่อนหน้า</a>
-      <a href="../index.html#projects">กลับไปหน้าผลงาน <i class="ti ti-arrow-right"></i></a>
+      <a href="singhanat-water.html"><i class="ti ti-arrow-left"></i> <span data-en="Previous Project">ผลงานก่อนหน้า</span></a>
+      <a href="../index.html#projects"><span data-en="Back to Projects">กลับไปหน้าผลงาน</span> <i class="ti ti-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -419,11 +420,12 @@ ui.root.add(appLayout);
 <footer>© 2026 KRITCHAO — GIS &amp; Photogrammetry Portfolio</footer>
 
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="ปิด"><i class="ti ti-x"></i></button>
+  <button class="lightbox-close" id="lightboxClose" data-en-aria-label="Close" aria-label="ปิด"><i class="ti ti-x"></i></button>
   <img id="lightboxImg" src="" alt="">
   <div class="lightbox-cap" id="lightboxCap"></div>
 </div>
 
+<script src="../i18n.js"></script>
 <script src="../motion.js"></script>
 <script>
   const navToggle = document.getElementById('navToggle');
