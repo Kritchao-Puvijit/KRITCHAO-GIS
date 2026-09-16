@@ -152,8 +152,8 @@
  * CUSTOMIZE:
  *  - AOI: section 1 — plain bbox, edit the 4 coordinates directly.
  *  - YEARS: section 5.
- *  - Composite date window: DRY_SEASON_START_MONTH / DRY_SEASON_MONTHS in
- *    section 2. Widen this (or set DRY_SEASON_MONTHS to 12) if a particular
+ *  - Composite date window: SEASON_START_MONTH / SEASON_END_MONTHS in
+ *    section 2. Widen this (or set SEASON_END_MONTHS to 12) if a particular
  *    year&#x27;s Jan-Mar composite still looks too cloudy.
  *  - Cloud filter thresholds: section 2 (CLOUDY_PIXEL_PERCENTAGE / CLOUD_COVER).
  *  - Pansharpen min/max stretch: section 4 (TOA reflectance scale — tweak
@@ -181,14 +181,14 @@ var aoiOutline = ee.Image().byte()
 //    scenes median() has to churn through by roughly 4x — the interactive
 //    dropdowns stay fully live (every year still computed on demand), this
 //    just makes each computation itself faster. Widen back to a full year
-//    (see DRY_SEASON_* below) if a given year&#x27;s window turns out too cloudy.
+//    (see SEASON_* below) if a given year&#x27;s window turns out too cloudy.
 // ============================================================
-var DRY_SEASON_START_MONTH = 1; // January
-var DRY_SEASON_MONTHS = 3;      // Jan-Mar
+var SEASON_START_MONTH = 1; // January
+var SEASON_END_MONTHS = 12;      // Jan-Dec
 
 function getS2Composite(year) {
-  var start = ee.Date.fromYMD(year, DRY_SEASON_START_MONTH, 1);
-  var end = start.advance(DRY_SEASON_MONTHS, &#x27;month&#x27;);
+  var start = ee.Date.fromYMD(year, SEASON_START_MONTH, 1);
+  var end = start.advance(SEASON_END_MONTHS, &#x27;month&#x27;);
   return ee.ImageCollection(&#x27;COPERNICUS/S2_SR_HARMONIZED&#x27;)
     .filterBounds(aoi)
     .filterDate(start, end)
@@ -207,8 +207,8 @@ function addS2Indices(img) {
 // Landsat: TOA collection (not Surface Reflectance) so the 15m panchromatic
 // band (B8) is available for the Panchromatic/Pansharpen layer options.
 function getLandsatComposite(year) {
-  var start = ee.Date.fromYMD(year, DRY_SEASON_START_MONTH, 1);
-  var end = start.advance(DRY_SEASON_MONTHS, &#x27;month&#x27;);
+  var start = ee.Date.fromYMD(year, SEASON_START_MONTH, 1);
+  var end = start.advance(SEASON_END_MONTHS, &#x27;month&#x27;);
   var l8 = ee.ImageCollection(&#x27;LANDSAT/LC08/C02/T1_TOA&#x27;)
     .filterBounds(aoi).filterDate(start, end)
     .filter(ee.Filter.lt(&#x27;CLOUD_COVER&#x27;, 20));
@@ -298,7 +298,7 @@ var SOURCE_NAMES = Object.keys(SOURCES);
 //    dropdown/label in ordinary flow panels above/below the split map
 //    sidesteps this entirely — nothing is ever overlaid on a masked map.
 // ============================================================
-var YEARS = [&#x27;2018&#x27;, &#x27;2019&#x27;, &#x27;2020&#x27;, &#x27;2021&#x27;, &#x27;2022&#x27;, &#x27;2023&#x27;, &#x27;2024&#x27;, &#x27;2025&#x27;];
+var YEARS = [&#x27;2016&#x27;, &#x27;2017&#x27;, &#x27;2018&#x27;, &#x27;2019&#x27;, &#x27;2020&#x27;, &#x27;2021&#x27;, &#x27;2022&#x27;, &#x27;2023&#x27;, &#x27;2024&#x27;, &#x27;2025&#x27;];
 
 function buildSide(defaultSource, defaultYear, defaultLayer, sideLabel) {
   var map = ui.Map();
