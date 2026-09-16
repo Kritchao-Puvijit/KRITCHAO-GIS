@@ -60,7 +60,7 @@
     <div class="breadcrumb"><a href="../index.html#projects">ผลงาน</a> <i class="ti ti-chevron-right"></i> <span>RS Change Detection</span></div>
     <div class="proj-cat-badge">Remote Sensing / Google Earth Engine</div>
     <h1>เปรียบเทียบภาพถ่ายดาวเทียมรายปีแบบ<span class="nb">อินเทอร์แอกทีฟ</span> <span class="nb">อำเภอเมืองเชียงใหม่</span></h1>
-    <p class="proj-lede">GEE Application แบบ split-view เปรียบเทียบภาพถ่ายดาวเทียม Sentinel-2 และ Landsat 8/9 ระหว่างปีที่เลือกได้อิสระทั้งสองฝั่ง แสดงได้ทั้งภาพสีจริง (True Color) ภาพ False Color, ดัชนีพืชพรรณ (NDVI), ดัชนีพื้นที่เมือง (NDBI) รวมถึงภาพขาวดำความละเอียดสูงและภาพ Pansharpen ของ Landsat เพื่อติดตามการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองในแต่ละปี</p>
+    <p class="proj-lede">GEE Application แบบ split-view เปรียบเทียบภาพถ่ายดาวเทียม Sentinel-2 <span class="nb">และ Landsat 8/9</span> ระหว่างปีที่เลือกได้อิสระทั้งสองฝั่ง แสดงได้ทั้งภาพสีจริง (True Color) ภาพ False Color, ดัชนีพืชพรรณ (NDVI), ดัชนีพื้นที่เมือง (NDBI) รวมถึงภาพขาวดำความละเอียดสูงและภาพ Pansharpen ของ Landsat เพื่อติดตามการเปลี่ยนแปลงการใช้ที่ดินและการขยายตัวของเมืองในแต่ละปี</p>
     <div class="cta-row" style="margin-top:28px;">
       <a href="https://ee-phiphi11200245.projects.earthengine.app/view/chiangmai-s2-compare" target="_blank" rel="noopener" class="btn btn-primary"><i class="ti ti-external-link"></i> เปิดแอปจริง</a>
     </div>
@@ -84,7 +84,8 @@
     <div class="content-block fade-in">
       <h2>วิธีการดำเนินงาน</h2>
       <ul>
-        <li>ดึงภาพ Sentinel-2 (Surface Reflectance) และ Landsat 8/9 (TOA) ผ่าน Google Earth Engine เฉพาะช่วงหน้าแล้ง (ม.ค.-มี.ค.) ของแต่ละปี เพื่อให้ได้ภาพเมฆน้อยและประมวลผลเร็ว</li>
+        <li>ดึงภาพ Sentinel-2 (Surface Reflectance) และ Landsat 8/9 (TOA) ผ่าน Google Earth Engine<br>
+          ของแต่ละปี เพื่อให้ได้ภาพเมฆน้อยและประมวลผลเร็ว</li>
         <li>กรองเมฆด้วย CLOUDY_PIXEL_PERCENTAGE / CLOUD_COVER แล้วทำ median composite รายปี</li>
         <li>คำนวณดัชนี NDVI และ NDBI จากค่าการสะท้อนแสงแต่ละแบนด์</li>
         <li>ทำ Pan-sharpening ภาพ Landsat ด้วยเทคนิค HSV swap (แทนช่อง Value ด้วยแบนด์ขาวดำความละเอียด 15m) เพื่อเพิ่มความคมชัดของภาพสี</li>
