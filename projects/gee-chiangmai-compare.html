@@ -133,10 +133,11 @@
  *
  * AOI = อำเภอเมืองเชียงใหม่ เป็นกรอบสี่เหลี่ยมธรรมดา (section 1) — เร็วกว่าครอบทั้งจังหวัด
  *
- * Speed: each yearly composite only pulls scenes from a 3-month dry-season
- * window (Jan-Mar, section 2) instead of the full calendar year — cuts the
- * number of images median() churns through by ~4x with minimal quality
- * loss, since Northern Thailand is clearest Dec-Feb anyway.
+ * Composite window: each yearly composite pulls scenes across the full
+ * calendar year (Jan-Dec, section 2) via SEASON_START_MONTH/SEASON_END_MONTHS.
+ * Narrow this window (e.g. 3 months for Jan-Mar) if you want fewer scenes for
+ * median() to churn through and faster computation, at the cost of only
+ * sampling part of the year.
  *
  * Layout: title → controls row (both sides) → split map → status row (both
  * sides), all stacked vertically. Dropdowns are NOT overlaid on the map (see
@@ -153,8 +154,8 @@
  *  - AOI: section 1 — plain bbox, edit the 4 coordinates directly.
  *  - YEARS: section 5.
  *  - Composite date window: SEASON_START_MONTH / SEASON_END_MONTHS in
- *    section 2. Widen this (or set SEASON_END_MONTHS to 12) if a particular
- *    year&#x27;s Jan-Mar composite still looks too cloudy.
+ *    section 2 (currently the full year, Jan-Dec). Narrow it — e.g.
+ *    SEASON_END_MONTHS = 3 for Jan-Mar only — for faster computation.
  *  - Cloud filter thresholds: section 2 (CLOUDY_PIXEL_PERCENTAGE / CLOUD_COVER).
  *  - Pansharpen min/max stretch: section 4 (TOA reflectance scale — tweak
  *    after a visual check, this wasn&#x27;t hand-tuned against a live run).
@@ -175,13 +176,13 @@ var aoiOutline = ee.Image().byte()
 // ============================================================
 // 2. Composites per data source (cloud-filtered median, per year)
 //
-//    Speed: use a 3-month dry-season window (Jan-Mar) instead of the full
-//    calendar year. Northern Thailand is clearest Dec-Feb, so this window
-//    still gives a clean composite while cutting the number of candidate
-//    scenes median() has to churn through by roughly 4x — the interactive
-//    dropdowns stay fully live (every year still computed on demand), this
-//    just makes each computation itself faster. Widen back to a full year
-//    (see SEASON_* below) if a given year&#x27;s window turns out too cloudy.
+//    Uses the full calendar year (Jan-Dec) by default so every scene that
+//    passes the cloud filter counts toward the median — the most complete
+//    composite. The interactive dropdowns stay fully live either way (every
+//    year is still computed on demand); narrowing SEASON_START_MONTH/
+//    SEASON_END_MONTHS below to a shorter window (e.g. Jan-Mar, when
+//    Northern Thailand is clearest) trades some completeness for a faster
+//    per-year computation, since median() then churns through fewer scenes.
 // ============================================================
 var SEASON_START_MONTH = 1; // January
 var SEASON_END_MONTHS = 12;      // Jan-Dec
