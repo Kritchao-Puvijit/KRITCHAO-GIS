@@ -136,7 +136,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .nav-dropdown a:last-child{border-bottom:none;}
 .nav-dropdown a:hover, .nav-dropdown a.active{color:var(--accent);}
 
-@media(max-width:720px){
+@media(max-width:900px){
   .navlinks{display:none;}
   .nav-toggle{display:flex;}
 }
